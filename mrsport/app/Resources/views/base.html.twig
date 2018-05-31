@@ -1,13 +1,51 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {# <link rel="icon" href="../../../../favicon.ico"> #}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico')}}">
+
+    <title>{% block title %}Metropole Rouen Sport{% endblock %}</title>
+
+    <!-- Custom CSS 
+    =================
+    =================-->
+        {% block stylesheets %}
+            <!-- Bootstrap -->
+            {% stylesheets '@Style_Vendors' %}
+                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
+            {% endstylesheets %}
+            
+            <!-- My CSS -->
+            {% stylesheets '@Style_Main' filter='cssrewrite' %}
+                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
+            {% endstylesheets %}
+        {% endblock %}
+    
+</head>
+<body>
+
+    <!-- Navbar  -->        
+    {% include 'navbar.html.twig' %}
+    
+    <main class="main">
+    <!-- Body  -->        
+        {% block body %}
+        
+        {% endblock body %}
+    </main>  
+
+    {% include 'footer.html.twig' %}
+
+    <!-- Script Javascript -->
+    {% block javascript %}
+        {% javascripts '@Script_Vendors' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+    
+</body>
 </html>

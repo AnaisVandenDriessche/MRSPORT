@@ -7,11 +7,11 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -31,6 +31,8 @@ framework:
     assets: ~
     php_errors:
         log: true
+    templating:
+            engines: ['twig']
 
 # Twig Configuration
 twig:
@@ -66,3 +68,49 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+# Assetics
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+    assets:
+        # ---------------------------------------
+        # Style
+        # ---------------------------------------
+
+        #Style vendor
+        Style_Vendors:
+            inputs:
+                - '%kernel.root_dir%/../vendor/bower/bootstrap/dist/css/bootstrap.min.css'        
+
+        # Feuille de style principale 
+        Style_Main: # Nom de la ressource contenant les feuilles de style
+            inputs:
+                - '%kernel.root_dir%/Resources/public/css/main.css'
+                - '%kernel.root_dir%/Resources/public/css/jumbotron.css'
+                - '%kernel.root_dir%/Resources/public/css/footer.css'
+                - '%kernel.root_dir%/Resources/public/css/navbar.css'
+        
+        Img_1:
+            inputs:
+                - '%kernel.root_dir%/Resources/public/img/rugby.jpeg'
+            output: img/stade.jpeg
+
+        # ---------------------------------------
+        # Scripts
+        # ---------------------------------------
+        
+        # Script Vendor
+        Script_Vendors:
+            input:
+                - '%kernel.root_dir%/.../vendor/bower/jquery/dist/jquery.min.js'
+                - '%kernel.root_dir%/.../vendor/bower/popper/dist/umd/popper.min.js'
+                - '%kernel.root_dir%/.../vendor/bower/bootsrap/dist/js/bootstrap.min.js'
+
+        # Script perso
+        Script_Perso:
+            inputs:
+                - '%kernel.root_dir%/Resources/public/js/main.js' 
+
