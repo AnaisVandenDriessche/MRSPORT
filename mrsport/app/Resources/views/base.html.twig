@@ -17,12 +17,21 @@
             <!-- Bootstrap -->
             {% stylesheets '@Style_Vendors' %}
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
-            {% endstylesheets %}
+            {% endstylesheets %}  
+
+            {# {% stylesheets '../web/assets/public/bootstrap/dist/css/bootstrap.min.css'
+            '../web/assets/public/css/footer.css' 
+            '../web/assets/public/css/jumbotron.css'%}
+                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+            {% endstylesheets %} #}
             
+ 
             <!-- My CSS -->
             {% stylesheets '@Style_Main' filter='cssrewrite' %}
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
             {% endstylesheets %}
+
+
         {% endblock %}
     
 </head>
