@@ -1,0 +1,67 @@
+<?php
+
+namespace MrsportBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * evenements
+ *
+ * @ORM\Table(name="evenements")
+ * @ORM\Entity(repositoryClass="MrsportBundle\Repository\evenementsRepository")
+ */
+class evenements
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * @var date
+     *
+     * @ORM\Column(name="date", type="date")
+     */
+    private $date;
+
+
+    /**
+     * @var time
+     *
+     * @ORM\Column(name="time", type="time")
+     */
+    private $time;
+
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string")
+     */
+    private $adresse;
+
+
+
+    /**
+     * @var description
+     *
+     * @ORM\Column(name="description", type="text", length= 500)
+     */
+    private $description;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
