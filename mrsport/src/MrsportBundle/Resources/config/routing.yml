@@ -1,0 +1,3 @@
+mrsport_homepage:
+    path:     /
+    defaults: { _controller: MrsportBundle:Default:index }
