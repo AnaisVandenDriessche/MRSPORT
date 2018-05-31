@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('MrsportBundle:Default:index.html.twig');
+        return $this->render('@Mrsport/Default/index.html.twig');
     }
 }
