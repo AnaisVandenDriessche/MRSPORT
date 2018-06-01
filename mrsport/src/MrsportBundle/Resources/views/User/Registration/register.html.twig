@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class=row>
+        <div class="col-sm-4 mr-auto ml-auto">
+            <h2>Inscription</h2>
+            
+            {% if not form.vars.valid %}
+                <div class="alert alert-danger">
+                    Le formulaire contient des errreurs.
+                </div>
+            {% endif %}
+            
+            {{ form_start(form) }}
+
+                {{ form_widget(form.email, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Email'
+                    }
+                }) }}
+                <br>
+
+                {{ form_widget(form.username, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Username'
+                    }
+                }) }}
+                <br>
+                
+
+                {{ form_widget(form.plainPassword.first, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Password'
+                    }
+                }) }}
+                <br>
+                
+
+                {{ form_widget(form.plainPassword.second, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Repeat Password'
+                    }
+                }) }}
+                <br>
+                <button type="submit" name="button" class="btn btn-block btn-success">M'inscrire</button>
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+</div>
+
+{# {{ dump(form.vars.valid) }}
+{{ dump(form) }} #}
+
+{% endblock body %}
+
+{% block javascript %}
+    {{ parent()}}
+    {% javascripts '@Script_CheckForm_Registration' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
