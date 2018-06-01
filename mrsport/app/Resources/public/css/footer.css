@@ -6,5 +6,39 @@ footer
     height: 50px;
     padding: 0,50px;
     border-radius: 0;
-
 }
+    .googlemaps, {
+        background-color: #333333;
+        color: #FFFFFF;
+    }
+    .googlemap-content {
+        top: -80px;
+        height: 380px !important;
+        width: 100% !important;
+        position: relative;
+        overflow: hidden;
+    }
+    .googlemap iframe {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        height: 200%;
+        width: 200%;
+    }
+    .copyright {
+        background-color: #ffffff;
+    }
+    
+    .contact .form-control {
+        border-radius: 0;
+        border: 1px solid rgba(255,255,255,.7);
+        background-color: rgba(255,255,255,0);
+        color: #ffffff;
+    
+        -webkit-transition: all .3s;
+                transition: all .3s;
+    }
+    .contact .form-control:focus {
+        background-color: rgba(255,255,255,.1);
+    }
+
