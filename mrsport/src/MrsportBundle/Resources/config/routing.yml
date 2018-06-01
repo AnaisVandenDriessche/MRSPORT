@@ -1,3 +1,54 @@
 mrsport_homepage:
     path:     /
     defaults: { _controller: MrsportBundle:Default:index }
+
+mrsport_backoffice:
+    path:     /backoffice
+    defaults: { _controller: MrsportBundle:Default:back_office }
+
+mrsport_resultatbasket:
+    path:     /resultatbasket
+    defaults: { _controller: MrsportBundle:Default:basket_resultat_classement }
+
+mrsport_agendabasket:
+    path:     /agendabasket
+    defaults: { _controller: MrsportBundle:Default:basket_agenda }
+
+mrsport_basket:
+    path:     /basket
+    defaults: { _controller: MrsportBundle:Default:basket }
+
+mrsport_football:
+    path:     /football
+    defaults: { _controller: MrsportBundle:Default:football }
+
+mrsport_agendafootball:
+    path:     /agendafootball
+    defaults: { _controller: MrsportBundle:Default:football_agenda }
+
+mrsport_resultatfootball:
+    path:     /resultatfootball
+    defaults: { _controller: MrsportBundle:Default:football_resultat_classement }
+
+mrsport_listeclub:
+    path:     /listeclub
+    defaults: { _controller: MrsportBundle:Default:liste_club }
+
+mrsport_singleclub:
+    path:     /singleclub
+    defaults: { _controller: MrsportBundle:Default:single_club }
+
+mrsport_contact:
+    path:     /contact
+    defaults: { _controller: MrsportBundle:Default:contact }
+
+mrsport_agendahockey:
+    path:     /agendahockey
+    defaults: { _controller: MrsportBundle:Default:hockey_agenda }
+
+mrsport_resultathockey:
+    path:     /resultathockey
+    defaults: { _controller: MrsportBundle:Default:hockey_resultat_classement }
+
+    
+
