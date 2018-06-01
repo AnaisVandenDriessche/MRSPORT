@@ -46,7 +46,7 @@
 
     <!-- Script Javascript -->
     {% block javascript %}
-        {% javascripts '@Script_Vendor' filter="cssrewrite" %}
+        {% javascripts '@Script_Vendor' %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
 

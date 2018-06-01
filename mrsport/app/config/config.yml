@@ -105,9 +105,9 @@ assetic:
         # Script Vendor
         Script_Vendor:
             input:
-                - '%kernel.root_dir%/.../vendor/bower/jquery/dist/jquery.min.js'
-                - '%kernel.root_dir%/.../vendor/bower/popper/dist/umd/popper.min.js'
-                - '%kernel.root_dir%/.../vendor/bower/bootsrap/dist/js/bootstrap.min.js'
+                - '%kernel.root_dir%/../vendor/bower/jquery/dist/jquery.min.js'
+                - '%kernel.root_dir%/../vendor/bower/popper/dist/umd/popper.min.js'
+                - '%kernel.root_dir%/../vendor/bower/bootstrap/dist/js/bootstrap.js'
 
         # Script perso
         Script_Perso:
