@@ -8,7 +8,7 @@
     {# <link rel="icon" href="../../../../favicon.ico"> #}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico')}}">
 
-    <title>{% block title %}Metropole Rouen Sport{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- Custom CSS 
     =================
@@ -16,45 +16,46 @@
         {% block stylesheets %}
             <!-- Bootstrap -->
             {% stylesheets '@Style_Vendors' %}
-                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
+                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" /> 
             {% endstylesheets %}  
 
-            {# {% stylesheets '../web/assets/public/bootstrap/dist/css/bootstrap.min.css'
-            '../web/assets/public/css/footer.css' 
-            '../web/assets/public/css/jumbotron.css'%}
-                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-            {% endstylesheets %} #}
-            
- 
             <!-- My CSS -->
             {% stylesheets '@Style_Main' filter='cssrewrite' %}
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
             {% endstylesheets %}
 
+            {# {% stylesheets '%kernel.root_dir%/.../web/public/css/bootsrap.min.css' filter='cssrewrite' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %} #}
 
         {% endblock %}
     
 </head>
 <body>
-
+<div class="wrapper">
     <!-- Navbar  -->        
-    {% include 'navbar.html.twig' %}
+    {% block nav %}{% include 'navbar.html.twig' %}{% endblock %}
     
     <main class="main">
     <!-- Body  -->        
-        {% block body %}
-        
-        {% endblock body %}
+        {% block body %}{% endblock body %}
     </main>  
 
-    {% include 'footer.html.twig' %}
+    {% block footer %}{% include 'footer.html.twig' %}{% endblock %}
+    
 
     <!-- Script Javascript -->
     {% block javascript %}
-        {% javascripts '@Script_Vendors' %}
+        {% javascripts '@Script_Vendor' filter="cssrewrite" %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
+
+        <!--CDN JS-->
+        {# <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> #}
+
     {% endblock %}
-    
+</div>   
 </body>
 </html>

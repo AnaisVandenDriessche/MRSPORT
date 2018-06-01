@@ -103,7 +103,7 @@ assetic:
         # ---------------------------------------
         
         # Script Vendor
-        Script_Vendors:
+        Script_Vendor:
             input:
                 - '%kernel.root_dir%/.../vendor/bower/jquery/dist/jquery.min.js'
                 - '%kernel.root_dir%/.../vendor/bower/popper/dist/umd/popper.min.js'
