@@ -55,6 +55,17 @@ class evenements
     private $description;
 
 
+    //relation entre les tables evements et sports (many to one) (anais)
+        // ---------------------------------//  
+
+    /**
+     * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $sports;
+
+
+
     /**
      * Get id.
      *
@@ -159,5 +170,29 @@ class evenements
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set sports.
+     *
+     * @param \MrsportBundle\Entity\Sports $sports
+     *
+     * @return evenements
+     */
+    public function setSports(\MrsportBundle\Entity\Sports $sports)
+    {
+        $this->sports = $sports;
+
+        return $this;
+    }
+
+    /**
+     * Get sports.
+     *
+     * @return \MrsportBundle\Entity\Sports
+     */
+    public function getSports()
+    {
+        return $this->sports;
     }
 }
