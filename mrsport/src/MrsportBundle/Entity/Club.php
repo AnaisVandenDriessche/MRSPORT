@@ -82,6 +82,16 @@ class club
      */
     private $siteweb;
 
+
+    //relation entre les tables club et sports (many to one) (anais)
+        // ---------------------------------//  
+
+    /**
+     * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $sports;
+
     
     
     /**
@@ -261,5 +271,29 @@ class club
     public function getSiteweb()
     {
         return $this->siteweb;
+    }
+
+    /**
+     * Set sports.
+     *
+     * @param \MrsportBundle\Entity\Sports $sports
+     *
+     * @return club
+     */
+    public function setSports(\MrsportBundle\Entity\Sports $sports)
+    {
+        $this->sports = $sports;
+
+        return $this;
+    }
+
+    /**
+     * Get sports.
+     *
+     * @return \MrsportBundle\Entity\Sports
+     */
+    public function getSports()
+    {
+        return $this->sports;
     }
 }
