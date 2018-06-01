@@ -104,11 +104,22 @@ assetic:
                 - '%kernel.root_dir%/Resources/public/css/jumbotron.css'
                 - '%kernel.root_dir%/Resources/public/css/footer.css'
                 - '%kernel.root_dir%/Resources/public/css/navbar.css'
+
         
         Img_1:
             inputs:
                 - '%kernel.root_dir%/Resources/public/img/rugby.jpeg'
+                                
             output: img/stade.jpeg
+
+        Img_2:
+            inputs:
+                - '%kernel.root_dir%/Resources/public/img/logo_rms.png'
+                                
+            output: img/logo_rms.png
+
+            
+
 
         # ---------------------------------------
         # Scripts

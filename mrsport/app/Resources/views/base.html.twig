@@ -7,6 +7,7 @@
     <meta name="author" content="">
     {# <link rel="icon" href="../../../../favicon.ico"> #}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <title>{% block title %}{% endblock %}</title>
 
@@ -35,8 +36,11 @@
 </head>
 <body>
 <div class="wrapper">
-    <!-- Navbar  -->        
+    <!-- Navbar  -->  
+    {% block socialmedia %}{% include 'socialmedia.html.twig' %}{% endblock %}
+          
     {% block nav %}{% include 'navbar.html.twig' %}{% endblock %}
+    
     {% block slider %}{% include 'slider.html.twig' %}{% endblock %}
     
     <main class="main">

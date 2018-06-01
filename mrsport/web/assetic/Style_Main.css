@@ -1,0 +1,29 @@
+
+.jumbotron
+{
+    background-image: url('img/stade.jpeg');
+    background-size: cover;
+
+    color: rgb(255, 251, 7);
+    height: 550px;
+    border-radius: 0;
+}
+footer
+{
+    background: rgb(153, 94, 94);
+    background-size: cover;
+    color: rgb(255, 251, 7);
+    height: 50px;
+    padding: 0,50px;
+    border-radius: 0;
+
+    
+}
+nav
+{
+    background: rgb(153, 94, 94);
+    color: rgb(255, 251, 7);
+    height: 60px;
+    font-size: 1.1rem;
+    border-radius: 0;
+}

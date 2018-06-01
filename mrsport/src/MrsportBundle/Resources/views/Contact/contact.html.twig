@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h2>Contact</h2>
+    </div> <!-- /container -->
+                
+                <form class="row" method="post" action="traitement.php" novalidate>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="NOM">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Adresse email">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" id="message" rows="10" placeholder="Votre message"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-yellow">Submit</button>
+                </form>
+
+
+{% endblock %}
