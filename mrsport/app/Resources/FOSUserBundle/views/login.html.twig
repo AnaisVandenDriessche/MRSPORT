@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="container">
+    <div class=row>
+        <div class="col-sm-4 mr-auto ml-auto">
+            <h2>Login</h2>
+        
+        {% if error %}
+            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+            
+        <form class="login" action="{{ path("fos_user_security_check") }}" method="POST">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            <input class="form-control" type="text" id="username" name="_username" value="" required="required" autocomplete="username" placeholder="username"/>
+            <br>
+            <input class="form-control" type="password" id="password" name="_password" required="required" autocomplete="current-password" placeholder="password" />
+            <br>
+            <label for="remember_me">
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> Remember me
+            </label>
+            <br>      
+            <button type="submit" id="_submit" name="_submit" class="btn btn-block btn-success">Login</button>
+            
+        </form>
+{% endblock body %}
