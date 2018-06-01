@@ -45,7 +45,10 @@
     
     <main class="main">
     <!-- Body  -->        
-        {% block body %}{% endblock body %}
+        {% block body %}
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+        {% endblock body %}
     </main>  
 
     {% block footer %}{% include 'footer.html.twig' %}{% endblock %}

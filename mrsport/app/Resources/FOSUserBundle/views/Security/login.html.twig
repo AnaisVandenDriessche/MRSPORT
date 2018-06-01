@@ -1,5 +1,6 @@
+{# {% extends "@FOSUser/layout.html.twig" %} #}
 {% extends 'base.html.twig' %}
-
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
     <div class="container">
@@ -12,10 +13,13 @@
         {% endif %}
             
         <form class="login" action="{{ path("fos_user_security_check") }}" method="POST">
+            {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            {% endif %}
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-            <input class="form-control" type="text" id="username" name="_username" value="" required="required" autocomplete="username" placeholder="username"/>
+            <input class="form-control" type="text" id="username" name="_username" value="" required="required" autocomplete="username" placeholder="Votre identifiant"/>
             <br>
-            <input class="form-control" type="password" id="password" name="_password" required="required" autocomplete="current-password" placeholder="password" />
+            <input class="form-control" type="password" id="password" name="_password" required="required" autocomplete="current-password" placeholder="Votre mot de passe" />
             <br>
             <label for="remember_me">
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> Remember me
