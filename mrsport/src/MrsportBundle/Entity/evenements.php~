@@ -55,6 +55,17 @@ class evenements
     private $description;
 
 
+    //relation entre les tables evements et sports (many to one) (anais)
+        // ---------------------------------//  
+
+    /**
+     * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $sports;
+
+
+
     /**
      * Get id.
      *
@@ -63,5 +74,125 @@ class evenements
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set date.
+     *
+     * @param \DateTime $date
+     *
+     * @return evenements
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date.
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set time.
+     *
+     * @param \DateTime $time
+     *
+     * @return evenements
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * Get time.
+     *
+     * @return \DateTime
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * Set adresse.
+     *
+     * @param string $adresse
+     *
+     * @return evenements
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse.
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set description.
+     *
+     * @param string $description
+     *
+     * @return evenements
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set sports.
+     *
+     * @param \MrsportBundle\Entity\Sports $sports
+     *
+     * @return evenements
+     */
+    public function setSports(\MrsportBundle\Entity\Sports $sports)
+    {
+        $this->sports = $sports;
+
+        return $this;
+    }
+
+    /**
+     * Get sports.
+     *
+     * @return \MrsportBundle\Entity\Sports
+     */
+    public function getSports()
+    {
+        return $this->sports;
     }
 }

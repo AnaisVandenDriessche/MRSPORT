@@ -25,34 +25,12 @@ class sports
     /**
      * @var string
      *
-     * @ORM\Column(name="football", type="string")
+     * @ORM\Column(name="name", type="string")
      */
-    private $football;
+    private $name;
 
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="basketball", type="string")
-     */
-    private $basketball;
-
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="hockey", type="string")
-     */
-    private $hockey;
-
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="rugby", type="string")
-     */
-    private $rugby;
-
+ 
 
     /**
      * Get id.
@@ -64,99 +42,29 @@ class sports
         return $this->id;
     }
 
+  
+
     /**
-     * Set football.
+     * Set name.
      *
-     * @param string $football
+     * @param string $name
      *
      * @return sports
      */
-    public function setFootball($football)
+    public function setName($name)
     {
-        $this->football = $football;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get football.
+     * Get name.
      *
      * @return string
      */
-    public function getFootball()
+    public function getName()
     {
-        return $this->football;
-    }
-
-    /**
-     * Set basketball.
-     *
-     * @param string $basketball
-     *
-     * @return sports
-     */
-    public function setBasketball($basketball)
-    {
-        $this->basketball = $basketball;
-
-        return $this;
-    }
-
-    /**
-     * Get basketball.
-     *
-     * @return string
-     */
-    public function getBasketball()
-    {
-        return $this->basketball;
-    }
-
-    /**
-     * Set hockey.
-     *
-     * @param string $hockey
-     *
-     * @return sports
-     */
-    public function setHockey($hockey)
-    {
-        $this->hockey = $hockey;
-
-        return $this;
-    }
-
-    /**
-     * Get hockey.
-     *
-     * @return string
-     */
-    public function getHockey()
-    {
-        return $this->hockey;
-    }
-
-    /**
-     * Set rugby.
-     *
-     * @param string $rugby
-     *
-     * @return sports
-     */
-    public function setRugby($rugby)
-    {
-        $this->rugby = $rugby;
-
-        return $this;
-    }
-
-    /**
-     * Get rugby.
-     *
-     * @return string
-     */
-    public function getRugby()
-    {
-        return $this->rugby;
+        return $this->name;
     }
 }
