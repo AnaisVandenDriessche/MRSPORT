@@ -9,6 +9,23 @@
             <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
             <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
         </div>
+    
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="img/logo_rms.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="#" class="card-link">Modifier son profil</a></li>
+                <li class="list-group-item"><a href="#" class="card-link">Proposer un équipe</a></li>
+            </ul>
+            {# <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div> #}
+        </div>
     </div>
     {% endblock fos_user_content %}
 {% endblock body %}
