@@ -58,6 +58,18 @@ mrsport_rugby:
     path:     /rugby
     defaults: { _controller: MrsportBundle:Default:rugby }
 
+mrsport_resultatrugby:
+    path:     /resultatrugby
+    defaults: { _controller: MrsportBundle:Default:rugby_resultat_classement }  
+
+mrsport_agendarugby:
+    path:     /agendarugby
+    defaults: { _controller: MrsportBundle:Default:rugby_agenda } 
+
+mrsport_evenement:
+    path:     /evenement
+    defaults: { _controller: MrsportBundle:Default:evenement }
+
 mrsport_dashboard:
     path:     /admin
     defaults: { _controller: MrsportBundle:Default:dashboard }
