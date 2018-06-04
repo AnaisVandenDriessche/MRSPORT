@@ -1,5 +1,63 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block fos_user_content %}
-{% include "@FOSUser/Registration/register_content.html.twig" %}
-{% endblock fos_user_content %}
+{% block body %}
+<div class="container">
+    <div class=row>
+        <div class="col-sm-4 mr-auto ml-auto">
+            <h2>Inscription</h2>
+            
+            {% if not form.vars.valid %}
+                <div class="alert alert-danger">
+                    Le formulaire contient des errreurs.
+                </div>
+            {% endif %}
+            
+            {{ form_start(form) }}
+
+                {{ form_widget(form.email, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Email'
+                    }
+                }) }}
+                <br>
+
+                {{ form_widget(form.username, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Username'
+                    }
+                }) }}
+                <br>
+                
+
+                {{ form_widget(form.plainPassword.first, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Password'
+                    }
+                }) }}
+                <br>
+                
+
+                {{ form_widget(form.plainPassword.second, {
+                    'attr': {
+                        'class': 'form-control',
+                        'placeholder': 'Repeat Password'
+                    }
+                }) }}
+                <br>
+                <button type="submit" name="button" class="btn btn-block btn-success">M'inscrire</button>
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+</div>
+
+{# {{ dump(form.vars.valid) }}
+{{ dump(form) }} #}
+
+{% endblock body %}
+
+
