@@ -100,6 +100,11 @@ class DefaultController extends Controller
         return $this->render('@Mrsport/admin/dashboard.html.twig');
     }
 
+    public function tablesAction()
+    {
+        return $this->render('@Mrsport/admin/tables.html.twig');
+    }
+
    
 
 
