@@ -1,12 +1,12 @@
 {# {% extends "@FOSUser/layout.html.twig" %} #}
 {% extends 'base.html.twig' %}
-{% block title %}Login{% endblock %}
+{% block title %}Connexion{% endblock %}
 
 {% block body %}
     <div class="container">
     <div class=row>
         <div class="col-sm-4 mr-auto ml-auto">
-            <h2>Login</h2>
+            <h2>Connexion</h2>
         
         {% if error %}
             <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -25,7 +25,19 @@
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" /> Remember me
             </label>
             <br>      
-            <button type="submit" id="_submit" name="_submit" class="btn btn-block btn-success">Login</button>
+            <button type="submit" id="_submit" name="_submit" class="btn btn-block btn-success">Valider</button>
+                
+            <div class="col-md-12 ">
+                <div class="login-or">
+                    <hr class="hr-or">
+                    <span class="span-or">ou</span>
+                </div>
+            </div>
+            <div class="text-center ">
+            <a class="nav-link btn btn-block btn-danger send-button tx-tfm" href="{{ path('fos_user_registration_register') }}">Inscription</a>
+            </div>
+            <br>      
+            
             
         </form>
 {% endblock body %}
