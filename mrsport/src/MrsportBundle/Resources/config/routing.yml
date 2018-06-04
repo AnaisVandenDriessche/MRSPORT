@@ -49,6 +49,13 @@ mrsport_agendahockey:
 mrsport_resultathockey:
     path:     /resultathockey
     defaults: { _controller: MrsportBundle:Default:hockey_resultat_classement }
+ 
+mrsport_hockey:
+    path:     /hockey
+    defaults: { _controller: MrsportBundle:Default:hockey }
 
+mrsport_rugby:
+    path:     /rugby
+    defaults: { _controller: MrsportBundle:Default:rugby }
     
 
