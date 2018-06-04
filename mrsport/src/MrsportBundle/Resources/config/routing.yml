@@ -55,7 +55,7 @@ mrsport_hockey:
     defaults: { _controller: MrsportBundle:Default:hockey }
 
 mrsport_rugby:
-    path:     /rugby
+    path:     rugby
     defaults: { _controller: MrsportBundle:Default:rugby }
 
 mrsport_resultatrugby:
@@ -73,5 +73,11 @@ mrsport_evenement:
 mrsport_dashboard:
     path:     /admin
     defaults: { _controller: MrsportBundle:Default:dashboard }
+
+
+mrsport_tables:
+    path:     /admin/tables
+    defaults: { _controller: MrsportBundle:Default:tables }
+
     
 
