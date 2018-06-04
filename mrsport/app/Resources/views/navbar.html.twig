@@ -25,21 +25,21 @@
                     <a class="nav-link" href="{{ path('mrsport_homepage') }}">Evènement Sportif</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('mrsport_homepage') }}">Contact</a>
+                    <a class="nav-link" href="{{ path('mrsport_homepage') }}">Nous Contacter</a>
                 </li>
                 {% if is_granted("IS_AUTHENTICATED_FULLY") %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Logout </a>
+                        <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('fos_user_registration_register') }}">Inscription </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('fos_user_security_login') }}">Login </a>
+                        <a class="nav-link" href="{{ path('fos_user_security_login') }}">Connexion</a>
                     </li>
                 {% endif %}
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
