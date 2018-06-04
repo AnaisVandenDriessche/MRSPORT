@@ -5,20 +5,16 @@
     {% block fos_user_content %}
     {% trans_default_domain 'FOSUserBundle' %}
     <div class="container">
-        <div class="fos_user_user_show">
-            <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-            <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-        </div>
-    
-
+    <h1 class="text-center">Mon profil</h1>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/logo_rms.png" alt="Card image cap">
+            <img class="card-img-top rounded-circle" src="{{ asset('img/3.png') }}"  height="200px" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <p class="card-title text-center text-uppercase text-muted text-danger">{{ user.username }}</p>
+                <p class="card-title text-center text-muted">{{ user.email }}</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="#" class="card-link">Modifier son profil</a></li>
+                <li class="list-group-item"><a href="#" class="card-link">Modifier mon profil</a></li>
                 <li class="list-group-item"><a href="#" class="card-link">Proposer un équipe</a></li>
             </ul>
             {# <div class="card-body">
