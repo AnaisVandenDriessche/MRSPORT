@@ -95,6 +95,11 @@ class DefaultController extends Controller
         return $this->render('@Mrsport/Evenement/evenement.html.twig');
     }
 
+    public function dashboardAction()
+    {
+        return $this->render('@Mrsport/admin/dashboard.html.twig');
+    }
+
    
 
 

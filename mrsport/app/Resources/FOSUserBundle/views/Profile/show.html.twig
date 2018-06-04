@@ -1,5 +1,16 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends 'base.html.twig' %}
+{% block title %}Mon profil{% endblock %}
 
-{% block fos_user_content %}
-{% include "@FOSUser/Profile/show_content.html.twig" %}
-{% endblock fos_user_content %}
+{% block body %}
+    {% block fos_user_content %}
+    {% trans_default_domain 'FOSUserBundle' %}
+    <div class="container">
+        <div class="fos_user_user_show">
+            <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+            <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+        </div>
+    </div>
+    {% endblock fos_user_content %}
+{% endblock body %}
+
+ 
