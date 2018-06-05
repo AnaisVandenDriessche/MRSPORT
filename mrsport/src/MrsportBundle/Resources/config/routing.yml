@@ -1,3 +1,6 @@
+mrsport_user:
+    resource: "@MrsportBundle/Resources/config/routing/user.yml"
+    prefix:   /user
 mrsport_club:
     resource: "@MrsportBundle/Resources/config/routing/club.yml"
     prefix:   /club

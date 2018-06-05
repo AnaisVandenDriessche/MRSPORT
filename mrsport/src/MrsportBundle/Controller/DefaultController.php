@@ -100,12 +100,8 @@ class DefaultController extends Controller
         return $this->render('@Mrsport/admin/dashboard.html.twig');
     }
 
-    public function listing_usersAction($id)
+    public function listing_usersAction()
     {
-        $product = $this->getDoctrine()
-        ->getRepository(Product::class)
-        ->find($id);
-
         return $this->render('@Mrsport/admin/listing_users.html.twig');
     }
 
