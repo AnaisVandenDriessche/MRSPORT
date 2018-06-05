@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 mrsport_user:
     resource: "@MrsportBundle/Resources/config/routing/user.yml"
     prefix:   /user
-=======
 mrsport_club:
     resource: "@MrsportBundle/Resources/config/routing/club.yml"
     prefix:   /club
->>>>>>> d9a5724e4f70a19d966456e723dfcf9a2b309351
 
 mrsport_homepage:
     path:     /
