@@ -6,7 +6,7 @@
 <div class="container">
     <div class=row>
         <div class="col-sm-4 mr-auto ml-auto">
-            <h2>Inscription</h2>
+            <h2 class="text-center">Inscription</h2>
             
             {% if not form.vars.valid %}
                 <div class="alert alert-danger">
@@ -19,7 +19,7 @@
                 {{ form_widget(form.email, {
                     'attr': {
                         'class': 'form-control',
-                        'placeholder': 'Email'
+                        'placeholder': 'Email*'
                     }
                 }) }}
                 <br>
@@ -27,7 +27,7 @@
                 {{ form_widget(form.username, {
                     'attr': {
                         'class': 'form-control',
-                        'placeholder': 'Username'
+                        'placeholder': 'Identifiant*'
                     }
                 }) }}
                 <br>
@@ -36,7 +36,7 @@
                 {{ form_widget(form.plainPassword.first, {
                     'attr': {
                         'class': 'form-control',
-                        'placeholder': 'Password'
+                        'placeholder': 'Password*'
                     }
                 }) }}
                 <br>
@@ -45,7 +45,7 @@
                 {{ form_widget(form.plainPassword.second, {
                     'attr': {
                         'class': 'form-control',
-                        'placeholder': 'Repeat Password'
+                        'placeholder': 'Confirmer Password*'
                     }
                 }) }}
                 <br>

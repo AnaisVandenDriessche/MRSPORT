@@ -4,17 +4,18 @@
 {% block body %}
 <div class="container">
 
-    <h1>Club creation</h1>
+    <h1 class="text-center">Proposition de club</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input class="btn btn-primary" type="submit" value="Create" />
+        <input class="btn btn-primary" type="submit" value="Proposer" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('club_index') }}">Back to the list</a>
+            <a href="{{ path('club_index') }}">Retour à la liste des clubs</a>
         </li>
     </ul>
+
 </div>
 {% endblock %}

@@ -13,7 +13,15 @@ class ClubType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('president')->add('entraineur')->add('fondation')->add('couleur')->add('stade')->add('siteweb')->add('sports');
+        $builder
+            ->add('name')
+            ->add('president')
+            ->add('entraineur')
+            ->add('fondation')
+            ->add('couleur')
+            ->add('stade')
+            ->add('siteweb')
+            ->add('sports');
     }/**
      * {@inheritdoc}
      */
