@@ -3,41 +3,52 @@
 {% block body %}
       {# main contenair #}
     <div class="container">
-        <h2>Evenement Sportif à Rouen le ... à ...</h2>
+        <h2>Evenements Sportifs à Rouen et alentours</h2>
     
 
-                <!-- Section header -->
-                <div class="section-header">
-                    <h3 class="section-title"> Les Sports</h3>
-                    <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis saepe, laboriosam rerum beatae ipsam quisquam neque laudantium. Aperiam commodi cumque, dolores ab tempora, assumenda cupiditate eius, esse consequatur maxime autem?</p>
-                </div>
-                <!-- end .section-header -->
-
-                <!-- Liste des sports -->
-                <div class="row">
-                    
-                    <!-- column -->
-                    <div class="col-8">
-                        <div class="content" data-name="Basket" >
-                            <div class="content-body">
-                                <h5 class="content-title">Basket</h5>
-                                <p class="content-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="contact">
-                            
-
-                        </div>
-                    </div>
-    </div>
-                    <!-- end - column -->
-   
-
-    
-
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom de l'événement</th>  
+      <th scope="col">Sport</th>
+      <th scope="col">Lieu</th>
+      <th scope="col">Date et heure</th>
+      <th scope="col">Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>French Cup</td>
+      <td>Patinage artistique</td>
+      <td>Rouen</td>
+      <td>Février</td>
+      <td>Pendant trois jours et courant février, la French Cup est une épreuve sportive qui rassemble plus de 700 patineurs de tous continents depuis près de 15 ans. </td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>24 heures motonautiques</td>
+      <td>Motonautiques</td>
+      <td>Rouen</td>
+      <td>Mai</td>
+      <td>La course se déroule sur la Seine autour de l’île Lacroix. Durant quatre jours, les visites des stands, rencontres avec les pilotes, animations et essais libres se succèdent le week-end du 1er mai avant le grand départ de la course.</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Seine Marathon 76</td>
+      <td>Course à pied</td>
+      <td>Rouen</td>
+      <td>Septembre</td>
+      <td>Courses pour tous (5Kms, 10kms, semi-marathon et marathon)</td>
+      
+      
+    </tr>
+  </tbody>
+</table>
 
 
 {% endblock %}

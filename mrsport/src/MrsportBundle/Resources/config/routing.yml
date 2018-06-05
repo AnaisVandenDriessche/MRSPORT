@@ -1,3 +1,7 @@
+mrsport_user:
+    resource: "@MrsportBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
 mrsport_homepage:
     path:     /
     defaults: { _controller: MrsportBundle:Default:index }
