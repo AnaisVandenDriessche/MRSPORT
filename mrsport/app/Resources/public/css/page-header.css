@@ -1,9 +1,9 @@
-.page-header
+img
 {
     background-image: url('img/Kindarena-Basket.jpg');
     background-size: cover;
 
 }
-.h2{
+h1{
     color: red;
 }

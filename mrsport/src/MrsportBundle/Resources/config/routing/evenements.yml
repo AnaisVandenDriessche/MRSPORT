@@ -1,0 +1,24 @@
+evenements_index:
+    path:     /
+    defaults: { _controller: "MrsportBundle:Evenements:index" }
+    methods:  GET
+
+evenements_show:
+    path:     /{id}/show
+    defaults: { _controller: "MrsportBundle:Evenements:show" }
+    methods:  GET
+
+evenements_new:
+    path:     /new
+    defaults: { _controller: "MrsportBundle:Evenements:new" }
+    methods:  [GET, POST]
+
+evenements_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MrsportBundle:Evenements:edit" }
+    methods:  [GET, POST]
+
+evenements_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MrsportBundle:Evenements:delete" }
+    methods:  DELETE
