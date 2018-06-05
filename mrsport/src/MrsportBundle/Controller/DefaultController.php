@@ -100,9 +100,23 @@ class DefaultController extends Controller
         return $this->render('@Mrsport/admin/dashboard.html.twig');
     }
 
-    public function tablesAction()
+    public function listing_usersAction($id)
     {
-        return $this->render('@Mrsport/admin/tables.html.twig');
+        $product = $this->getDoctrine()
+        ->getRepository(Product::class)
+        ->find($id);
+
+        return $this->render('@Mrsport/admin/listing_users.html.twig');
+    }
+
+    public function validation_clubAction()
+    {
+        return $this->render('@Mrsport/admin/validation_club.html.twig');
+    }
+
+    public function validation_evenementAction()
+    {
+        return $this->render('@Mrsport/admin/validation_evenement.html.twig');
     }
 
 
