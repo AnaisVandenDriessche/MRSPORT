@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="club")
  * @ORM\Entity(repositoryClass="MrsportBundle\Repository\clubRepository")
  */
-class club
+class Club
 {
     /**
      * @var int
@@ -21,8 +21,6 @@ class club
      */
     private $id;
 
-
-    
 
     /**
      * @var string

@@ -1,3 +1,7 @@
+mrsport_club:
+    resource: "@MrsportBundle/Resources/config/routing/club.yml"
+    prefix:   /club
+
 mrsport_homepage:
     path:     /
     defaults: { _controller: MrsportBundle:Default:index }
@@ -91,5 +95,5 @@ mrsport_listing_users:
     path:     /admin/listing_users
     defaults: { _controller: MrsportBundle:Default:listing_users }
 
-    
+
 
