@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
 
 {% block body %}
+<div class="container">
+
     <h1>Club edit</h1>
 
     {{ form_start(edit_form) }}
@@ -14,8 +18,9 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input class="btn btn-primary" type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+</div>
 {% endblock %}
