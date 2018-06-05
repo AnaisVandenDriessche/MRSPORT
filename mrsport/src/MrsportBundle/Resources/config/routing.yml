@@ -71,13 +71,8 @@ mrsport_evenement:
     defaults: { _controller: MrsportBundle:Default:evenement }
 
 mrsport_dashboard:
-    path:     /admin
+    path:     /admin/dashboard
     defaults: { _controller: MrsportBundle:Default:dashboard }
-
-
-mrsport_tables:
-    path:     /admin/tables
-    defaults: { _controller: MrsportBundle:Default:tables }
 
 mrsport_validation_club:
     path:     /admin/validation_club
