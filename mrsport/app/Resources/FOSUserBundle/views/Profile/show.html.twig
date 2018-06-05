@@ -9,16 +9,18 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top rounded-circle" src="{{ asset('img/3.png') }}"  height="200px" alt="Card image cap">
             <div class="card-body">
-                <p class="card-title text-center text-uppercase text-muted text-danger">{{ user.username }}</p>
+                <p class="card-title text-center text-muted text-danger">{{ user.username }}</p>
                 <p class="card-title text-center text-muted">{{ user.email }}</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="{{ path('fos_user_profile_edit') }}" class="card-link">Modifier mon profil</a></li>
-                <li class="list-group-item"><a href="#" class="card-link">Proposer un équipe</a></li>
-                <li class="list-group-item"><a href="#" class="card-link">Mes équipes</li>
+                <li class="list-group-item"><a href="{{ path('fos_user_change_password') }}" class="card-link">Changer mon mot de passe</a></li>  
+                <li class="list-group-item"><a href="#" class="card-link">Proposer une Equipe</a></li>
+                <li class="list-group-item"><a href="#" class="card-link">Proposer un Evénement</a></li>
+                <li class="list-group-item"><a href="#" class="card-link">Mes Equipes</li>
                 
-            </ul>
+            </ul> 
             {# <div class="card-body">
                 <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a>

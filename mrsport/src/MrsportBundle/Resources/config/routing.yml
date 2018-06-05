@@ -79,5 +79,17 @@ mrsport_tables:
     path:     /admin/tables
     defaults: { _controller: MrsportBundle:Default:tables }
 
+mrsport_validation_club:
+    path:     /admin/validation_club
+    defaults: { _controller: MrsportBundle:Default:validation_club }
+
+mrsport_validation_evenement:
+    path:     /admin/validation_evenement
+    defaults: { _controller: MrsportBundle:Default:validation_evenement }
+
+mrsport_listing_users:
+    path:     /admin/listing_users
+    defaults: { _controller: MrsportBundle:Default:listing_users }
+
     
 
