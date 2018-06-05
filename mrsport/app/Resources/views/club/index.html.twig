@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Clubs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>President</th>
+                <th>Entraineur</th>
+                <th>Fondation</th>
+                <th>Couleur</th>
+                <th>Stade</th>
+                <th>Siteweb</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for club in clubs %}
+            <tr>
+                <td><a href="{{ path('club_show', { 'id': club.id }) }}">{{ club.id }}</a></td>
+                <td>{{ club.name }}</td>
+                <td>{{ club.president }}</td>
+                <td>{{ club.entraineur }}</td>
+                <td>{% if club.fondation %}{{ club.fondation|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ club.couleur }}</td>
+                <td>{{ club.stade }}</td>
+                <td>{{ club.siteweb }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('club_show', { 'id': club.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('club_edit', { 'id': club.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('club_new') }}">Create a new club</a>
+        </li>
+    </ul>
+{% endblock %}
