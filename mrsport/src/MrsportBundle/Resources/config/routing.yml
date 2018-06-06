@@ -4,6 +4,9 @@ mrsport_user:
 mrsport_club:
     resource: "@MrsportBundle/Resources/config/routing/club.yml"
     prefix:   /club
+mrsport_evenements:
+    resource: "@MrsportBundle/Resources/config/routing/evenements.yml"
+    prefix:   /evenements
 
 mrsport_homepage:
     path:     /
