@@ -19,6 +19,7 @@ class EvenementsType extends AbstractType
             ->add('date')
             ->add('time')
             ->add('adresse')
+            ->add('ville')
             ->add('description')
             ->add('sports',EntityType::class, array(
                 'class' => Sports::class,

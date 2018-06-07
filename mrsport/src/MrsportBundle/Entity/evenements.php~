@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="evenements")
  * @ORM\Entity(repositoryClass="MrsportBundle\Repository\evenementsRepository")
  */
-class evenements
+class Evenements
 {
     /**
      * @var int
@@ -46,6 +46,14 @@ class evenements
     private $adresse;
 
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville", type="string")
+     */
+    private $ville;
+
+
 
     /**
      * @var description
@@ -60,7 +68,7 @@ class evenements
 
     /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $sports;
 

@@ -68,6 +68,7 @@ class AppFixtures extends Fixture
         $club->setCouleur('Blue');
         $club->setStade('Velodrome');
         $club->setSiteweb('rouen.fr');
+        $club->setSports($sport4);
         $manager->persist($club);
 
         $date2 = new \DateTime('2017-06-12');
@@ -79,16 +80,49 @@ class AppFixtures extends Fixture
         $club2->setCouleur('Yellow');
         $club2->setStade('Stade Vert');
         $club2->setSiteweb('barentin.fr');
+        $club2->setSports($sport2);
         $manager->persist($club2);
 
-        // // Evenement
-        // $date3 = new \DateTime('2018-06-12');
-        // $evenement = new Evenements();
-        // $evenement->setDate($date3);
-        // $evenement->setTime($date3);
-        // $evenement->setAdresse('23 rue Victor Hugo');
-        // $evenement->setDescription('Rencotre à sportif à Soteville-Lès-Rouen');
-        // $manager->persist($evenement);
+        // Evenement
+        $date3 = '2018-06-12';
+        $time = '15:30';
+        $evenement = new Evenements();
+        $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
+        $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
+        $evenement->setAdresse('23 rue Victor Hugo');
+        $evenement->setDescription('Rencontre sportives');
+        $evenement->setVille('Soteville-Lès-Rouen');
+        $manager->persist($evenement);
+
+        $date3 = '2018-09-18';
+        $time = '09:30';
+        $evenement = new Evenements();
+        $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
+        $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
+        $evenement->setAdresse('hôtel de ville');
+        $evenement->setDescription('Marathon');
+        $evenement->setVille('Rouen');
+        $manager->persist($evenement);
+
+        $date3 = '2018-05-01';
+        $time = '09:30';
+        $evenement = new Evenements();
+        $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
+        $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
+        $evenement->setAdresse('quai du Havre');
+        $evenement->setDescription('24h motonautiques');
+        $evenement->setVille('Rouen');
+        $manager->persist($evenement);
+
+        $date3 = '2018-06-01';
+        $time = '08:30';
+        $evenement = new Evenements();
+        $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
+        $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
+        $evenement->setAdresse('quai du Havre');
+        $evenement->setDescription('triahlon');
+        $evenement->setVille('Rouen');
+        $manager->persist($evenement);
 
         $manager->flush();
         

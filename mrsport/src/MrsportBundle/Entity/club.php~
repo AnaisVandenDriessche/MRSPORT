@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="club")
  * @ORM\Entity(repositoryClass="MrsportBundle\Repository\clubRepository")
  */
-class club
+class Club
 {
     /**
      * @var int
@@ -21,8 +21,6 @@ class club
      */
     private $id;
 
-
-    
 
     /**
      * @var string
@@ -88,12 +86,17 @@ class club
 
     /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $sports;
 
     
-    
+    public function __construct()
+    {
+
+        //$this->sports = new ArrayCollection();
+    }
+
     /**
      * Get id.
      *
@@ -184,7 +187,7 @@ class club
      *
      * @return club
      */
-    public function setFondation(\year $fondation)
+    public function setFondation($fondation)
     {
         $this->fondation = $fondation;
 
@@ -272,4 +275,30 @@ class club
     {
         return $this->siteweb;
     }
+
+    /**
+     * Set sports.
+     *
+     * @param \MrsportBundle\Entity\Sports $sports
+     *
+     * @return club
+     */
+    public function setSports(\MrsportBundle\Entity\Sports $sports)
+    {
+        $this->sports = $sports;
+
+        return $this;
+    }
+
+    /**
+     * Get sports.
+     *
+     * @return \MrsportBundle\Entity\Sports
+     */
+    public function getSports()
+    {
+        return $this->sports;
+    }
+
+    
 }

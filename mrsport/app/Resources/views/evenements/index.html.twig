@@ -11,6 +11,7 @@
                     <th>Date</th>
                     <th>Time</th>
                     <th>Adresse</th>
+                    <th>Ville</th>
                     <th>Description</th>
                     <th>Actions</th>
                 </tr>
@@ -22,6 +23,7 @@
                     <td>{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
                     <td>{% if evenement.time %}{{ evenement.time|date('H:i:s') }}{% endif %}</td>
                     <td>{{ evenement.adresse }}</td>
+                    <td>{{ evenement.ville }}</td>
                     <td>{{ evenement.description }}</td>
                     <td>
                         <ul>
