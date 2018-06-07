@@ -33,6 +33,14 @@ class AppFixtures extends Fixture
         $user->setEnabled(true);
         $manager->persist($user);
 
+        $user = new User();
+        $user->setUsername('anais');
+        $user->setEmail('anaisvdd@gmail.com');
+        $user->setPassword('$2y$13$mciblxB6J0Vz7moaJtdc0eGTkhCJp/t3sAU/HpB9XWL9KzBpxmcBG');
+        $user->setRoles(['ROLE_SUPER_ADMIN']);
+        $user->setEnabled(true);
+        $manager->persist($user);
+
         // Sport
         $sport = new Sports();
         $sport->setName('Football');
