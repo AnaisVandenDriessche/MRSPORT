@@ -11,7 +11,6 @@ mrsport_sports:
     resource: "@MrsportBundle/Resources/config/routing/sports.yml"
     prefix:   /sports
 
-
 mrsport_homepage:
     path:     /
     defaults: { _controller: MrsportBundle:Default:index }
