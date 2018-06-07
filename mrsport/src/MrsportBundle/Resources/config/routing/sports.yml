@@ -1,0 +1,24 @@
+sports_index:
+    path:     /
+    defaults: { _controller: "MrsportBundle:Sports:index" }
+    methods:  GET
+
+sports_show:
+    path:     /{id}/show
+    defaults: { _controller: "MrsportBundle:Sports:show" }
+    methods:  GET
+
+sports_new:
+    path:     /new
+    defaults: { _controller: "MrsportBundle:Sports:new" }
+    methods:  [GET, POST]
+
+sports_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MrsportBundle:Sports:edit" }
+    methods:  [GET, POST]
+
+sports_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MrsportBundle:Sports:delete" }
+    methods:  DELETE
