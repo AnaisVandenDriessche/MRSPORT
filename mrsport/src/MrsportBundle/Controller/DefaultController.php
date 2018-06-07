@@ -3,6 +3,7 @@
 namespace MrsportBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use MrsportBundle\Entity\User;
 
 class DefaultController extends Controller
 {
@@ -97,7 +98,15 @@ class DefaultController extends Controller
 
     public function dashboardAction()
     {
-        return $this->render('@Mrsport/admin/dashboard.html.twig');
+        // doctrine
+        $em = $this->getDoctrine()->getManager();
+
+        $users = $em->getRepository('MrsportBundle:User')->findAll();
+
+        
+        return $this->render('@Mrsport/admin/dashboard.html.twig',array(
+            'users'  => $users,
+        ));
     }
 
     public function listing_usersAction()
