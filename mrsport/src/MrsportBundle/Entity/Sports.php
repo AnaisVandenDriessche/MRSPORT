@@ -30,7 +30,7 @@ class Sports
     private $name;
 
 
- 
+
 
     /**
      * Get id.
@@ -65,6 +65,10 @@ class Sports
      */
     public function getName()
     {
+        return $this->name;
+    }
+
+    public function __toString() {
         return $this->name;
     }
 }

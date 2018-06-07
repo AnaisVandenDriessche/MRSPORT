@@ -36,9 +36,14 @@ class ClubController extends Controller
         $club = new Club();
         $form = $this->createForm('MrsportBundle\Form\ClubType', $club);
         $form->handleRequest($request);
+        
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // dump($form);
+            // die();
             $em = $this->getDoctrine()->getManager();
+            // $club->setSports();
+            // 
             $em->persist($club);
             $em->flush();
 

@@ -33,7 +33,7 @@ class SportsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $sport = new Sport();
+        $sport = new Sports();
         $form = $this->createForm('MrsportBundle\Form\SportsType', $sport);
         $form->handleRequest($request);
 
