@@ -33,7 +33,7 @@ class EvenementsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $evenement = new Evenement();
+        $evenement = new Evenements();
         $form = $this->createForm('MrsportBundle\Form\EvenementsType', $evenement);
         $form->handleRequest($request);
 
