@@ -7,6 +7,10 @@ mrsport_club:
 mrsport_evenements:
     resource: "@MrsportBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
+ mrsport_sports:
+        resource: "@MrsportBundle/Resources/config/routing/sports.yml"
+        prefix:   /sports
+
 
 mrsport_homepage:
     path:     /
