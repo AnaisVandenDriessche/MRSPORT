@@ -1,0 +1,10 @@
+.football
+{
+    background-image: url('img/joueurcontrole.jpeg');
+    background-size: cover;
+
+    color: rgb(255, 251, 7);
+    height: 450px;
+    border-radius: 0;
+}
+

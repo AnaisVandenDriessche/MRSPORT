@@ -6,4 +6,16 @@
     color: rgb(255, 251, 7);
     height: 450px;
     border-radius: 0;
+}   
+.jumbotron_football
+{
+        background-image: url('img/joueurcontrole.jpg');
+        background-size: cover;
+    
+        color: rgb(255, 251, 7);
+        height: 450px;
+        border-radius: 0;
 }
+
+
+

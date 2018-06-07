@@ -1,8 +1,10 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
 <!-- Navbar -->
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark ">
     <div class="container">
-        <h1 > BACK OFFICE MRSPORT </h1>
+        <h1 style="text-align: center;" > BACK OFFICE MRSPORT </h1>
         <a class="navbar-brand" href="{{ path('mrsport_homepage') }}"><img src="{{ asset('img/logo_rms.png') }}" alt="logo rms" width="70" height="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -12,8 +14,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ path('mrsport_homepage') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
-               
-               
                 {% if is_granted("IS_AUTHENTICATED_FULLY") %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
@@ -28,22 +28,112 @@
 </nav>
 <!-- End Navbar -->
 
-{# Slidebar #}
 
-<div class="sidebar-nav">
-    <div class="well" style="width:300px; padding: 8px 0;">
-		<ul class="nav nav-list"> 
-		  <li class="nav-header">Admin Menu</li>        
-		  <li><a href="{{ path('mrsport_dashboard') }}" ><i class="icon-home"></i> Dashboard</a></li>
-          <li><a href="{{ path('mrsport_listing_users') }}"><i class="icon-envelope"></i> Utilisateurs <span class="badge badge-info">4</span></a></li>
-          <li><a href="{{ path('mrsport_validation_club') }}"><i class="icon-comment"></i> Clubs <span class="badge badge-info">10</span></a></li>
-		  <li class="active"><a href="{{ path('mrsport_validation_evenement') }}"><i class="icon-user"></i> Evenements</a></li>
-          <li class="divider"></li>
-		</ul>
-	</div>
+
+<div class="container">
+{# Slidebar #}
+    <div class="row">
+        <div class="col-4">
+            <div class="float-left">
+                <div class="sidebar-nav">
+                    <div class="well" style="width:300px; padding: 8px 0;">
+                        <ul class="nav nav-list"> 
+                        <li class="nav-header">Admin Menu</li>        
+                        <li><a href="{{ path('mrsport_dashboard') }}" ><i class="icon-home"></i> Dashboard</a></li><br>
+                        <li><a href="{{ path('mrsport_listing_users') }}"><i class="icon-envelope"></i> Utilisateurs <span class="badge badge-info">4</span></a></li><br>
+                        <li><a href="{{ path('mrsport_validation_club') }}"><i class="icon-comment"></i> Clubs <span class="badge badge-info">10</span></a></li>
+                        <li class="active"><a href="{{ path('mrsport_validation_evenement') }}"><i class="icon-user"></i> Evenements</a></li>
+                        <li class="divider"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+{# End Slidbar #}
+
+{# Nb user #}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;"> 
+                <div class="card-body">
+                    <h5 class="card-title">Nombre de Users</h5>
+                    <p class="card-text">Affiche le nombre d'utilisateurs</p>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+{# End Nb User #}
+            <br>
+{# Nb Evenement #}
+             <div class="card" style="width: 18rem;"> 
+                <div class="card-body">
+                    <h5 class="card-title">Nombre d'évènement</h5>
+                    <p class="card-text">Affiche le nombre d'evenement</p>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+{# ------ End Nb evenement ----  #}
+
+{# ----- Club ------ #}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;"> 
+                <div class="card-body">
+                    <h5 class="card-title">Nombre de Club</h5>
+                    <p class="card-text">Affiche le nombre d'utilisateurs</p>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+{# ------  End Club ------ #}
+            <br>
+
+{# ----- Visiteur ------- #}
+             <div class="card" style="width: 18rem;"> 
+                <div class="card-body">
+                    <h5 class="card-title">Nombre de Visiteur</h5>
+                    <p class="card-text">Affiche le nombre de visiteur</p>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+{# ------ End Visiteur ------ #}
+        </div>
+    </div>
 </div>
 
+{# Footer #}
+    {# <div class="container"> 
+        <div class="">
 
-
-
+<div <img src="" alt=""> #}
 
