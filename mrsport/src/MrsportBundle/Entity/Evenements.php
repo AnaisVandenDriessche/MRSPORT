@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * evenements
  *
- * @ORM\Table(name="evenements")
+ * @ORM\Table(name="mrs_evenements")
  * @ORM\Entity(repositoryClass="MrsportBundle\Repository\evenementsRepository")
  */
 class Evenements
@@ -46,6 +46,14 @@ class Evenements
     private $adresse;
 
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville", type="string")
+     */
+    private $ville;
+
+
 
     /**
      * @var description
@@ -60,7 +68,7 @@ class Evenements
 
     /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $sports;
 
@@ -194,5 +202,29 @@ class Evenements
     public function getSports()
     {
         return $this->sports;
+    }
+
+    /**
+     * Set ville.
+     *
+     * @param string $ville
+     *
+     * @return Evenements
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville.
+     *
+     * @return string
+     */
+    public function getVille()
+    {
+        return $this->ville;
     }
 }

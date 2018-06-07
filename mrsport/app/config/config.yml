@@ -104,6 +104,8 @@ assetic:
                 - '%kernel.root_dir%/Resources/public/css/jumbotron.css'
                 - '%kernel.root_dir%/Resources/public/css/footer.css'
                 - '%kernel.root_dir%/Resources/public/css/navbar.css'
+                - '%kernel.root_dir%/Resources/public/css/page-header.css'
+                
 
         
         Img_1:
@@ -120,6 +122,13 @@ assetic:
             inputs:
                 - '%kernel.root_dir%/Resources/public/img/2.jpg'        
             output: img/2.jpg
+
+        Img_4:
+            inputs:
+                - '%kernel.root_dir%/Resources/public/img/familletv.jpg'        
+            output: img/familletv.jpg
+
+
             
 
 
