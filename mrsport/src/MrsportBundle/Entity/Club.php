@@ -86,12 +86,17 @@ class Club
 
     /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $sports;
 
     
-    
+    public function __construct()
+    {
+
+        //$this->sports = new ArrayCollection();
+    }
+
     /**
      * Get id.
      *
@@ -182,7 +187,7 @@ class Club
      *
      * @return club
      */
-    public function setFondation(\year $fondation)
+    public function setFondation($fondation)
     {
         $this->fondation = $fondation;
 
@@ -294,4 +299,6 @@ class Club
     {
         return $this->sports;
     }
+
+    
 }
