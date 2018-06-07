@@ -81,9 +81,6 @@ class Club
     private $siteweb;
 
 
-    //relation entre les tables club et sports (many to one) (anais)
-        // ---------------------------------//  
-
     /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
      * @ORM\JoinColumn(nullable=true)
