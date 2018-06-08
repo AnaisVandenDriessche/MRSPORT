@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
 
 {% block body %}
+<div class="container">
+
     {% block evenement %}
         <h1>Evenements list</h1>
 
@@ -46,5 +50,5 @@
             </li>
         </ul>
     {% endblock %}
-    
+</div> 
 {% endblock %}

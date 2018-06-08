@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
 
 {% block body %}
+<div class="container">
     <h1>Evenement</h1>
 
     <table>
@@ -41,4 +44,5 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+</div>
 {% endblock %}
