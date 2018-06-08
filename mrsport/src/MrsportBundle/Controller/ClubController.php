@@ -38,6 +38,8 @@ class ClubController extends Controller
         ));
     }
 
+    
+
     /**
      * Creates a new club entity.
      *
