@@ -1,21 +1,66 @@
 {% extends 'base.html.twig' %}
-{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{# {% form_theme form 'bootstrap_4_layout.html.twig' %} #}
 
 
 {% block body %}
 <div class="container">
 
-    <h1>Evenement creation</h1>
+    <h1 class="text-center" >Création d'un évenement</h1>
+    {# {{ dump(form.adresse.vars)}} #}
+
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{ form_label(form.date, "Date de l'évenement")}}
+                {{ form_widget(form.date,{'attr':{'class':'form-control'}})}}
+                {{ form_errors(form.date)}}
+            </div>
+            <div class="form-group col-md-6">
+                {{ form_label(form.time, "Heure de l'évenement")}}
+                {{ form_widget(form.time,{'attr':{'class':'form-control'}})}}
+                {{ form_errors(form.time)}}
+            </div>
+        </div>
+        <!--Adresse -->
+        
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{ form_label(form.adresse, "Adresse de l'évenement") }}
+                {{ form_widget(form.adresse,{'attr':{'class':'form-control'}})}}
+                {{ form_errors(form.adresse)}}
+            </div>
+            <div class="form-group col-md-6">
+                {{ form_label(form.ville)}}
+                {{ form_widget(form.ville,{'attr':{'class':'form-control'}})}}
+                {{ form_errors(form.ville)}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.description)}}
+            {{ form_widget(form.description,{'attr':{'class':'form-control'}})}}
+            {{ form_errors(form.description)}}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.sports, 'Choisir un sport')}}
+            {{ form_widget(form.sports,{'attr':{'class':'form-control'}})}}
+            {{ form_errors(form.sports)}}
+        </div>
+            <input class="btn-block btn-primary" type="submit" value="Envoyer" />
+    
     {{ form_end(form) }}
 
-    {# <ul>
+    <ul>
+    
         <li>
-            <a href="{{ path('evenements_index') }}">Back to the list</a>
+            <a href="{{ path('evenements_index') }}">Retour à la liste</a>
         </li>
-    </ul> #}
+    </ul>
+     {# {{ form_start(form) }}
+       {{ form_widget(form)}}
+        <input class="btn-block btn-primary" type="submit" value="Valider" />
+    {{ form_end(form) }} #}
 </div>
 {% endblock %}
