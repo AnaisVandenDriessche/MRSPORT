@@ -1,3 +1,4 @@
+/* Login-in login-out */
 .login-or {
     position: relative;
     color: #aaa;
@@ -21,3 +22,39 @@
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
+
+/* Sport
+============== */
+
+.backgd {
+    background-color:#00BB69;
+}
+
+a {
+    color: #fff;
+    
+}
+
+a:hover {
+    color: gold;
+}
+
+.card {
+    border-radius: 0px;
+}
+
+.yellow{
+    color: gold;
+    
+}
+
+.backgd_newsletter{
+    background-color:rgb(119, 119, 119);
+
+}
+
+.backgd_news{
+    background-color:rgb(248, 242, 242);
+
+}
+
