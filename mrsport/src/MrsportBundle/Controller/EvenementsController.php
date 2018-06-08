@@ -27,6 +27,17 @@ class EvenementsController extends Controller
         ));
     }
 
+    public function adminEvenementsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $evenements = $em->getRepository('MrsportBundle:Evenements')->findAll();
+
+        return $this->render('@Mrsport/admin/validation_evenement.html.twig', array(
+            'evenements' => $evenements,
+        ));
+    }
+
     /**
      * Creates a new evenement entity.
      *

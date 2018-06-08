@@ -1,2 +1,64 @@
 {% extends 'layout.html.twig' %}
-{% block title %}Page pour valider les évènements ajoutés par les utilisateurs{% endblock %}
+
+
+
+       
+{% block body %}
+    
+    <div class="container container2">
+        <h2 class="text-center"> Liste des Evenements Sportifs ajoutés par les utilisateurs</h2>
+    <br>  
+
+
+{% block evenement %}
+ <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Ville</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for evenement in evenements %}
+        <tr>
+            <td scope="row"><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td>
+            <td scope="row">{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
+            <td scope="row">{% if evenement.time %}{{ evenement.time|date('H:i:s') }}{% endif %}</td>
+            <td scope="row">{{ evenement.adresse }}</td>
+            <td scope="row">{{ evenement.ville }}</td>
+            <td scope="row">{{ evenement.description }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('evenements_show', { 'id': evenement.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('evenements_new') }}">Create a new evenement</a>
+    </li>
+</ul>
+  
+    
+{% endblock %}
+
+
+
+{% endblock body %}
+
+
+
