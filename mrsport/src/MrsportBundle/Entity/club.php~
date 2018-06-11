@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * club
  *
- * @ORM\Table(name="club")
+ * @ORM\Table(name="mrs_club")
  * @ORM\Entity(repositoryClass="MrsportBundle\Repository\clubRepository")
  */
 class Club
@@ -80,9 +80,6 @@ class Club
      */
     private $siteweb;
 
-
-    //relation entre les tables club et sports (many to one) (anais)
-        // ---------------------------------//  
 
     /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")

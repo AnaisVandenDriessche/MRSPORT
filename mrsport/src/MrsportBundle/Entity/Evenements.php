@@ -21,6 +21,13 @@ class Evenements
      */
     private $id;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string")
+     */
+    private $name;
+
 
     /**
      * @var date
@@ -226,5 +233,29 @@ class Evenements
     public function getVille()
     {
         return $this->ville;
+    }
+
+    /**
+     * Set name.
+     *
+     * @param string $name
+     *
+     * @return Evenements
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name.
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 }

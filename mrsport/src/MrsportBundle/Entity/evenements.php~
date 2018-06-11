@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * evenements
  *
- * @ORM\Table(name="evenements")
+ * @ORM\Table(name="mrs_evenements")
  * @ORM\Entity(repositoryClass="MrsportBundle\Repository\evenementsRepository")
  */
 class Evenements
@@ -20,6 +20,13 @@ class Evenements
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string")
+     */
+    private $name;
 
 
     /**
@@ -202,5 +209,29 @@ class Evenements
     public function getSports()
     {
         return $this->sports;
+    }
+
+    /**
+     * Set ville.
+     *
+     * @param string $ville
+     *
+     * @return Evenements
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville.
+     *
+     * @return string
+     */
+    public function getVille()
+    {
+        return $this->ville;
     }
 }

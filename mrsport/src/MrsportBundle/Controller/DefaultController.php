@@ -101,11 +101,17 @@ class DefaultController extends Controller
         // doctrine
         $em = $this->getDoctrine()->getManager();
 
-        $users = $em->getRepository('MrsportBundle:User')->findAll();
+        $users = $em->getRepository('MrsportBundle:User')->findlastfive();
+        $evenements = $em->getRepository('MrsportBundle:Evenements')->findlastfive();
+        $clubs = $em->getRepository('MrsportBundle:Club')->findlastfive();
+        
 
         
         return $this->render('@Mrsport/admin/dashboard.html.twig',array(
             'users'  => $users,
+            'evenements' => $evenements,
+            'clubs' => $clubs,
+            
            
         ));
     }

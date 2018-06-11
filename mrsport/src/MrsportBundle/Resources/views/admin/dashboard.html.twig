@@ -1,6 +1,8 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
+
+
  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
@@ -16,20 +18,54 @@
             </div>
           </div>
 
-          <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-          <h2>Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped table-sm">
-              <thead>
-       
-               
-
-              
-            </table>
+{# stats #}
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top mx-auto" src="{{ asset('public/img/icon_user.svg') }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Les 5 derniers utilisateurs connectés</h5>
+                <p class="card-text">
+                  {% for user in users %}
+                    <ul><li>
+                        {{ user.username }}
+                    </li></ul>
+                  {% endfor %}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top mx-auto" src="{{ asset('public/img/icon_club.svg') }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Les 5 derniers clubs ajoutés</h5>
+                <p class="card-text">
+                  {% for club in clubs %}
+                    <ul><li>
+                      {{ club.name }}
+                    </li></ul>
+                  {% endfor %}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top mx-auto" src="{{ asset('public/img/icon_event.svg') }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Les 5 derniers événements ajoutés</h5>
+                <p class="card-text"> 
+                  {% for evenement in evenements %}
+                    <ul><li>
+                      {{ evenement.name }}
+                    </li></ul>
+                    {% endfor %}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
           </div>
-        </main>
-      </div>
-    </div>
+{# endstats #}
+</div>
+</div>
+</main>
+</div>
+</div> 
 
     {% endblock body %}

@@ -6,6 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
+    {# Font Awesome #}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+   
 
     <title>Dashboard Template for Bootstrap</title>
 <!-- Custom CSS 
@@ -33,21 +36,16 @@
   </head>
 
   <body>
+  {# debut navbar #}
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <img src="img\logo_rms.png" width="30" height="30" class="d-inline-block align-top" alt="logo MRSPORT">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{ path('mrsport_homepage') }}">METROPOLE ROUEN SPORT</a>
-      <input class="form-control form-control-dark w-70" type="text" placeholder="Search" aria-label="Search">
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Welcome {{ app.user.username }}</a>
-        </li>      
-        <li class="nav-item text-nowrap">  
-          <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
-        </li>
-      </ul>
+    <img src="{{ asset('img/logo_rms.png') }}" width="70" height="70" class="navbar-brand" alt="logo MRSPORT">
+      <a class="navbar-text" href="{{ path('mrsport_homepage') }}">METROPOLE ROUEN SPORT</a>
+      <a class="navbar-text ml-auto" href="{{ path('fos_user_profile_show') }}">Welcome {{ app.user.username }}</a>
+      <a class="navbar-text ml-auto" href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
+  {# fin navbar #}
     </nav>
 
-
+{# side bar #}
 
     <div class="container-fluid">
       <div class="row">
@@ -80,10 +78,11 @@
                 </li>
                 </ul>
 
-            </div>
+          </div>
         </nav>
-        </div>
+      </div>
     </div>
+{# fin side bar #}
 
     {% block body %}
 

@@ -41,6 +41,38 @@ class AppFixtures extends Fixture
         $user->setEnabled(true);
         $manager->persist($user);
 
+        $user = new User();
+        $user->setUsername('zizou');
+        $user->setEmail('zidane@fff.com');
+        $user->setPassword('$2y$13$mciblxB6J0Vz7moaJtdc0eGTkhCJp/t3sAU/HpB9XWL9KzBpxmcBG');
+        $user->setRoles(['']);
+        $user->setEnabled(true);
+        $manager->persist($user);
+
+        $user = new User();
+        $user->setUsername('serena');
+        $user->setEmail('williams@usa.com');
+        $user->setPassword('$2y$13$mciblxB6J0Vz7moaJtdc0eGTkhCJp/t3sAU/HpB9XWL9KzBpxmcBG');
+        $user->setRoles(['']);
+        $user->setEnabled(true);
+        $manager->persist($user);
+
+        $user = new User();
+        $user->setUsername('stephen');
+        $user->setEmail('curry@nba.com');
+        $user->setPassword('$2y$13$mciblxB6J0Vz7moaJtdc0eGTkhCJp/t3sAU/HpB9XWL9KzBpxmcBG');
+        $user->setRoles(['']);
+        $user->setEnabled(true);
+        $manager->persist($user);
+
+        $user = new User();
+        $user->setUsername('lebron');
+        $user->setEmail('james@nba.com');
+        $user->setPassword('$2y$13$mciblxB6J0Vz7moaJtdc0eGTkhCJp/t3sAU/HpB9XWL9KzBpxmcBG');
+        $user->setRoles(['']);
+        $user->setEnabled(true);
+        $manager->persist($user);
+
         // Sport
         $sport = new Sports();
         $sport->setName('Football');
@@ -87,6 +119,7 @@ class AppFixtures extends Fixture
         $date3 = '2018-06-12';
         $time = '15:30';
         $evenement = new Evenements();
+        $evenement->setName('Rencontre sportives'); 
         $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
         $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
         $evenement->setAdresse('23 rue Victor Hugo');
@@ -94,9 +127,11 @@ class AppFixtures extends Fixture
         $evenement->setVille('Soteville-Lès-Rouen');
         $manager->persist($evenement);
 
+        
         $date3 = '2018-09-18';
         $time = '09:30';
         $evenement = new Evenements();
+        $evenement->setName('Seine Marathon 76'); 
         $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
         $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
         $evenement->setAdresse('hôtel de ville');
@@ -104,24 +139,60 @@ class AppFixtures extends Fixture
         $evenement->setVille('Rouen');
         $manager->persist($evenement);
 
+       
         $date3 = '2018-05-01';
         $time = '09:30';
         $evenement = new Evenements();
+        $evenement->setName('24h motonautiques');      
         $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
         $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
         $evenement->setAdresse('quai du Havre');
         $evenement->setDescription('24h motonautiques');
         $evenement->setVille('Rouen');
         $manager->persist($evenement);
-
+        
         $date3 = '2018-06-01';
         $time = '08:30';
         $evenement = new Evenements();
+        $evenement->setName('Rouen Triathlon');      
         $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
         $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
         $evenement->setAdresse('quai du Havre');
         $evenement->setDescription('triahlon');
         $evenement->setVille('Rouen');
+        $manager->persist($evenement);
+
+        $date3 = '2018-01-01';
+        $time = '19:00';
+        $evenement = new Evenements();
+        $evenement->setName('Zumba');      
+        $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
+        $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
+        $evenement->setAdresse('Kindarena');
+        $evenement->setDescription('Zumba');
+        $evenement->setVille('Rouen');
+        $manager->persist($evenement);
+
+        $date3 = '2018-06-01';
+        $time = '13:00';
+        $evenement = new Evenements();
+        $evenement->setName('Baseball - European Champion’s Cup');      
+        $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
+        $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
+        $evenement->setAdresse('Saint Exupéry');
+        $evenement->setDescription('Championnat d\'Europe de BaseBall');
+        $evenement->setVille('Rouen');
+        $manager->persist($evenement);
+
+        $date3 = '2018-06-10';
+        $time = '13:00';
+        $evenement = new Evenements();
+        $evenement->setName('Coupe UEFA des régions');      
+        $evenement->setDate(\DateTime::createFromFormat('Y-m-d', $date3));
+        $evenement->setTime(\DateTime::createFromFormat('H:i', $time));
+        $evenement->setAdresse('Saint-Lô');
+        $evenement->setDescription('Football - Coupe UEFA des régions');
+        $evenement->setVille('Saint-Lô');
         $manager->persist($evenement);
 
         $manager->flush();

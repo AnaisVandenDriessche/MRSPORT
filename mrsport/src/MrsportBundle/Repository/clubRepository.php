@@ -10,4 +10,14 @@ namespace MrsportBundle\Repository;
  */
 class clubRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findlastfive()
+    {
+
+
+        $qb = $this->createQueryBuilder('c')
+                    ->orderBy('c.id', 'DESC')
+                    ->getQuery()->setMaxResults(5);
+
+            return $qb->execute();
+    }
 }
