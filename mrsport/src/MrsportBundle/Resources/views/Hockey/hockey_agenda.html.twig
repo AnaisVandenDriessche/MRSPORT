@@ -1,8 +1,71 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-  <div class="container">
-      <h1>Hockey Agenda </h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus qui dolorem commodi nostrum quas recusandae fugiat dolore quam corrupti iusto non reprehenderit voluptas eos, corporis facilis porro, nihil, praesentium consequuntur.</p>
-  </div> <!-- /container -->
+    <div class="container">
+                <h1 class="text-center ">Hockey</h1>
+        <div class="row" >
+            <div class="col-4" id="sticky-sidebar">
+                <!-- Side Navigation --> 
+                <div class="card backgd">
+                    <div class="card-body">
+                        <h2 class="card-title yellow text-uppercase">Tous les sports</h2>
+                        <ul>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_football') }}">Football</a>
+                            </li>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_basket') }}">Basket</a>
+                            </li>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_rugby') }}">Rugby</a>
+                            </li>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_hockey') }}">Hockey</a>
+                            </li> 
+                        </ul>
+                    </div> 
+                </div>
+                <br>
+                <!-- End Side Navigation --> 
+
+                <!-- NewsLetter --> 
+                <div class="card backgd_newsletter">
+                    <div class="card-body">
+                        <h2 class="card-title yellow text-uppercase">NewsLetters</h2>
+                        <p>Inscrivez-vous pour retrouver les dernières informations de Normandie Sport </p> 
+                       
+                       <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                    </div> 
+                </div>
+                <br>
+                <!-- End Side Navigation --> 
+
+                <!-- News --> 
+               
+                <div class="card backgd_news">
+                    <div class="card-body">
+                        <h2 class="card-title yellow text-uppercase">News</h2>
+                       
+                        <img src="{{ asset('img/news.png') }}" alt="..." class="img-thumbnail">
+                       
+                    </div> 
+                </div>
+                <!-- End News--> 
+
+                
+            </div>
+            <!-- End col-4--> 
+
+            <div class="col-8" id="main">
+                <div class="">
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b1e1c1804938f51d3ba92fe" src="https://scorenco.com/widget/5b1e1c1804938f51d3ba92fe/?auto_height=true" style="display: block; width: 100%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe><a style="font-size:11px" href="https://scorenco.com/hockey-sur-glace/clubs/les-dragons---rouen/">Les Dragons - Rouen sur Score n'co</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

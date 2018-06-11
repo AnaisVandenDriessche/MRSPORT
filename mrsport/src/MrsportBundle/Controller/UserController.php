@@ -27,6 +27,18 @@ class UserController extends Controller
         ));
     }
 
+    public function adminUserAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $users = $em->getRepository('MrsportBundle:User')->findAll();
+
+        return $this->render('@Mrsport/admin/listing_users.html.twig', array(
+            'users' => $users,
+        ));
+    }
+
+
     /**
      * Creates a new user entity.
      *

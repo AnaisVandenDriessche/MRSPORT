@@ -106,6 +106,7 @@ class DefaultController extends Controller
         
         return $this->render('@Mrsport/admin/dashboard.html.twig',array(
             'users'  => $users,
+           
         ));
     }
 

@@ -106,6 +106,8 @@ assetic:
                 - '%kernel.root_dir%/Resources/public/css/footer.css'
                 - '%kernel.root_dir%/Resources/public/css/navbar.css'
                 - '%kernel.root_dir%/Resources/public/css/page-header.css'
+                - '%kernel.root_dir%/Resources/public/css/dashboard.css'
+                
                 
 
         
