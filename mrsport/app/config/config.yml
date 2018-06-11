@@ -147,5 +147,5 @@ assetic:
         # Script perso
         Script_Perso:
             inputs:
-                - '%kernel.root_dir%/Resources/public/js/main.js' 
+                - '%kernel.root_dir%/Resources/public/js/main.js'  
 
