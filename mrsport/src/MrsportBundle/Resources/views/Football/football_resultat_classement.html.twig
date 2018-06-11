@@ -1,24 +1,70 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
     <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <h1>Football résulat</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus qui dolorem commodi nostrum quas recusandae fugiat dolore quam corrupti iusto non reprehenderit voluptas eos, corporis facilis porro, nihil, praesentium consequuntur.</p>
+                <h1 class="text-center ">Football Resultat </h1>
+        <div class="row" >
+            <div class="col-4" id="sticky-sidebar">
+                <!-- Side Navigation --> 
+                <div class="card backgd">
+                    <div class="card-body">
+                        <h2 class="card-title yellow text-uppercase">Tous les sports</h2>
+                        <ul>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_football') }}">Football</a>
+                            </li>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_basket') }}">Basket</a>
+                            </li>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_rugby') }}">Rugby</a>
+                            </li>
+                            <li class="nav">
+                                <a class="nav-link" href="{{ path('mrsport_hockey') }}">Hockey</a>
+                            </li> 
+                        </ul>
+                    </div> 
+                </div>
+                <br>
+                <!-- End Side Navigation --> 
+
+                <!-- NewsLetter --> 
+                <div class="card backgd_newsletter">
+                    <div class="card-body">
+                        <h2 class="card-title yellow text-uppercase">NewsLetter</h2>
+                        <p>Nec minus feminae quoque calamitatum participes fuere similium. </p> 
+                       
+                       <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                    </div> 
+                </div>
+                <br>
+                <!-- End Side Navigation --> 
+
+                <!-- News --> 
+               
+                <div class="card backgd_news">
+                    <div class="card-body">
+                        <h2 class="card-title yellow text-uppercase">News</h2>
+                       
+                        <img src="{{ asset('img/news.png') }}" alt="..." class="img-thumbnail">
+                       
+                    </div> 
+                </div>
+                <!-- End News--> 
+
+                
             </div>
-            
-            <div class="col-6">
-                <div class="resultat">
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5afec762f56cdb6da380026d" src="https://scorenco.com/widget/5afec762f56cdb6da380026d/?auto_height=true" style="display: block; width: 100%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe><a style="font-size:11px" href="https://scorenco.com/football/clubs/quevilly-rouen-metropole/">Quevilly Rouen Métropole sur Score n'co</a>
+            <!-- End col-4--> 
+
+            <div class="col-8" id="main">
+                <div class="">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b1a81fa8b760f13235315dc" src="https://scorenco.com/widget/5b1a81fa8b760f13235315dc/?auto_height=true" style="display: block; width: 100%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe>
                 </div>
             </div>
-        </div>    
-    </div> 
-    
-  
-    <!-- /container -->
-
-
+        </div>
+    </div>
 {% endblock %}
