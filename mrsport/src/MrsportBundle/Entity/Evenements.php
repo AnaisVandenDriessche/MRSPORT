@@ -69,9 +69,13 @@ class Evenements
      */
     private $description;
 
+    /**
+     * @var status
+     *
+     * @ORM\Column(name="status", columnDefinition="ENUM('valide','invalide','new')")
+     */
+    private $status;
 
-    //relation entre les tables evements et sports (many to one) (anais)
-        // ---------------------------------//  
 
     /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
@@ -257,5 +261,29 @@ class Evenements
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set status.
+     *
+     * @param string $status
+     *
+     * @return Evenements
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status.
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }

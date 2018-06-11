@@ -20,6 +20,7 @@
             <th scope="col">Adresse</th>
             <th scope="col">Ville</th>
             <th scope="col">Description</th>
+            <th scope="col">Status</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -32,6 +33,14 @@
             <td scope="row">{{ evenement.adresse }}</td>
             <td scope="row">{{ evenement.ville }}</td>
             <td scope="row">{{ evenement.description }}</td>
+            <td scope="row">{{ evenement.status }}
+            {% if evenement.status == "new" %}
+            <a href="{{ path('evenements_valide', { 'id': evenement.id }) }}" class="btn btn-primary">Valider</a>
+            <a href="{{ path('evenements_invalide', { 'id': evenement.id }) }}" class="btn btn-primary">Invalider</a>
+            
+            {% endif %}
+            </td>
+            
             <td>
                 <ul>
                     <li>

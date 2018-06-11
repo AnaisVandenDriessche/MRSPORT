@@ -101,6 +101,7 @@ class AppFixtures extends Fixture
         $club->setStade('Velodrome');
         $club->setSiteweb('rouen.fr');
         $club->setSports($sport4);
+        $club->setStatus('invalide');
         $manager->persist($club);
 
         $date2 = new \DateTime('2017-06-12');
@@ -113,6 +114,7 @@ class AppFixtures extends Fixture
         $club2->setStade('Stade Vert');
         $club2->setSiteweb('barentin.fr');
         $club2->setSports($sport2);
+        $club2->setStatus('new');
         $manager->persist($club2);
 
         $date2 = new \DateTime('2011-06-12');
@@ -125,6 +127,7 @@ class AppFixtures extends Fixture
         $club2->setStade('stade Jean-Mermoz');
         $club2->setSiteweb('rouen-normandie-rugby.fr');
         $club2->setSports($sport2);
+        $club2->setStatus('new');
         $manager->persist($club2);
 
         $date2 = new \DateTime('2011-07-01');
@@ -137,6 +140,7 @@ class AppFixtures extends Fixture
         $club2->setStade('Kindarena');
         $club2->setSiteweb('rouenmetrobasket.com');
         $club2->setSports($sport2);
+        $club2->setStatus('valide');
         $manager->persist($club2);
 
         $date2 = new \DateTime('2011-07-01');
@@ -149,6 +153,7 @@ class AppFixtures extends Fixture
         $club2->setStade('Stade Stanislas Bilyk');
         $club2->setSiteweb('https://www.fff.fr/la-vie-des-clubs/183800/infos-cles');
         $club2->setSports($sport2);
+        $club2->setStatus('valide');
         $manager->persist($club2);
 
         // Evenement
@@ -161,6 +166,7 @@ class AppFixtures extends Fixture
         $evenement->setAdresse('23 rue Victor Hugo');
         $evenement->setDescription('Rencontre sportives');
         $evenement->setVille('Soteville-Lès-Rouen');
+        $evenement->setStatus('valide');
         $manager->persist($evenement);
 
         
@@ -173,6 +179,7 @@ class AppFixtures extends Fixture
         $evenement->setAdresse('hôtel de ville');
         $evenement->setDescription('Marathon');
         $evenement->setVille('Rouen');
+        $evenement->setStatus('valide');
         $manager->persist($evenement);
 
        
@@ -185,6 +192,7 @@ class AppFixtures extends Fixture
         $evenement->setAdresse('quai du Havre');
         $evenement->setDescription('24h motonautiques');
         $evenement->setVille('Rouen');
+        $evenement->setStatus('invalide');
         $manager->persist($evenement);
         
         $date3 = '2018-06-01';
@@ -196,6 +204,7 @@ class AppFixtures extends Fixture
         $evenement->setAdresse('quai du Havre');
         $evenement->setDescription('triahlon');
         $evenement->setVille('Rouen');
+        $evenement->setStatus('new');
         $manager->persist($evenement);
 
         $date3 = '2018-01-01';
@@ -207,6 +216,7 @@ class AppFixtures extends Fixture
         $evenement->setAdresse('Kindarena');
         $evenement->setDescription('Zumba');
         $evenement->setVille('Rouen');
+        $evenement->setStatus('new');
         $manager->persist($evenement);
 
         $date3 = '2018-06-01';
@@ -218,6 +228,7 @@ class AppFixtures extends Fixture
         $evenement->setAdresse('Saint Exupéry');
         $evenement->setDescription('Championnat d\'Europe de BaseBall');
         $evenement->setVille('Rouen');
+        $evenement->setStatus('valide');
         $manager->persist($evenement);
 
         $date3 = '2018-06-10';
@@ -229,6 +240,7 @@ class AppFixtures extends Fixture
         $evenement->setAdresse('Saint-Lô');
         $evenement->setDescription('Football - Coupe UEFA des régions');
         $evenement->setVille('Saint-Lô');
+        $evenement->setStatus('valide');
         $manager->persist($evenement);
 
         $manager->flush();

@@ -82,6 +82,14 @@ class Club
 
 
     /**
+     * @var status
+     *
+     * @ORM\Column(name="status", columnDefinition="ENUM('valide','invalide','new')")
+     */
+    private $status;
+
+
+    /**
      * @ORM\ManyToOne(targetEntity="MrsportBundle\Entity\Sports")
      * @ORM\JoinColumn(nullable=true)
      */
