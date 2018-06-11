@@ -1,3 +1,63 @@
 {% extends 'layout.html.twig' %}
-{% block title %}Page pour valider les clubs ajoutés par les utilisateurs{% endblock %}
+
+
+{% block body %} 
+
+<div class="container container2">
+   {% block club %}
+        <h3>Liste des clubs ajoutés par les utilisateurs:</h3>
+       <br>
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th scope="col">Id</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">President</th>
+                      <th scope="col">Entraineur</th>
+                      <th scope="col">Fondation</th>
+                      <th scope="col">Couleur</th>
+                      <th scope="col">Stade</th>
+                      <th scope="col">Siteweb</th>
+                      <th scope="col">Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+              {% for club in clubs %}
+                  <tr>
+                      <td scope="row"><a href="{{ path('club_show', { 'id': club.id }) }}">{{ club.id }}</a></td>
+                      <td scope="row">{{ club.name }}</td>
+                      <td scope="row">{{ club.president }}</td>
+                      <td scope="row">{{ club.entraineur }}</td>
+                      <td scope="row">{% if club.fondation %}{{ club.fondation|date('Y-m-d') }}{% endif %}</td>
+                      <td scope="row">{{ club.couleur }}</td>
+                      <td scope="row">{{ club.stade }}</td>
+                      <td scope="row">{{ club.siteweb }}</td>
+                      <td>
+                          <ul>
+                              <li>
+                                  <a href="{{ path('club_show', { 'id': club.id }) }}">show</a>
+                              </li>
+                              <li>
+                                  <a href="{{ path('club_edit', { 'id': club.id }) }}">edit</a>
+                              </li>
+                          </ul>
+                      </td>
+                  </tr>
+              {% endfor %}
+              </tbody>
+          </table>
+
+            <ul>
+              <li>
+                  <a href="{{ path('club_new') }}">Create a new club</a>
+              </li>
+            </ul>
+
+  {% endblock club %}
+       
+        
+        
+</div>
+
+{% endblock body %} 
 

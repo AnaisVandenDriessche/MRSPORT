@@ -1,16 +1,59 @@
 {% extends 'layout.html.twig' %}
 
 
-{% block title %}Page affichant la liste des utilisateurs{% endblock %}
+{% block body %}
 
-{% block body %} 
+    {% block user %}
 
-<div class="container">
-        <h3>Liste des utilisateurs :</h3>
-        
-</div>
+    <div class="container container2">
 
-{% endblock body %} 
+        <h1>Liste des utilisateurs inscrits sur le site</h1>
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Pseudo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }} </a></td>
+                   
+                    <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.username }}</a></td>
+
+                    <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.email }}</a></td>
+{# 
+                    <td scope="row"><a href="{{ path('user_edit', { 'id': user.id }) }}">{{ user.last_login }}</a></td> #}
+                     <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
+                            </li>
+                            
+
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <ul>
+            <li>
+                <a href="{{ path('user_new') }}">Create a new user</a>
+            </li>
+        </ul>
+    {% endblock %}
+{% endblock %}
+
 
 
               

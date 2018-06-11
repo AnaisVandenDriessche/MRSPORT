@@ -27,6 +27,19 @@ class ClubController extends Controller
         ));
     }
 
+    public function adminClubAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $clubs = $em->getRepository('MrsportBundle:Club')->findAll();
+
+        return $this->render('@Mrsport/admin/validation_club.html.twig', array(
+            'clubs' => $clubs,
+        ));
+    }
+
+    
+
     /**
      * Creates a new club entity.
      *
