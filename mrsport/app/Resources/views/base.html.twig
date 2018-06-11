@@ -10,7 +10,9 @@
     {# Font Awesome #}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     {# Google font #}
-	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	{# <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"> #}
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+
 {#     
     <link href="/Applications/MAMP/htdocs/projet/MRSPORT/mrsport/app/Resources/public/css/footer.css" rel="stylesheet" type="text/css"> #}
 
@@ -29,10 +31,6 @@
             {% stylesheets '@Style_Main' filter='cssrewrite' %}
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
             {% endstylesheets %}
-
-            {# {% stylesheets '%kernel.root_dir%/.../web/public/css/bootsrap.min.css' filter='cssrewrite' %}
-                <link rel="stylesheet" href="{{ asset_url }}" />
-            {% endstylesheets %} #}
 
         {% endblock %}
 
@@ -62,6 +60,10 @@
         <!-- Script Javascript -->
         {% block javascript %}
             {% javascripts '@Script_Vendor' %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+            
+            {% javascripts '@Script_Perso' %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
 
