@@ -1,16 +1,24 @@
 <header>
     <!-- Slider Flexslider -->
-    <div class="flexslider">
+    
+    <div class="flexslider position-relative">
         <ul class="slides">
             <li>
             <img src="{{ asset('img/hockey.png')}}" alt="third slide" />
+            <p class="flex-caption">Hello <span class="text-danger">Rouen Sport</span></p>
             </li>
             <li>
             <img src="{{ asset('img/basket2.png')}}" alt="Second slide" />
+            <p class="flex-caption">Match retour</p>
             </li>
             <li>
             <img src="{{ asset('img/foot.png')}}" alt="First slide" />
+            <p class="flex-caption">Victoire de QRM ce week-end</p>
             </li>
         </ul>
     </div>
+   {# <div class="container position-absolute slide_text">
+    <h2 class="">Hello Rouen Sport</h2>
+
+  </div> #}
 </header>

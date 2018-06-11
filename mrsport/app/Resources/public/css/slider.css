@@ -20,3 +20,51 @@
     height: 550px;
     display: block;
   }
+
+
+.jumbotron{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.24);
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    height: 50%;
+    width: 50%;
+    top: 35%;
+   
+}
+
+/* .slide_text{
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    text-align: right;
+     padding: 0 20px; 
+    color: #fff;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline; 
+
+} */
+
+
+.flex-caption {
+    background:gold;
+    height:100px;
+    margin:0;
+    text-align:center;
+    color:#fff;
+    font-size: 68px;
+    font-family: 'Oswald';
+    line-height: 91px;
+    padding-right:20px;
+    top:50%;   
+    /* z-index:9999; */
+    right: 0px; /*Adjust this by yourself to make it look better*/
+    width: 60%;
+    position:absolute;
+}
+ ul.slides li{
+  position:relative; /*You need this*/
+
+} 
