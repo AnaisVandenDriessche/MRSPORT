@@ -96,13 +96,13 @@ assetic:
         #Style vendor
         Style_Vendors:
             inputs:
-                - '%kernel.root_dir%/../vendor/bower/bootstrap/dist/css/bootstrap.min.css'        
+                - '%kernel.root_dir%/../vendor/bower/bootstrap/dist/css/bootstrap.min.css'  
 
         # Feuille de style principale 
         Style_Main: # Nom de la ressource contenant les feuilles de style
             inputs:
                 - '%kernel.root_dir%/Resources/public/css/main.css'
-                - '%kernel.root_dir%/Resources/public/css/jumbotron.css'
+                - '%kernel.root_dir%/Resources/public/css/slider.css'
                 - '%kernel.root_dir%/Resources/public/css/footer.css'
                 - '%kernel.root_dir%/Resources/public/css/navbar.css'
                 - '%kernel.root_dir%/Resources/public/css/page-header.css'
