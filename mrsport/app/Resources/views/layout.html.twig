@@ -42,50 +42,55 @@
       <a class="navbar-text" href="{{ path('mrsport_homepage') }}">METROPOLE ROUEN SPORT</a>
       <a class="navbar-text ml-auto" href="{{ path('fos_user_profile_show') }}">Welcome {{ app.user.username }}</a>
       <a class="navbar-text ml-auto" href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
-  {# fin navbar #}
     </nav>
+  {# fin navbar #}
 
 {# side bar #}
-
-    <div class="container-fluid">
+ 
+    <div class="container-fluid container-fluid2">
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active" href="{{ path('mrsport_dashboard') }}">
-                    <span data-feather="home"></span>
+                    <span i div style="font-size:3em; color:Tomato" class="fas fa-tachometer-alt"></span>
                     Dashboard <span class="sr-only">(current)</span>
                     </a>
+                    <br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('mrsport_listing_users') }}">
-                    <span data-feather="users"></span>
+                    <span i div style="font-size:3em; color:green" class="fas fa-child"></span>
                     Les utilisateurs
                     </a>
+                    <br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('mrsport_validation_club') }}">
-                    <span data-feather="aperture"></span>
+                    <span i div style="font-size:3em; color:Orange" class="fas fa-football-ball"></span>
                     Les clubs
                     </a>
+                    <br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('mrsport_validation_evenement') }}">
-                    <span data-feather="award"></span>
+                    <span i div style="font-size:3em; color:Blue" class=" far fa-calendar-alt"></span>
                     Les événements
                     </a>
+                    <br>
                 </li>
                 </ul>
 
           </div>
         </nav>
-      </div>
-    </div>
+      
 {# fin side bar #}
 
     {% block body %}
-
+      </div>
+    </div>
+    
     {% endblock body %}
 
 
