@@ -27,14 +27,17 @@
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" /> 
             {% endstylesheets %}  
 
+
+            <link rel="stylesheet" href="{{ asset('public/flexslider/flexslider.css') }}" type="text/css" /> 
+
             <!-- My CSS -->
             {% stylesheets '@Style_Main' filter='cssrewrite' %}
                 <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />    
             {% endstylesheets %}
-
+            
         {% endblock %}
 
-        {% block css %}{% endblock %}
+
     
 </head>
 <body>
@@ -62,10 +65,15 @@
             {% javascripts '@Script_Vendor' %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
-            
+
+             <!-- Flexslider JS -->
+            <script src="{{ asset('public/flexslider/jquery.flexslider-min.js')}}"></script>
+
             {% javascripts '@Script_Perso' %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
+
+       
 
         {% endblock %}
     </div>   
