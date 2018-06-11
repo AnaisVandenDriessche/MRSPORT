@@ -6,29 +6,28 @@
 <div class="container">
 
     {% block evenement %}
-        <h1>Evenements list</h1>
+        <h1 style text-align = "center";  > Liste des évènements </h1>
             
-        <table>
+        <table class="table table-bordered " >
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Adresse</th>
-                    <th>Ville</th>
-                    <th>Description</th>
-                    <th>Actions</th>
+                    {# <th scope="col" >Id</th> #}
+                    <th scope="col" >Evenement et emplacement</th>
+                    <th scope="col" >Date</th>
+                   
+                    <th scope="col" >Actions</th>
                 </tr>
             </thead>
             <tbody>
             {% for evenement in evenements %}
-                <tr>
-                    <td><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td>
-                    <td>{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
-                    <td>{% if evenement.time %}{{ evenement.time|date('H:i:s') }}{% endif %}</td>
-                    <td>{{ evenement.adresse }}</td>
-                    <td>{{ evenement.ville }}</td>
-                    <td>{{ evenement.description }}</td>
+                <tr  >
+                    
+                    {# <td><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td> #}
+                    <td> Venez participez au  {{ evenement.description }} au {{ evenement.adresse }} {{ evenement.ville }}  </td>
+        
+                    <td > Le  {% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %} 
+                          à  {% if evenement.time %}{{ evenement.time|date('H:i:s') }}{% endif %} </td> 
+                  
                     <td>
                         <ul>
                             <li>

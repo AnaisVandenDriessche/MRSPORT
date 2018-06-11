@@ -3,11 +3,7 @@
     background-image: url('img/stade.jpeg');
     background-size: cover;
     color: rgb(255, 251, 7);
-<<<<<<< HEAD
-    height: 600px;
-=======
     height: 500px;
->>>>>>> 57b69d6f6fc56ebfdf466a7349e1baa32cedafff
     border-radius: 0;
 }   
 .jumbotron_football
