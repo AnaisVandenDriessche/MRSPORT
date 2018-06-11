@@ -8,20 +8,51 @@
 
 {% block body %}
     <div class="container">
-        <h2>Les derniers résultats</h2>
-                <h3>Football</h3>
-            {# Quévilly Rouen Métropole #}
-                <script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe class="" id="5b10fb3a80cf1e76c88f827b" src="https://scorenco.com/widget/5b10fb3a80cf1e76c88f827b/?auto_height=true" style="display: block; width: 80%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe>
-                <hr>
-            
-            <script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b110b10415f93466cbc6803" src="https://scorenco.com/widget/5b110b10415f93466cbc6803/?auto_height=true" style="display: block; width: 80%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe>
+                <h2 style="text-align:center;" > Dernier Résultat </h2>
+                    <script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b110cc1415f9332a5d32e60" src="https://scorenco.com/widget/5b110cc1415f9332a5d32e60/" style="display: block; width: 80%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe>
 
-                <h3>Hockey</h3>
-                <script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b110cc1415f9332a5d32e60" src="https://scorenco.com/widget/5b110cc1415f9332a5d32e60/?auto_height=true" style="display: block; width: 80%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe>
+                <h2 style="text-align:center;" >Prochain Match</h2>
+                    {# <h3 style="text-align:center;" >Prochain Match</h3> #}
+                            {# Quévilly Rouen Métropole #}
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b1e3e0d04938f1221ed253d" src="https://scorenco.com/widget/5b1e3e0d04938f1221ed253d/" style="display: block; width: 80%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe><a style="font-size:11px" href="https://scorenco.com/football/clubs/us-mesnil-esnard-franqueville/"></a>
+                                <script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b110b10415f93466cbc6803" src="https://scorenco.com/widget/5b110b10415f93466cbc6803/" style="display: block; width: 80%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe>
+                        <h2 style="text-align:center;" > Adresse et contact</h2>
+        <div class="map-example"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.435427694202!2d1.0996575156706334!3d49.43848677934854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0de7e3153ffff%3A0x3ae23858ef5e17f0!2sNFactory%2C+Incubateur+%26+Acc%C3%A9l%C3%A9rateur+Normand!5e0!3m2!1sfr!2sfr!4v1528119660202" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
+                </div>
+            </div> 
+            <div class="col-lg-4">
+                <div class="heading">
+                   
+                </div> 
+          
+            <div class="col-md-12">   		
+		            <h2>  <p>  <i class="fas fa-envelope"></i> N'hésitez pas à nous contacter </p> </h2> <br>
+		                <h4>Nous contacter</h4>
+                            <form>    
+                                <div class="form-group"> 
+                                    <input type="password" class="form-control" id="exampleInputNom" placeholder="Nom">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Votre message" ></textarea>
+                                </div>
+                                    <button type="submit" class="btn-block btn-primary">Submit</button>
             </div>
-        
+                            </form>
+            </div>
+        </div>
+    </div> 
+</div> 
+   
             {# <img class="card-img-top" src="img/2.jpg" alt="Card image cap"> #}
-        
     </div> <!-- /container -->
 
 {% endblock %}

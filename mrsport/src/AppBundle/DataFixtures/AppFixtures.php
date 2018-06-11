@@ -115,6 +115,42 @@ class AppFixtures extends Fixture
         $club2->setSports($sport2);
         $manager->persist($club2);
 
+        $date2 = new \DateTime('2011-06-12');
+        $club2 = new Club();
+        $club2->setName('Rouen Normandie Rugby');
+        $club2->setPresident('Jean-Louis Louvel');
+        $club2->setEntraineur('Richard Hill');
+        $club2->setFondation($date2);
+        $club2->setCouleur('Noir et blanc');
+        $club2->setStade('stade Jean-Mermoz');
+        $club2->setSiteweb('rouen-normandie-rugby.fr');
+        $club2->setSports($sport2);
+        $manager->persist($club2);
+
+        $date2 = new \DateTime('2011-07-01');
+        $club2 = new Club();
+        $club2->setName('Rouen Métropole Basket');
+        $club2->setPresident('Yvan Gueuder');
+        $club2->setEntraineur('Alexandre Ménard');
+        $club2->setFondation($date2);
+        $club2->setCouleur('Bleu, blanc et orange');
+        $club2->setStade('Kindarena');
+        $club2->setSiteweb('rouenmetrobasket.com');
+        $club2->setSports($sport2);
+        $manager->persist($club2);
+
+        $date2 = new \DateTime('2011-07-01');
+        $club2 = new Club();
+        $club2->setName('F. C. FEMININ ROUEN PLATEAU EST');
+        $club2->setPresident('Feret Romain');
+        $club2->setEntraineur('John Doe');
+        $club2->setFondation($date2);
+        $club2->setCouleur('Rose et noir');
+        $club2->setStade('Stade Stanislas Bilyk');
+        $club2->setSiteweb('https://www.fff.fr/la-vie-des-clubs/183800/infos-cles');
+        $club2->setSports($sport2);
+        $manager->persist($club2);
+
         // Evenement
         $date3 = '2018-06-12';
         $time = '15:30';
