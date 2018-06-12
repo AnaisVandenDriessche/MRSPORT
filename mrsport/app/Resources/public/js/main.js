@@ -1,6 +1,6 @@
 // alert('Hello World');
-$(window).on('load', function(){ 
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
-});
+// $(window).on('load', function(){ 
+//   $('.flexslider').flexslider({
+//     animation: "slide"
+//   });
+// });

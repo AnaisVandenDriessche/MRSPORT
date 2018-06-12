@@ -41,41 +41,37 @@
     
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Navbar  -->  
-        {# {% block socialmedia %}{% include 'socialmedia.html.twig' %}{% endblock %} #}
-            
+   
+        <!-- Navbar  -->              
         {% block nav %}{% include 'navbar.html.twig' %}{% endblock %}
-        
+
+        <!-- Slider  -->              
         {% block slider %}{% include 'slider.html.twig' %}{% endblock %}
         
-        <main class="main">
+        {# <main class=""> #}
         <!-- Body  -->        
             {% block body %}
             {% block fos_user_content %}
             {% endblock fos_user_content %}
             {% endblock body %}
-        </main>  
+        {# </main>   #}
 
+        <!-- Footer  -->              
         {% block footer %}{% include 'footer.html.twig' %}{% endblock %}
         
-
         <!-- Script Javascript -->
         {% block javascript %}
             {% javascripts '@Script_Vendor' %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
 
-             <!-- Flexslider JS -->
-            <script src="{{ asset('public/flexslider/jquery.flexslider-min.js')}}"></script>
+                <!-- Flexslider JS -->
+            {# <script src="{{ asset('public/flexslider/jquery.flexslider-min.js')}}"></script> #}
 
             {% javascripts '@Script_Perso' %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
-
-       
-
         {% endblock %}
-    </div>   
+      
 </body>
 </html>
