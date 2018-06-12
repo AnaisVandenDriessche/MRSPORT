@@ -1,10 +1,80 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_header.html.twig' %}
 
 {% block body %}
-<div class="main-title" style="text-align: center; " >
-    <h1> Contact </h1> <br><br><br>
-    <h2> Vous êtes passionné de sport, et souhaitez faire grandir notre site internet, n'hésitez pas et venez nous donner votre avis. </h2>  
-</div>
+
+ <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="imgheader">
+        <div class="container">
+            <h1 class="mx-auto text-center">Contactez nous!</h1>
+          <p class="textheader"> Vous êtes passionné de sport, et souhaitez faire grandir notre site internet, n'hésitez pas et venez nous donner votre avis.</p>  
+        </div>
+      </div>
+<br>
+
+
+
+    {# ligne reseaux sociaux + presentation entreprise #}
+    <div class="container">
+        <p class="presentation">
+        METROPOLE ROUEN SPORT rassemble la plus large communauté de sportifs et d'amoureux du sport de la région Rouennaise. 
+        S'informer et participer aux évenements sportifs, aux clubs de sports en utlisant le réseau METROPOLE ROUEN SPORT.</p>
+
+        <div class="contact-social-wrap">
+        <div class="row">
+
+           <ul class="contact-socials mx-auto">
+
+                <a target="_blank" href="https://www.facebook.com/Métropole-Rouen-Sport-170635346965228/?hc_ref=ARQbT-V7WTTY9FBJw-VjjNMSERyGZvehhoSKjSlgk_tfQijVj_jilEJahXRvY52TKHM"><i class="fab fa-facebook" style="font-size:2em; color:#D3D3D3"></i></a>
+                <a target="_blank" href="https://twitter.com/SportRouen"><i class="fab fa-twitter" style="font-size:2em; color:#D3D3D3"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/company/metropolerouensport/"><i class="fab fa-linkedin" style="font-size:2em; color:#D3D3D3"></i></a>
+                <a target="_blank" href="https://www.instagram.com/rouenmetropolesport/"><i class="fab fa-instagram" style="font-size:2em; color:#D3D3D3"></i></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UC3wskFl2Dm9H4PZfQ6zBnxA"><i class="fab fa-youtube" style="font-size:2em; color:#D3D3D3"></i></a>
+            </ul>
+        </div>
+           
+        </div>
+      
+
+        <!-- carte contact -->
+        <div class="card-group">
+       
+                <div class="card body">
+                    {# <img src="{{ asset('public/img/anais.jpg') }}" alt="MIT" class="rounded-circle" width="50" height="50"> #}
+                    <div class="name"><i style="font-size:1em; color:#FFC722" class="fas fa-user"></i>Mit Z. Kabasele</div>
+                   
+                    <div class="phone"><p style="font-size:1em; color:red" class="fas fa-mobile"></p>06.06.06.06.06</div>
+                    <div class="mail"><p style="font-size:1em; color:red" class="fas fa-at"></p>mit@mrsport.com</div>
+                    
+                
+                </div>
+                
+                <div class="card body">
+                {# <img src="{{ asset('public/img/anais.jpg') }}" alt="Elmoufid" class="rounded-circle" width="50" height="50"> #}
+                    <div class="name"><i style="font-size:1em; color:#FFC722" class="fas fa-user"></i>Elmoufid Hadji</div>
+                    
+                    <div class="phone"><p style="font-size:1em; color:red" class="fas fa-mobile"></p>06.06.06.06.06</div>
+                    <div class="mail"><p style="font-size:1em; color:red" class="fas fa-at"></p>elmoufid@mrsport.com</div>
+                
+                </div>
+                
+                <div class="card body">
+                {# <img src="{{ asset('public/img/anais.jpg') }}" alt="Anaïs" class="rounded-circle" width="50" height="50"> #}
+                    <div class="name"><i style="font-size:1em; color:#FFC722" class="fas fa-user"></i>Anaïs Van den Driessche</div>
+                    
+                    <div class="phone"><p style="font-size:1em; color:red" class="fas fa-mobile"></p>06.06.06.06.06</div>
+                    <div class="mail"><p style="font-size:1em; color:red" class="fas fa-at"></p>anais@mrsport.com</div>
+                
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+
+    </div> <!-- /container -->
+
 <div class="map-example"> 
     <div class="container">
         <div class="row">
@@ -13,33 +83,69 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.435427694202!2d1.0996575156706334!3d49.43848677934854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0de7e3153ffff%3A0x3ae23858ef5e17f0!2sNFactory%2C+Incubateur+%26+Acc%C3%A9l%C3%A9rateur+Normand!5e0!3m2!1sfr!2sfr!4v1528119660202" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
                 </div>
             </div> 
-            <div class="col-lg-4">
-                <div class="heading">
+
+                <div class="col-lg-6">
+                    <div class="heading">
                    
                 </div> 
-          
-            <div class="col-md-12">   		
-                <p> Laisse nous une ligne <p>
-		            <h2>  <p>  <i class="fas fa-envelope"></i> N'hésitez pas à nous contacter </p> </h2>
-		                <h4>Nous contacter</h4>
-                            <form>    
-                                <div class="form-group"> 
-                                    <input type="password" class="form-control" id="exampleInputNom" placeholder="Nom">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Votre message" ></textarea>
-                                </div>
-                                    <button type="submit" class="btn-block btn-primary">Submit</button>
+
+                <div class="textcontact">
+                <div class="col-lg-12">   		
+                    <h2><p><i class="fas fa-envelope"></i> N'hésitez pas à nous contacter</p></h2>       
+                        <form>    
+                            <div class="form-group"> 
+                                <input type="name" class="form-control" id="exampleInputNom" placeholder="Nom">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                <small id="emailHelp" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Votre message" ></textarea>
+                            </div>
+                                <button type="submit" class="btn-block btn-success">Envoyer</button>
+
+                        </form>
+                </div>
             </div>
-                            </form>
-            </div>
-        </div>
+        </div> 
     </div> 
 </div> 
+</main>
 
+ 
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
 
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+            

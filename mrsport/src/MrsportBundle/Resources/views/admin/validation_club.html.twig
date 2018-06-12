@@ -33,9 +33,19 @@
                       <td scope="row">{{ club.couleur }}</td>
                       <td scope="row">{{ club.stade }}</td>
                       <td scope="row">{{ club.siteweb }}</td>
-                      <td scope="row">{{ club.status}}</td>
-                      
-                      <td>
+                      <td scope="row">{{ club.status}}
+                      {% if club.status == "new" %}
+                      <ul>
+                        <li>
+                        <a href="{{ path('club_valide', { 'id': club.id }) }}" class="btn btn-outline-info">Valider</a>
+                        </li>
+                        <li>
+                        <a href="{{ path('club_invalide', { 'id': club.id }) }}" class="btn btn-outline-info">Invalider</a>
+                        </li>
+                      </ul>
+                    {% endif %}
+                      </td>
+                        <td>
                           <ul>
                               <li>
                                   <a href="{{ path('club_show', { 'id': club.id }) }}">show</a>
@@ -44,7 +54,7 @@
                                   <a href="{{ path('club_edit', { 'id': club.id }) }}">edit</a>
                               </li>
                           </ul>
-                      </td>
+                        </td>
                   </tr>
               {% endfor %}
               </tbody>

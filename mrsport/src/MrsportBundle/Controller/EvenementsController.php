@@ -77,6 +77,7 @@ class EvenementsController extends Controller
         ));
     }
 
+
     /**
      * Displays a form to edit an existing evenement entity.
      *
@@ -134,7 +135,7 @@ class EvenementsController extends Controller
         ;
     }
 
-
+    
     public function show($id)
     {
         $evenements = $this->getDoctrine()
@@ -146,6 +147,12 @@ class EvenementsController extends Controller
                 'No evenements found for id '.$id
             );
         }
+
+        $evenements->setStatus();
+        $em->persist($evenements);
+        $em->flush();
+
+        return $this->redirectToRoute('dashboard');
     }
 
 }

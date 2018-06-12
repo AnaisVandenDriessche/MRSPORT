@@ -35,13 +35,17 @@
             <td scope="row">{{ evenement.description }}</td>
             <td scope="row">{{ evenement.status }}
             {% if evenement.status == "new" %}
-            <a href="{{ path('evenements_valide', { 'id': evenement.id }) }}" class="btn btn-primary">Valider</a>
-            <a href="{{ path('evenements_invalide', { 'id': evenement.id }) }}" class="btn btn-primary">Invalider</a>
-            
+            <ul>
+            <li>
+                <a href="{{ path('evenements_valide', { 'id': evenement.id }) }}" class="btn btn-outline-info">Valider</a>
+            </li>
+            <li>
+                <a href="{{ path('evenements_invalide', { 'id': evenement.id }) }}" class="btn btn-outline-info">Invalider</a>
+            </li>
+            <ul>
             {% endif %}
             </td>
-            
-            <td>
+                <td>
                 <ul>
                     <li>
                         <a href="{{ path('evenements_show', { 'id': evenement.id }) }}">show</a>
