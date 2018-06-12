@@ -1,24 +1,62 @@
 <header>
     <!-- Slider Flexslider -->
-    
-    <div class="flexslider position-relative">
+    {# <div class="flexslider position-relative">
         <ul class="slides">
             <li>
-            <img src="{{ asset('img/hockey.png')}}" alt="third slide" />
-            <p class="flex-caption">Hello <span class="text-danger">Rouen Sport</span></p>
+                <img src="{{ asset('img/hockey.png')}}" alt="third slide Hockey" />
+                <div class="flex-caption">
+                    <p>Victoire des <span class="text-warning">Dragons de Rouen</span></p>
+                </div>
             </li>
             <li>
-            <img src="{{ asset('img/basket2.png')}}" alt="Second slide" />
-            <p class="flex-caption">Match retour</p>
+                <img src="{{ asset('img/basket2.png')}}" alt="Second slide Basket" />
+                <div class="flex-caption">
+                    <p>Qualification <span class="text-warning">de Rouen Basket</span></p>
+                </div>
             </li>
             <li>
-            <img src="{{ asset('img/foot.png')}}" alt="First slide" />
-            <p class="flex-caption">Victoire de QRM ce week-end</p>
+                <img src="{{ asset('img/foot.png')}}" alt="First slide Football" />
+                <div class="flex-caption">
+                    <p>Victoire de <span class="text-warning">QRM</span> dimanche</p>
+                </div>
             </li>
         </ul>
-    </div>
-   {# <div class="container position-absolute slide_text">
-    <h2 class="">Hello Rouen Sport</h2>
+    </div> #}
 
-  </div> #}
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{{ asset('img/hockey.jpg')}}" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Victoire <br><span class="text-warning">Rouen Normandie Rugby</span></h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{{ asset('img/basket2.png')}}" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Qualification <span class="text-warning">de Rouen Basket</span></h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{{ asset('img/foot.png')}}" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Victoire de <span class="text-warning">QRM</span> dimanche</h5>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+   
 </header>

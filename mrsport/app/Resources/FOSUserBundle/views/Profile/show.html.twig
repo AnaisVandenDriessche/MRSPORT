@@ -5,26 +5,26 @@
     {% block fos_user_content %}
     {% trans_default_domain 'FOSUserBundle' %}
     <div class="container">
-    <h1 class="text-center">Mon profil</h1>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top rounded-circle" src="{{ asset('img/3.png') }}"  height="200px" alt="Card image cap">
+        <h1 class="text-center">My Profil</h1>
+        <div class="card card_profil">
+            {# <img class="card-img-top rounded-circle" src="{{ asset('img/3.png') }}"  height="200px" alt="image profil"> #}
+            {# <div class="text-secondary mx-auto">
+                <i class="fas fa-user-circle fa-7x"></i>
+            </div> #}
             <div class="card-body">
-                <h2 class="card-title text-center text-danger">{{ user.username }}</h2>
-                <p class="card-title text-center text-muted">{{ user.email }}</p>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h2 class="card-title text-center text-danger font-weight-bold">{{ user.username }}</h2>
+                <p class="text-center"><i class="fas fa-user-circle fa-7x"></i></p>
+                <p class="card-title text-center text-primary">{{ user.email }}</p>
+                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="{{ path('fos_user_profile_edit') }}" class="card-link">Modifier mon profil</a></li>
-                <li class="list-group-item"><a href="{{ path('fos_user_change_password') }}" class="card-link">Changer mon mot de passe</a></li>  
-                <li class="list-group-item"><a href="{{ path('club_new') }}" class="card-link">Proposer une Equipe</a></li>
-                <li class="list-group-item"><a href="{{ path('evenements_new') }}" class="card-link">Proposer un Evénement</a></li>
-                <li class="list-group-item"><a href="#" class="card-link">Mes Equipes</li>
+            <ul class="list-group list-group-flush profil_link">
+                <li class="list-group-item text-center profil"><a href="{{ path('fos_user_profile_edit') }}" class="card-link">Modifier mon profil</a></li>
+                <li class="list-group-item text-center profil"><a href="{{ path('fos_user_change_password') }}" class="card-link">Changer mon mot de passe</a></li>  
+                <li class="list-group-item text-center profil"><a href="{{ path('club_new') }}" class="card-link">Proposer une Equipe</a></li>
+                <li class="list-group-item text-center profil"><a href="{{ path('evenements_new') }}" class="card-link">Proposer un Evénement</a></li>
+                <li class="list-group-item text-center profil"><a href="#" class="card-link">Mes Equipes</li>
                 
             </ul>    
-            {# <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div> #}
         </div>
     </div>
     {% endblock fos_user_content %}

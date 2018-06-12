@@ -1,6 +1,8 @@
 html, body {
     font-family: 'Roboto', sans-serif;
+    /* width: 100%; */
 }
+
 /* Login-in login-out */
 .login-or {
     position: relative;
@@ -26,8 +28,95 @@ html, body {
     margin-bottom: 0px !important;
 }
 
-/* Sport
-============== */
+/*=========================
+Index
+=========================== */
+.section1{
+    background-color: #333333;
+    padding: 90px 0;
+}
+
+.section1 h2{
+    text-align: center;
+    font-family: 'Oswald';
+    text-transform: uppercase; 
+    font-size: 3rem;
+    color: #fff;
+    padding-bottom: 80px;
+}
+
+.scorenco{
+    padding-bottom: 30px;
+}
+
+/******* */
+
+.section2{
+    /* background-color: #be0000; */
+    background-image: url('img/foot2.jpeg');
+    /* effet parallax */
+    height: 700px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: rgba(206, 130, 183, 0.007) */
+    /* opacity: 0.8; */
+    
+    /* padding: 90px 0; */
+}
+
+.section2 h2{
+    text-align: center;
+    font-family: 'Oswald';
+    text-transform: uppercase; 
+    font-size: 3rem;
+    color: #fff;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+/******* */
+
+
+.section3 h2{
+    text-align: center;
+    font-family: 'Oswald';
+    text-transform: uppercase; 
+    font-size: 3rem;
+    color: #fff;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+/* .section3 .googlemap iframe {
+    margin-top: -80px;
+    height: 590px ;
+    width: 600px ;
+} */
+
+/* google map */
+.googlemap {
+    background-color: #ffc107;
+    color: #FFFFFF;
+    padding: 60px 0;
+}
+.googlemap iframe {
+    margin-top: -120px; 
+    height: 380px !important;
+    width: 100% !important;
+}
+
+/* Formulaire */
+.googlemap form {
+    padding-top: 50px;
+}
+
+
+/*=========================
+Sport
+=========================== */
 
 .backgd {
     background-color:#00BB69;
@@ -65,5 +154,41 @@ a:hover {
    margin-top: 100px;
  
 }
+
+/*====================== 
+Profil
+======================= */
+
+.card .profil:hover{
+    background-color: rgba(218, 204, 189, 0.452);
+    
+}
+
+.card .profil_link a:hover{
+    color: #f00;
+    /* font-size: 1.3rem; */
+   
+}
+
+.card_profil .card-body{
+    background-color: rgba(228, 228, 228, 0.836);
+    padding: 50px 0;
+    
+
+}
+
+.card_profil{
+    margin: 0 50px;
+    box-shadow: 1px 1px 5px 0px #656565;
+     -moz-box-shadow: 1px 1px 5px 0px #656565;
+      -webkit-box-shadow: 1px 1px 5px 0px #656565;
+       -o-box-shadow: 1px 1px 5px 0px #656565;
+    padding-bottom: 30px
+
+
+}
+
+
+
 
 
