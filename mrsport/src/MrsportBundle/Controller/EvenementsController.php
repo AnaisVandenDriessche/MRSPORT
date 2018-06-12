@@ -52,6 +52,7 @@ class EvenementsController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($evenement);
             $em->flush();
+            
 
             return $this->redirectToRoute('evenements_show', array('id' => $evenement->getId()));
         }
@@ -132,4 +133,19 @@ class EvenementsController extends Controller
             ->getForm()
         ;
     }
+
+
+    public function show($id)
+    {
+        $evenements = $this->getDoctrine()
+            ->getRepository(Evenements::class)
+            ->find($id);
+    
+        if (!$evenements) {
+            throw $this->createNotFoundException(
+                'No evenements found for id '.$id
+            );
+        }
+    }
+
 }
