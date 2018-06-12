@@ -11,7 +11,7 @@ header h5{
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    /* min-height: 550px; */
+    /* height: 550px; */
     transition: -webkit-transform 0.6s ease;
     transition: transform 0.6s ease;
     transition: transform 0.6s ease, -webkit-transform 0.6s ease;
@@ -21,8 +21,11 @@ header h5{
     perspective: 1000px;
   }
 
-.carousel-item img{
-    /* min-height: 550px; */
+
+.carousel img {
+    width: auto;
+    max-height: 550px;
+
 }
 
 
