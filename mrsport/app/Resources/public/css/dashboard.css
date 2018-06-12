@@ -1,11 +1,11 @@
-a {
+/* a {
   color: black;
   
 }
 
 a:hover {
   color: blue;
-}
+} */
 
 .card-img-top{
   height: 100px;
@@ -17,9 +17,9 @@ a:hover {
   box-shadow: 3px 3px 5px #aaa;
 }
 
-.ml-auto{
+/* .ml-auto{
   padding-right: 10px;
   display: right;
-}
+} */
 
 

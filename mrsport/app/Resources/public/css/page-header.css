@@ -14,11 +14,11 @@
     font-family: 'Oswald';
 }
 
-.text-center{
+/* .text-center{
     color: white;
     font-size: 80px;
     padding-top: 300px;
-}
+} */
 
 .textheader{
     color: white;
@@ -40,14 +40,14 @@
 
 
 /* mini cartes contact avec nos 3 noms */
-.card-group{
+/* .card-group{
     font-family: 'Oswald';
     padding-bottom: 70px;  
 }
 
 .card.body{
     padding:15px;
-}
+} */
 
 .name.phone.mail{
     padding-left: 10px; 
