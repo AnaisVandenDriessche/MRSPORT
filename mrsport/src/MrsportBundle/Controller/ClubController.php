@@ -139,4 +139,17 @@ class ClubController extends Controller
             ->getForm()
         ;
     }
+
+    public function show($id)
+    {
+        $evenements = $this->getDoctrine()
+            ->getRepository(Club::class)
+            ->find($id);
+    
+        if (!$Club) {
+            throw $this->createNotFoundException(
+                'No evenements found for id '.$id
+            );
+        }
+    }
 }

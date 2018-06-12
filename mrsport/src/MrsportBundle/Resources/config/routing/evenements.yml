@@ -22,3 +22,15 @@ evenements_delete:
     path:     /{id}/delete
     defaults: { _controller: "MrsportBundle:Evenements:delete" }
     methods:  DELETE
+
+evenements_valide:
+    path:     /{id}/valide
+    defaults: { _controller: "MrsportBundle:Evenements:valide" }
+    methods:  [GET, POST]
+
+evenements_invalide:
+    path:     /{id}/invalide
+    defaults: { _controller: "MrsportBundle:Evenements:invalide" }
+    methods:  [GET, POST]
+
+
