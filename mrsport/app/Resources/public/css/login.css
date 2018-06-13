@@ -1,3 +1,5 @@
+/* Login
+================= */
 .container_login{
     /* background-color: rgb(0, 196, 118); */
     background-image: url('img/foot2.jpeg');
@@ -15,9 +17,9 @@
     /* margin: 0 30px; */
     /* background: #9152f8; */
     background: -webkit-linear-gradient(top, gold, #151515);
-    background: -o-linear-gradient(top, gold, #f80552);
-    background: -moz-linear-gradient(top, gold, #f80552);
-    background: linear-gradient(top, gold, #f80552);
+    background: -o-linear-gradient(top, gold, #151515);
+    background: -moz-linear-gradient(top, gold, #151515);
+    background: linear-gradient(top, gold, #151515);
     opacity: .98;
 
 }
@@ -29,4 +31,21 @@
 .container_login h2{
     padding: 10px 0;
     font-size: 2rem;
+}
+
+
+/* Register
+================== */
+.wrap-login2 {
+    width: auto;
+    border-radius: 10px;
+    padding: 55px;
+    /* margin: 0 30px; */
+    /* background: #9152f8; */
+    background: -webkit-linear-gradient(top, gold, #069d2f);
+    background: -o-linear-gradient(top, gold, #151515);
+    background: -moz-linear-gradient(top, gold, #151515);
+    background: linear-gradient(top, gold, #151515);
+    opacity: .98;
+
 }

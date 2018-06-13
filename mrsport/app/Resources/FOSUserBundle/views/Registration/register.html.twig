@@ -1,62 +1,64 @@
 {% extends 'base.html.twig' %}
 {% block title %}Inscription{% endblock %}
+{% block slider %}{% endblock %}
 
 
 {% block body %}
-<div class="container">
-    <div class=row>
-        <div class="col-sm-4 mr-auto ml-auto">
-            <h2 class="text-center">Inscription</h2>
-            
-            {% if not form.vars.valid %}
-                <div class="alert alert-danger">
-                    Le formulaire contient des errreurs.
+<div class="container-fluid">
+    <div class="row container_login">
+            <div class="container">
+                <div class="col-sm-5 mr-auto ml-auto wrap-login2">
+                    <h2 class="text-center">Inscription</h2>
+                    
+                    {% if not form.vars.valid %}
+                        <div class="alert alert-danger">
+                            Le formulaire contient des errreurs.
+                        </div>
+                    {% endif %}
+                    <!--Form-->
+                    {{ form_start(form) }}
+                        <!--mail-->
+                        {{ form_widget(form.email, {
+                            'attr': {
+                                'class': 'form-control',
+                                'placeholder': 'Email*'
+                            }
+                        }) }}
+                        <br>
+                        <!--username-->
+                        {{ form_widget(form.username, {
+                            'attr': {
+                                'class': 'form-control',
+                                'placeholder': 'Identifiant*'
+                            }
+                        }) }}
+                        <br>
+                        <!--password-->
+                        {{ form_widget(form.plainPassword.first, {
+                            'attr': {
+                                'class': 'form-control',
+                                'placeholder': 'Password*'
+                            }
+                        }) }}
+                        <br>
+                        <!--confirm_password-->
+                        {{ form_widget(form.plainPassword.second, {
+                            'attr': {
+                                'class': 'form-control',
+                                'placeholder': 'Confirmer Password*'
+                            }
+                        }) }}
+                        <br>
+                        <button type="submit" name="button" class="btn btn-block btn-danger">M'inscrire</button>
+
+                    {{ form_end(form) }}
+                    <!--endForm-->
+
                 </div>
-            {% endif %}
-            
-            {{ form_start(form) }}
-
-                {{ form_widget(form.email, {
-                    'attr': {
-                        'class': 'form-control',
-                        'placeholder': 'Email*'
-                    }
-                }) }}
-                <br>
-
-                {{ form_widget(form.username, {
-                    'attr': {
-                        'class': 'form-control',
-                        'placeholder': 'Identifiant*'
-                    }
-                }) }}
-                <br>
-                
-
-                {{ form_widget(form.plainPassword.first, {
-                    'attr': {
-                        'class': 'form-control',
-                        'placeholder': 'Password*'
-                    }
-                }) }}
-                <br>
-                
-
-                {{ form_widget(form.plainPassword.second, {
-                    'attr': {
-                        'class': 'form-control',
-                        'placeholder': 'Confirmer Password*'
-                    }
-                }) }}
-                <br>
-                <button type="submit" name="button" class="btn btn-block btn-success">M'inscrire</button>
-
-            {{ form_end(form) }}
-
+            </div>
         </div>
     </div>
 </div>
-
 {# {{ dump(form.vars.valid) }}
 {{ dump(form) }} #}
 
