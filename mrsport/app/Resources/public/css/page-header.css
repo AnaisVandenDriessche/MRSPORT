@@ -5,8 +5,8 @@
     background-image: url('img/familletv.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 700px;
-    width: 100%;
+    height: 400px;
+    /* width: 100%; */
     border-radius: 0;
 }
 
@@ -14,11 +14,12 @@
     font-family: 'Oswald';
 }
 
-/* .text-center{
+.imgheader .text-center{
     color: white;
     font-size: 80px;
     padding-top: 300px;
-} */
+    
+} 
 
 .textheader{
     color: white;
@@ -29,25 +30,37 @@
 
 /* barre de reseaux sociaux */
 .presentation{
+    margin-top: 7%;
     color: #D3D3D3;
     font-size: 18px;
     text-align: center;
+
 }
 
-.contact-socials.mx-auto{
-    padding: 30px;
+.contact-social-wrap{
+    margin: 8%;
+}
+
+.contact-socials a{
+    padding: 52px 30px 20px 30px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
 }
 
 
 /* mini cartes contact avec nos 3 noms */
-/* .card-group{
+
+#cardgroup .card-group{
     font-family: 'Oswald';
     padding-bottom: 70px;  
+    
 }
 
-.card.body{
+#cardgroup .card-group .card.body{
     padding:15px;
-} */
+    margin-bottom: 7%;
+}
 
 .name.phone.mail{
     padding-left: 10px; 
@@ -57,17 +70,18 @@
 .map-example{
   /* transform: skew(-10deg); */
   background-image: url('public/img/projo.jpg');
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  height: 900px;
-  width: 100%; */
-  border-radius: 0;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* height: 700px; */
+  /* width: 100%; */
+ 
   
 } 
 
 #map{
     margin-top:80px;
     margin-bottom:20px;
+    border-radius: 5%;
 }
 
 .textcontact{
@@ -76,7 +90,14 @@
     font-family: 'Oswald';
 }
 
-
+/* @media (max-width: 1024px) {
+    html { font-size: 0.5em!important; }
+    }
+    
+@media (max-width: 980px) {
+    html { font-size: 0.8em!important; }
+}
+     */
 
 
 
