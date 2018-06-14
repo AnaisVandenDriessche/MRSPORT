@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="screen" href="screen.css" type="text/css" />
     {# Font Awesome #}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-   
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
 
     <title>Dashboard Template for Bootstrap</title>
 <!-- Custom CSS 
@@ -37,61 +37,57 @@
     
   </head>
 
-  <body>
-  {# debut navbar #}
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <img src="{{ asset('img/logo_rms2.png') }}" width="70" height="70" class="navbar-brand" alt="logo MRSPORT">
-      <a class="navbar-text" href="{{ path('mrsport_homepage') }}">METROPOLE ROUEN SPORT</a>
-      <a class="navbar-text ml-auto" href="{{ path('fos_user_profile_show') }}">Welcome {{ app.user.username }}</a>
-      <a class="navbar-text ml-auto" href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
-    </nav>
-  {# fin navbar #}
+ 
+{# debut navbar #}
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <img src="{{ asset('img/logo_rms2.png') }}" width="70" height="70" class="navbar-brand" alt="logo MRSPORT">
+    <a class="navbar-text" href="{{ path('mrsport_homepage') }}">METROPOLE ROUEN SPORT</a>
+    <a class="navbar-text ml-auto" href="{{ path('fos_user_profile_show') }}">Welcome {{ app.user.username }}</a>
+    <a class="navbar-text ml-auto" href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
+</nav>
+{# fin navbar #}
 
 {# side bar #}
  
-    <div class="container-fluid container-fluid2">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ path('mrsport_dashboard') }}">
-                    <span i div style="font-size:2em; color:Tomato" class="fas fa-tachometer-alt"></span>
-                    Dashboard <span class="sr-only">(current)</span>
-                    </a>
-                    <br>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('mrsport_listing_users') }}">
-                    <span i div style="font-size:2em; color:green" class="fas fa-child"></span>
-                    Les utilisateurs
-                    </a>
-                    <br>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('mrsport_validation_club') }}">
-                    <span i div style="font-size:2em; color:Orange" class="fas fa-football-ball"></span>
-                    Les clubs
-                    </a>
-                    <br>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('mrsport_validation_evenement') }}">
-                    <span i div style="font-size:2em; color:Blue" class=" far fa-calendar-alt"></span>
-                    Les événements
-                    </a>
-                    <br>
-                </li>
-                </ul>
-
-          </div>
-        </nav>
+<nav id="sidebardashboard">
+  <div class="sidebar-sticky">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('mrsport_dashboard') }}">
+          <span i div style="font-size:2em; color:Tomato" class="fas fa-tachometer-alt"></span>
+          Dashboard <span class="sr-only">(current)</span>
+          </a>
+          <br>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('mrsport_listing_users') }}">
+            <span i div style="font-size:2em; color:green" class="fas fa-child"></span>
+            Les utilisateurs
+            </a>
+          <br>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('mrsport_validation_club') }}">
+            <span i div style="font-size:2em; color:Orange" class="fas fa-football-ball"></span>
+            Les clubs
+            </a>
+          <br>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('mrsport_validation_evenement') }}">
+            <span i div style="font-size:2em; color:Blue" class=" far fa-calendar-alt"></span>
+            Les événements
+            </a>
+          <br>
+        </li>
+      </ul>
+  </div>
+</nav>
       
 {# fin side bar #}
 
     {% block body %}
-      </div>
-    </div>
+     
     
     {% endblock body %}
 
@@ -110,36 +106,5 @@
       feather.replace()
     </script>
 
-    <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script>
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          datasets: [{
-            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-            lineTension: 0,
-            backgroundColor: 'transparent',
-            borderColor: '#007bff',
-            borderWidth: 4,
-            pointBackgroundColor: '#007bff'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
-  </body>
+  
 </html>

@@ -43,12 +43,14 @@ class EvenementsController extends Controller
      */
     public function newAction(Request $request)
     {
+      
         $evenement = new Evenements();
         $form = $this->createForm('MrsportBundle\Form\EvenementsType', $evenement);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $evenement->setStatus('new');
             $em->persist($evenement);
             $em->flush();
             

@@ -35,15 +35,17 @@
                       <td scope="row">{{ club.siteweb }}</td>
                       <td scope="row">{{ club.status}}
                       {% if club.status == "new" %}
-                      <ul>
-                        <li>
-                        <a href="{{ path('club_valide', { 'id': club.id }) }}" class="btn btn-outline-info">Valider</a>
-                        </li>
-                        <li>
-                        <a href="{{ path('club_invalide', { 'id': club.id }) }}" class="btn btn-outline-info">Invalider</a>
-                        </li>
-                      </ul>
-                    {% endif %}
+                            <ul>
+                                <li>
+                                <a href="{{ path('club_valide', { 'id': club.id }) }}" class="btn btn-outline-info">Valider</a>
+                                </li>
+                                <li>
+                                <a href="{{ path('club_invalide', { 'id': club.id }) }}" class="btn btn-outline-info">Invalider</a>
+                                </li>
+                            </ul>
+                    
+                            
+                            {% endif %}
                       </td>
                         <td>
                           <ul>

@@ -1,42 +1,41 @@
-.container-fluid2 a {
-  color: black;
-  
+/* side bar */
+#sidebardashboard{
+  position:fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
-.container-fluid2 a:hover {
+#sidebardashboard .sidebar-sticky{
+  font-family: 'oswald';
+  margin-top: 40%;
+}
+
+#sidebardashboard .sidebar-sticky a:hover {
   color: blue;
 }
 
+#sidebardashboard .sidebar-sticky a{
+  color: white;
+}
+
+/* stats */
+/* logo */
 main .card-img-top{
-  height: 100px;
-  width: 100px;
+  padding-top: 10%;
+  height: 200px;
+  width: 150px;
   
 }
 
-.container-fluid2 .sidebar-sticky{
-
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  padding: 48px 0 0;
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-  transition: all 0.3s ease-out;
-  margin-left: -200px;
-
+/* titre logo */
+main .card-title{
+  font-family: 'oswald';
+  font-weight: bold;
+  padding-bottom: 5%;
+  font-size: 20px;
 }
 
-.shadow .ml-auto{
-  padding-right: 10px;
-  display: right;
+.container .containerdash{
+  margin-top:80%;
 }
-
-@media (min-width: 600px) {
-  .container-fluid2 .sidebar-sticky{
-    transition: 0s;
-    left: 200px;
-  }
-}
-
-

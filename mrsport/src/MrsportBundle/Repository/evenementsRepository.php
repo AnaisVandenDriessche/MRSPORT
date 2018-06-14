@@ -21,6 +21,17 @@ class evenementsRepository extends \Doctrine\ORM\EntityRepository
             return $qb->execute();
     }
 
+    public function getEventWithStatus($status = 'valide')
+    {
+
+        $qb = $this->createQueryBuilder('e')
+                ->where("e.status = :identifier")
+                ->orderBy('e.date', 'ASC')
+                ->setParameter(':identifier', $status)
+                ->getQuery();
+                   
+            return $qb->execute();
+    }
   
     
 }

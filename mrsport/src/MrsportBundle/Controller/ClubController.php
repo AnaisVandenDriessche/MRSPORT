@@ -55,7 +55,7 @@ class ClubController extends Controller
             // dump($form);
             // die();
             $em = $this->getDoctrine()->getManager();
-            // $club->setSports();
+            $club->setStatus('new');
             // 
             $em->persist($club);
             $em->flush();
