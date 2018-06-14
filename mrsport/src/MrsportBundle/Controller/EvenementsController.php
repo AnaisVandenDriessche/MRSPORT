@@ -6,6 +6,8 @@ use MrsportBundle\Entity\Evenements;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 /**
  * Evenement controller.
  *
@@ -80,11 +82,12 @@ class EvenementsController extends Controller
 
 
     /**
-     * Displays a form to edit an existing evenement entity.
+     * @Security("has_role('ROLE_ADMIN')")
      *
      */
     public function editAction(Request $request, Evenements $evenement)
     {
+        //die('jkhjk');
         $deleteForm = $this->createDeleteForm($evenement);
         $editForm = $this->createForm('MrsportBundle\Form\EvenementsType', $evenement);
         $editForm->handleRequest($request);

@@ -44,17 +44,26 @@
     </section>
 
     <section class="section4">
-        <div class="container text-center">
-            <h2>Partage ton évènement ou ton club</h2>
-            <p>Vous souhaitez partager votre évènement ou votre club. Cliques et remplis le formulaire.<br> Une fois vérifié, il sera mis en ligne sous 48h maximum.</p>
-            
-            <div class="choose_evenement">
-                <a class="btn btn-danger btn-lg" href="#" role="button">Evènement</a>
-                <a class="btn btn-warning btn-lg" href="#" role="button">Club</a>
+        <div class="container">
+            <div class="container text-center border_section4">
+                <h2>Partage ton <span class="text-warning">évènement</span> ou ton <span class="text-warning">club</span></h2>
+                <p>Vous souhaitez partager votre évènement ou votre club. Cliques et remplis le formulaire.<br> Une fois vérifié, il sera mis en ligne sous 48h maximum.</p>
+                
+                <div class="choose_evenement">
+                    <a class="btn btn-danger btn-lg" href="{{ path('evenements_new') }}" role="button">Evènement</a>
+                    <a class="btn btn-warning btn-lg" href="{{ path('club_new') }}" role="button">Club</a>
+                </div>
+                <ul class="nav justify-content-center">
+                    <li class="club_link nav-item" >
+                        <a href="{{ path('evenements_index') }}" class="nav-link">Voir les évenements</a>
+                    </li>
+                    <li class="club_link" >
+                        <a href="{{ path('club_index') }}" class="nav-link" >Voir les clubs</a>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
-
-
     </section>
         
     <section class="section3">
@@ -62,8 +71,9 @@
         <div class="googlemap">
             <div class="container">
             <!--GoogleMpas-->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d40496.15573087305!2d3.1346278!3d50.626936!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1516871038733"
-                frameborder="0" style="border:0" allowfullscreen></iframe>
+                {# <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d40496.15573087305!2d3.1346278!3d50.626936!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1516871038733"
+                frameborder="0" style="border:0" allowfullscreen></iframe> #}
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.435427694202!2d1.0996575156706334!3d49.43848677934854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0de7e3153ffff%3A0x3ae23858ef5e17f0!2sNFactory%2C+Incubateur+%26+Acc%C3%A9l%C3%A9rateur+Normand!5e0!3m2!1sfr!2sfr!4v1528119660202" frameborder="0" style="border:0" allowfullscreen></iframe> 
 
             <!--Contact Form-->
                 <form>
