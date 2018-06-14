@@ -26,9 +26,9 @@ club_delete:
 club_valide:
     path:     /{id}/valide
     defaults: { _controller: "MrsportBundle:Club:valide" }
-    methods:  VALIDE
+    # methods:  VALIDE
 
 club_invalide:
     path:     /{id}/invalide
     defaults: { _controller: "MrsportBundle:Club:invalide" }
-    methods:  INVALIDE
+    # methods:  INVALIDE

@@ -1,25 +1,42 @@
-/* a {
+.container-fluid2 a {
   color: black;
   
 }
 
-a:hover {
+.container-fluid2 a:hover {
   color: blue;
-} */
+}
 
-.card-img-top{
+main .card-img-top{
   height: 100px;
   width: 100px;
   
 }
 
-.bg-light{
-  box-shadow: 3px 3px 5px #aaa;
+.container-fluid2 .sidebar-sticky{
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  transition: all 0.3s ease-out;
+  margin-left: -200px;
+
 }
 
-/* .ml-auto{
+.shadow .ml-auto{
   padding-right: 10px;
   display: right;
-} */
+}
+
+@media (min-width: 600px) {
+  .container-fluid2 .sidebar-sticky{
+    transition: 0s;
+    left: 200px;
+  }
+}
 
 
