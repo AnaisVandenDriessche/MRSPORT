@@ -109,6 +109,9 @@ assetic:
                 - '%kernel.root_dir%/Resources/public/css/page-header.css'
                 - '%kernel.root_dir%/Resources/public/css/dashboard.css'
                 - '%kernel.root_dir%/Resources/public/css/login.css'
+                - '%kernel.root_dir%/Resources/public/css/profil.css'
+                - '%kernel.root_dir%/Resources/public/css/club.css'
+                - '%kernel.root_dir%/Resources/public/css/evenement.css'
                 
                 
 

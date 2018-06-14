@@ -1,25 +1,32 @@
 {% extends 'base.html.twig' %}
 {% block title %}Proposition équipe{% endblock %}
-{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block slider %}{% include 'slider_change_mdp.html.twig' %}{% endblock %}
 
 {% block body %}
+<div class="container-fluid">
+    <div class="row container_club"> 
+        <div class="container">
+            <div class="col-md-9 mr-auto ml-auto wrap-club">
+                <h2 class="text-center">Proposition de club</h2>
+                <!--form-->
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <input class="btn btn-block btn-primary" type="submit" value="Valider Proposition" />
+                {{ form_end(form) }}
 
-<div class="container">
-
-    <h1 class="text-center">Proposition de club</h1>
-
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input class="btn btn-primary" type="submit" value="Proposer" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('club_index') }}">Retour à la liste des clubs</a>
-            {# <a href="{{ path('fos_user_profile_show') }}">Mon profil</a> #}
-
-        </li>
-    </ul>
-
+                <ul class="nav justify-content-center">
+                    <li class="club_link nav-item" >
+                        <a href="{{ path('club_index') }}" class="nav-link" >Retour à la liste des clubs</a>
+                        {# <a href="{{ path('fos_user_profile_show') }}">Mon profil</a> #}
+                    </li>
+                    <li class="club_link" >
+                        <a href="{{ path('fos_user_profile_show') }}" class="nav-link">Mon profil</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}

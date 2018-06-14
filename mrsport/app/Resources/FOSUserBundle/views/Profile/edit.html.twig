@@ -1,25 +1,24 @@
 {% extends 'base.html.twig' %}
-{% block title %}Modifier Profil{% endblock %}
-{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block title %}Edit Profil{% endblock %}
+{% block slider %}{% include 'slider_profil_edit.html.twig' %}{% endblock %}
+
 
 {% block body %}
-    {% block fos_user_content %}
-        {% trans_default_domain 'FOSUserBundle' %}
-        <div class="container">
-            <h1 class="text-center">Mon profil</h1>
-            <div class="row">
-
-                <div class="col">
-                    
-                            {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-                            {{ form_widget(form) }}
-                            <div>
-                                <input class="btn btn-primary" type="submit" value="{{ 'profile.edit.submit'|trans }}" />
-                            </div>
-                            {{ form_end(form) }}
-                       
+{% block fos_user_content %}
+{% trans_default_domain 'FOSUserBundle' %}
+        <div class="container-fluid">
+            <div class="row container_login">             
+                <div class="col-md-7 mx-auto wrap-edit-profil">
+                    <h2 class="text-center">Mon profil</h2> 
+                    <!--Form-->
+                    {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+                    {{ form_widget(form) }}
+                    <div>
+                        <input class="btn btn-block btn-primary" type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+                    </div>
+                    {{ form_end(form) }}
                 </div>
             </div>
         </div>
-    {% endblock fos_user_content %}
+{% endblock fos_user_content %}
 {% endblock body %}

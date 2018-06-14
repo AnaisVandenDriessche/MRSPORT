@@ -1,30 +1,28 @@
 {% extends 'base.html.twig' %}
-{% block title %}Mon profil{% endblock %}
+{% block title %}Profil{% endblock %} 
+{% block slider %}{% include 'slider_profil.html.twig' %}{% endblock %}
+ 
 
 {% block body %}
     {% block fos_user_content %}
     {% trans_default_domain 'FOSUserBundle' %}
-    <div class="container">
-        <h1 class="text-center">My Profil</h1>
-        <div class="card card_profil">
-            {# <img class="card-img-top rounded-circle" src="{{ asset('img/3.png') }}"  height="200px" alt="image profil"> #}
-            {# <div class="text-secondary mx-auto">
-                <i class="fas fa-user-circle fa-7x"></i>
-            </div> #}
-            <div class="card-body">
-                <h2 class="card-title text-center text-danger font-weight-bold">{{ user.username }}</h2>
-                <p class="text-center"><i class="fas fa-user-circle fa-7x"></i></p>
-                <p class="card-title text-center text-primary">{{ user.email }}</p>
-                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="wrap-profil">
+        <div class="container container_profil">
+            {# <h1 class="text-center">My Profil</h1> #}
+            <div class="card card_profil">
+                <div class="card-body">
+                    <p class="text-center"><i class="fas fa-user-circle fa-7x"></i></p>
+                    <h2 class="card-title text-center text-danger font-weight-bold text-uppercase">{{ user.username }}</h2>
+                    <p class="card-title text-center text-warning font-italic">{{ user.email }}</p>
+                    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush profil_link">
+                    <li class="list-group-item text-center profil"><a href="{{ path('fos_user_profile_edit') }}" class="card-link">Modifier mon profil</a></li>
+                    <li class="list-group-item text-center profil"><a href="{{ path('fos_user_change_password') }}" class="card-link">Changer mon mot de passe</a></li>  
+                    <li class="list-group-item text-center profil"><a href="{{ path('club_new') }}" class="card-link">Proposer une Equipe</a></li>
+                    <li class="list-group-item text-center profil"><a href="{{ path('evenements_new') }}" class="card-link">Proposer un Evénement</a></li>
+                </ul>    
             </div>
-            <ul class="list-group list-group-flush profil_link">
-                <li class="list-group-item text-center profil"><a href="{{ path('fos_user_profile_edit') }}" class="card-link">Modifier mon profil</a></li>
-                <li class="list-group-item text-center profil"><a href="{{ path('fos_user_change_password') }}" class="card-link">Changer mon mot de passe</a></li>  
-                <li class="list-group-item text-center profil"><a href="{{ path('club_new') }}" class="card-link">Proposer une Equipe</a></li>
-                <li class="list-group-item text-center profil"><a href="{{ path('evenements_new') }}" class="card-link">Proposer un Evénement</a></li>
-                <li class="list-group-item text-center profil"><a href="#" class="card-link">Mes Equipes</li>
-                
-            </ul>    
         </div>
     </div>
     {% endblock fos_user_content %}

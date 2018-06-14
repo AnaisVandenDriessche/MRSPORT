@@ -1,66 +1,77 @@
 {% extends 'base.html.twig' %}
-{# {% form_theme form 'bootstrap_4_layout.html.twig' %} #}
+{% block title %}Créer New Evènement{% endblock %}
+{% block slider %}{% include 'slider_new_evenement.html.twig' %}{% endblock %}
 
 
 {% block body %}
-<div class="container">
+<div class="container-fluid">
+    <div class="row container_evenement"> 
+        <div class="container">
+            <div class="col-md-9 mr-auto ml-auto wrap-evenement">
 
-    <h1 class="text-center" >Création d'un évenement</h1>
-    {# {{ dump(form.adresse.vars)}} #}
+                <h2 class="text-center" >New Evènement</h2>
+                {# {{ dump(form.adresse.vars)}} #}
 
+                {{ form_start(form) }}
+                    <div class="form-group">
+                        {{ form_label(form.name, "Nom de l'évenement")}}
+                        {{ form_widget(form.name,{'attr':{'class':'form-control'}})}}
+                        {{ form_errors(form.name)}}
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            {{ form_label(form.date, "Date de l'évenement")}}
+                            {{ form_widget(form.date,{'attr':{'class':''}})}}
+                            {{ form_errors(form.date)}}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form_label(form.time, "Heure de l'évenement")}}
+                            {{ form_widget(form.time,{'attr':{'class':''}})}}
+                            {{ form_errors(form.time)}}
+                        </div>
+                    </div>
+                    <!--Adresse -->
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            {{ form_label(form.adresse, "Adresse de l'évenement") }}
+                            {{ form_widget(form.adresse,{'attr':{'class':'form-control'}})}}
+                            {{ form_errors(form.adresse)}}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form_label(form.ville)}}
+                            {{ form_widget(form.ville,{'attr':{'class':'form-control'}})}}
+                            {{ form_errors(form.ville)}}
+                        </div>
+                    </div>
 
-    {{ form_start(form) }}
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                {{ form_label(form.date, "Date de l'évenement")}}
-                {{ form_widget(form.date,{'attr':{'class':'form-control'}})}}
-                {{ form_errors(form.date)}}
-            </div>
-            <div class="form-group col-md-6">
-                {{ form_label(form.time, "Heure de l'évenement")}}
-                {{ form_widget(form.time,{'attr':{'class':'form-control'}})}}
-                {{ form_errors(form.time)}}
-            </div>
-        </div>
-        <!--Adresse -->
-        
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                {{ form_label(form.adresse, "Adresse de l'évenement") }}
-                {{ form_widget(form.adresse,{'attr':{'class':'form-control'}})}}
-                {{ form_errors(form.adresse)}}
-            </div>
-            <div class="form-group col-md-6">
-                {{ form_label(form.ville)}}
-                {{ form_widget(form.ville,{'attr':{'class':'form-control'}})}}
-                {{ form_errors(form.ville)}}
-            </div>
-        </div>
+                    <div class="form-group">
+                        {{ form_label(form.description)}}
+                        {{ form_widget(form.description,{'attr':{'class':'form-control'}})}}
+                        {{ form_errors(form.description)}}
+                    </div>
 
-        <div class="form-group">
-            {{ form_label(form.description)}}
-            {{ form_widget(form.description,{'attr':{'class':'form-control'}})}}
-            {{ form_errors(form.description)}}
-        </div>
+                    <div class="form-group">
+                        {{ form_label(form.sports, 'Choisir un sport')}}
+                        {{ form_widget(form.sports,{'attr':{'class':'form-control'}})}}
+                        {{ form_errors(form.sports)}}
+                    </div>
+                        <input class="btn btn-block btn-primary" type="submit" value="Envoyer" />
+                
+                {{ form_end(form) }}
 
-        <div class="form-group">
-            {{ form_label(form.sports, 'Choisir un sport')}}
-            {{ form_widget(form.sports,{'attr':{'class':'form-control'}})}}
-            {{ form_errors(form.sports)}}
-        </div>
-            <input class="btn-block btn-primary" type="submit" value="Envoyer" />
-    
-    {{ form_end(form) }}
-
-    <ul>
-    
-        <li>
-            <a href="{{ path('evenements_index') }}">Retour à la liste</a>
-        </li>
-    </ul>
-     {# {{ form_start(form) }}
-       {{ form_widget(form)}}
-        <input class="btn-block btn-primary" type="submit" value="Valider" />
-    {{ form_end(form) }} #}
+                <ul class="nav justify-content-center">
+                    <li class="club_link nav-item" >
+                        <a href="{{ path('evenements_index') }}" class="nav-link">Retour à la liste</a>
+                    </li>
+                </ul>
+                {# {{ form_start(form) }}
+                {{ form_widget(form)}}
+                    <input class="btn-block btn-primary" type="submit" value="Valider" />
+                {{ form_end(form) }} #}
+                
+            </div>    
+        </div>        
+    </div>
 </div>
 {% endblock %}

@@ -33,7 +33,7 @@ Index
 =========================== */
 .section1{
     background-color: #333333;
-    padding: 90px 0;
+    padding: 60px 0;
 }
 
 .section1 h2{
@@ -42,7 +42,7 @@ Index
     text-transform: uppercase; 
     font-size: 3rem;
     color: #fff;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
 }
 
 .scorenco{
@@ -122,16 +122,16 @@ Sport
     background-color:#00BB69;
 }
 
-a {
+#sticky-sidebar a {
     color: #fff;
     
 }
 
-a:hover {
+#sticky-sidebar a:hover {
     color: gold;
 }
 
-.card {
+#sticky-sidebar .card {
     border-radius: 0px;
 }
 
@@ -150,7 +150,7 @@ a:hover {
 
 }
 
-.container-fluid2{
+#sticky-sidebar .container-fluid2{
    margin-top: 100px;
  
 }
@@ -159,34 +159,7 @@ a:hover {
 Profil
 ======================= */
 
-.card .profil:hover{
-    background-color: rgba(218, 204, 189, 0.452);
-    
-}
 
-.card .profil_link a:hover{
-    color: #f00;
-    /* font-size: 1.3rem; */
-   
-}
-
-.card_profil .card-body{
-    background-color: rgba(228, 228, 228, 0.836);
-    padding: 50px 0;
-    
-
-}
-
-.card_profil{
-    margin: 0 50px;
-    box-shadow: 1px 1px 5px 0px #656565;
-     -moz-box-shadow: 1px 1px 5px 0px #656565;
-      -webkit-box-shadow: 1px 1px 5px 0px #656565;
-       -o-box-shadow: 1px 1px 5px 0px #656565;
-    padding-bottom: 30px
-
-
-}
 
 
 

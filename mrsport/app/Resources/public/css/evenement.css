@@ -1,6 +1,6 @@
-/* Login
+/* Club
 ================= */
-.container_login{
+.container_evenement{
     /* background-color: rgb(0, 196, 118); */
     background-image: url('img/foot2.jpeg');
     background-size: cover;
@@ -10,7 +10,7 @@
 
 } 
 
-.wrap-login {
+.wrap-evenement {
     width: auto;
     border-radius: 10px;
     padding: 55px;
@@ -24,13 +24,23 @@
 
 }
 
-.container_login p{
+.container_evenement p{
     padding: 10px 0;
 }
 
-.container_login h2{
+.container_evenement h2{
     padding: 10px 0;
     font-size: 2rem;
+}
+
+.container_evenement .club_link a{
+    color: gold;
+}
+
+.container_evenement li .club_link {
+    color: gold;
+    padding: 10px 0;
+
 }
 
 

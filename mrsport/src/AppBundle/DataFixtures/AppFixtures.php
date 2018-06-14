@@ -145,7 +145,7 @@ class AppFixtures extends Fixture
 
         $date2 = new \DateTime('2011-07-01');
         $club2 = new Club();
-        $club2->setName('F. C. FEMININ ROUEN PLATEAU EST');
+        $club2->setName('F.C. Feminin Rouen Plateau Est');
         $club2->setPresident('Feret Romain');
         $club2->setEntraineur('John Doe');
         $club2->setFondation($date2);
