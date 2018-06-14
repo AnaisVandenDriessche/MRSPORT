@@ -7,6 +7,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\TextType; 
+
 use MrsportBundle\Entity\Sports;
 
 
@@ -18,16 +20,28 @@ class ClubType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('president')
-            ->add('entraineur')
+            ->add('name',TextType::class, [
+                "required" => true
+            ])
+            ->add('president', TextType::class, [
+                "required" => true
+            ])
+            ->add('entraineur', TextType::class, [
+                "required" => true
+            ])
             ->add('fondation',DateType::class,array(
                 'widget' => 'choice',
                 'format' => 'y-M-d',
             ))
-            ->add('couleur')
-            ->add('stade')
-            ->add('siteweb')
+            ->add('couleur', TextType::class, [
+                "required" => true
+            ])
+            ->add('stade', TextType::class, [
+                "required" => true
+            ])
+            ->add('siteweb', TextType::class, [
+                "required" => true
+            ])
             ->add('sports',EntityType::class, array(
                 'class' => Sports::class,
                 // 'choice_label' => 'name',
