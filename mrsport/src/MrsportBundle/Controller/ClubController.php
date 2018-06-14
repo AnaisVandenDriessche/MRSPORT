@@ -20,7 +20,7 @@ class ClubController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $clubs = $em->getRepository('MrsportBundle:Club')->findAll();
+        $clubs = $em->getRepository(Club::class)->getClubWithStatus('valide');
 
         return $this->render('club/index.html.twig', array(
             'clubs' => $clubs,
@@ -139,17 +139,60 @@ class ClubController extends Controller
             ->getForm()
         ;
     }
-
     public function show($id)
     {
-        $evenements = $this->getDoctrine()
+        $club = $this->getDoctrine()
             ->getRepository(Club::class)
             ->find($id);
     
-        if (!$Club) {
+        if (!$club) {
             throw $this->createNotFoundException(
-                'No evenements found for id '.$id
+                'No clubs found for id '.$id
             );
         }
+
+        $club->setStatus('valide');
+        $em->persist($club);
+        $em->flush();
+
+        return $this->redirectToRoute('dashboard');
+    }
+
+
+    public function valideAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $club = $this->getDoctrine()->getRepository(Club::class)->find($id);
+        if (!$club) {
+            throw $this->createNotFoundException(
+                'No clubs found for id '.$id
+            );
+        }
+        $em = $this->getDoctrine()->getManager();
+        $club->setStatus('valide');
+        $em->persist($club);
+        $em->flush();
+
+        return $this->redirectToRoute('mrsport_validation_club');
+
+      
+    }
+
+
+    public function invalideAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $club = $this->getDoctrine()->getRepository(Club::class)->find($id);
+        if (!$club) {
+            throw $this->createNotFoundException(
+                'No clubs found for id '.$id
+            );
+        }
+
+        $club->setStatus('invalide');
+        $em->persist($club);
+        $em->flush();
+
+        return $this->redirectToRoute('mrsport_validation_club');
     }
 }

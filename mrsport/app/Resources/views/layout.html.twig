@@ -6,6 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
+    {# media queries #}
+    <link rel="stylesheet" media="screen" href="screen.css" type="text/css" />
     {# Font Awesome #}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
    
@@ -38,7 +40,7 @@
   <body>
   {# debut navbar #}
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <img src="{{ asset('img/logo_rms.png') }}" width="70" height="70" class="navbar-brand" alt="logo MRSPORT">
+    <img src="{{ asset('img/logo_rms2.png') }}" width="70" height="70" class="navbar-brand" alt="logo MRSPORT">
       <a class="navbar-text" href="{{ path('mrsport_homepage') }}">METROPOLE ROUEN SPORT</a>
       <a class="navbar-text ml-auto" href="{{ path('fos_user_profile_show') }}">Welcome {{ app.user.username }}</a>
       <a class="navbar-text ml-auto" href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
@@ -54,28 +56,28 @@
                 <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active" href="{{ path('mrsport_dashboard') }}">
-                    <span i div style="font-size:3em; color:Tomato" class="fas fa-tachometer-alt"></span>
+                    <span i div style="font-size:2em; color:Tomato" class="fas fa-tachometer-alt"></span>
                     Dashboard <span class="sr-only">(current)</span>
                     </a>
                     <br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('mrsport_listing_users') }}">
-                    <span i div style="font-size:3em; color:green" class="fas fa-child"></span>
+                    <span i div style="font-size:2em; color:green" class="fas fa-child"></span>
                     Les utilisateurs
                     </a>
                     <br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('mrsport_validation_club') }}">
-                    <span i div style="font-size:3em; color:Orange" class="fas fa-football-ball"></span>
+                    <span i div style="font-size:2em; color:Orange" class="fas fa-football-ball"></span>
                     Les clubs
                     </a>
                     <br>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('mrsport_validation_evenement') }}">
-                    <span i div style="font-size:3em; color:Blue" class=" far fa-calendar-alt"></span>
+                    <span i div style="font-size:2em; color:Blue" class=" far fa-calendar-alt"></span>
                     Les événements
                     </a>
                     <br>

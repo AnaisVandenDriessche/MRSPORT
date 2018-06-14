@@ -20,4 +20,16 @@ class clubRepository extends \Doctrine\ORM\EntityRepository
 
             return $qb->execute();
     }
+
+    public function getClubWithStatus($status = 'valide')
+    {
+
+        $qb = $this->createQueryBuilder('c')
+                ->where("c.status = :identifier")
+                ->orderBy('c.id', 'ASC')
+                ->setParameter(':identifier', $status)
+                ->getQuery();
+                   
+            return $qb->execute();
+    }
 }

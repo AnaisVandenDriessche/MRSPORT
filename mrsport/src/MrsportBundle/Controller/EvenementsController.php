@@ -21,8 +21,7 @@ class EvenementsController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
-        $evenements = $em->getRepository('MrsportBundle:Evenements')->findAll();
+        $evenements = $em->getRepository(Evenements::class)->getEventWithStatus('valide');
 
         return $this->render('evenements/index.html.twig', array(
             'evenements' => $evenements,
@@ -151,11 +150,49 @@ class EvenementsController extends Controller
             );
         }
 
-        $evenements->setStatus();
+        $evenements->setStatus('valide');
         $em->persist($evenements);
         $em->flush();
 
         return $this->redirectToRoute('dashboard');
+    }
+
+
+    public function valideAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $evenements = $this->getDoctrine()->getRepository(Evenements::class)->find($id);
+        if (!$evenements) {
+            throw $this->createNotFoundException(
+                'No evenements found for id '.$id
+            );
+        }
+        $em = $this->getDoctrine()->getManager();
+        $evenements->setStatus('valide');
+        $em->persist($evenements);
+        $em->flush();
+
+        return $this->redirectToRoute('mrsport_validation_evenement');
+
+      
+    }
+
+
+    public function invalideAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $evenements = $this->getDoctrine()->getRepository(Evenements::class)->find($id);
+        if (!$evenements) {
+            throw $this->createNotFoundException(
+                'No evenements found for id '.$id
+            );
+        }
+
+        $evenements->setStatus('invalide');
+        $em->persist($evenements);
+        $em->flush();
+
+        return $this->redirectToRoute('mrsport_validation_evenement');
     }
 
 }

@@ -14,11 +14,13 @@ class evenementsRepository extends \Doctrine\ORM\EntityRepository
     public function findlastfive()
     {
 
-
         $qb = $this->createQueryBuilder('e')
                     ->orderBy('e.id', 'DESC')
                     ->getQuery()->setMaxResults(5);
 
             return $qb->execute();
     }
+
+  
+    
 }
