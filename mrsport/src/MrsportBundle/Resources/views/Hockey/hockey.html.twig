@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}Football{% endblock %}
+{% block slider %}{% include 'slider_hockey.html.twig' %}{% endblock %}
+ 
 {% block body %}
-
     <div class="container">
-                <h1 class="text-center ">Hockey</h1>
+        <h1 class="text-center ">Hockey</h1>
         <div class="row" >
-            <div class="col-4" id="sticky-sidebar">
+            <div class="col-4 d-none d-md-block" id="sticky-sidebar">
                 <!-- Side Navigation --> 
                 <div class="card backgd">
                     <div class="card-body">

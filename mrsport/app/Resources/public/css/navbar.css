@@ -6,6 +6,7 @@ nav
     border-radius: 0;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
+    
 }
 
 /* navColor link */
@@ -28,6 +29,7 @@ nav
     color: #f00;
     font-weight: 1000;
 }
+
 
 
 

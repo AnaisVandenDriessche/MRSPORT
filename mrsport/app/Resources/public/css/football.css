@@ -1,0 +1,103 @@
+/*============================================
+Show Profil 
+==============================================*/
+
+.jumbotron-profil{
+    background-color: #333333;
+    height: 250px; 
+    /* parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* end parallax scrolling effect */
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 0px;
+    padding: 2rem 1rem;
+    margin-bottom: 0;
+}
+
+
+.wrap-football{
+    background-image: url('img/22.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 30px 0;
+    /* opacity: 0.7; */
+
+}
+
+.container_profil li{
+    /* width: 500px; */
+    background-color: #292c2f;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.container_profil a{
+    color: #ffffff;
+}
+
+.container_profil .card{
+    border: 0px;
+    border-radius: .9rem;
+}
+
+.container_profil i{
+    padding-bottom: 40px;
+}
+
+.card .profil:hover{
+    background-color: rgb(249, 195, 0);
+    
+}
+
+.card .profil_link a:hover{
+    /* color: gold; */
+    /* font-size: 1.3rem; */
+   
+}
+
+.card_profil .card-body{
+    /* background-color: #151515; */
+    padding: 50px 0; 
+
+}
+
+.card_profil{
+    margin: 0 50px;
+    
+    /* box-shadow: 1px 1px 5px 0px #656565;
+     -moz-box-shadow: 1px 1px 5px 0px #656565;
+      -webkit-box-shadow: 1px 1px 5px 0px #656565;
+       -o-box-shadow: 1px 1px 5px 0px #656565; */
+    /* padding-bottom: 30px; */
+
+
+
+}
+
+
+/*============================================
+Edit Profil 
+==============================================*/
+
+.wrap-edit-profil {
+    width: auto;
+    border-radius: 10px;
+    padding: 55px;
+    /* margin: 0 30px; */
+    /* background: #9152f8; */
+    background: -webkit-linear-gradient(top, gold, #151515);
+    background: -o-linear-gradient(top, gold, #151515);
+    background: -moz-linear-gradient(top, gold, #151515);
+    background: linear-gradient(top, gold, #151515);
+    opacity: .98;
+
+}
+
+

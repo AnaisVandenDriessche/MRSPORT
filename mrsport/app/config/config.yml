@@ -112,6 +112,7 @@ assetic:
                 - '%kernel.root_dir%/Resources/public/css/profil.css'
                 - '%kernel.root_dir%/Resources/public/css/club.css'
                 - '%kernel.root_dir%/Resources/public/css/evenement.css'
+                - '%kernel.root_dir%/Resources/public/css/football.css'
                 
                 
 
