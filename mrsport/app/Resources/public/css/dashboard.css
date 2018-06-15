@@ -19,6 +19,7 @@
   color: white;
 }
 
+
 /* stats */
 /* logo */
 main .card-img-top{
@@ -36,6 +37,10 @@ main .card-title{
   font-size: 20px;
 }
 
-.container .containerdash{
-  margin-top:80%;
+/* centrer les 3 cards */
+.containerdash .row{
+  margin-top:10%;
+  margin-left:5%;
+  margin-right:5%;
+  
 }
