@@ -40,7 +40,7 @@ class EvenementsController extends Controller
     }
 
     /**
-     * Creates a new evenement entity.
+     * @Security("has_role('ROLE_ADMIN')")
      *
      */
     public function newAction(Request $request)

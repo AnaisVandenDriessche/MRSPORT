@@ -28,7 +28,10 @@
                     </div>
                 </li>
                 <li class="nav-item {% if current_path == 'evenements_index' %}active{% endif %}">
-                    <a class="nav-link" href="{{ path('evenements_index') }}">Evènements Sportifs</a>
+                    <a class="nav-link" href="{{ path('evenements_index') }}">Evenements Sportifs</a>
+                </li>
+                <li class="nav-item {% if current_path == 'club_index' %}active{% endif %}">
+                    <a class="nav-link" href="{{ path('club_index') }}">Clubs</a>
                 </li>
                 <li class="nav-item {% if current_path == 'mrsport_contact' %}active{% endif %}">
                     <a class="nav-link" href="{{ path('mrsport_contact') }}">Nous Contacter</a>

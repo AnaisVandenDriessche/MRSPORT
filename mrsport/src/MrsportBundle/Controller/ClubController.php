@@ -6,6 +6,9 @@ use MrsportBundle\Entity\Club;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
+
 /**
  * Club controller.
  *
@@ -41,7 +44,7 @@ class ClubController extends Controller
     
 
     /**
-     * Creates a new club entity.
+     * @Security("has_role('ROLE_ADMIN')")
      *
      */
     public function newAction(Request $request)
@@ -84,7 +87,7 @@ class ClubController extends Controller
     }
 
     /**
-     * Displays a form to edit an existing club entity.
+     * @Security("has_role('ROLE_ADMIN')")
      *
      */
     public function editAction(Request $request, Club $club)

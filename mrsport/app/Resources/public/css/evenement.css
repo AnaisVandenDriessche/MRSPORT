@@ -1,47 +1,102 @@
 /* Club
 ================= */
+.wrap-evenement {
+    /* background-image: url('img/foot2.jpeg'); */
+
+    width: auto;
+    /* padding: 55px; */
+    /* margin: 0 30px; */
+    /* background: #9152f8; */
+    /* background: -webkit-linear-gradient(top, gold, #151515);
+    background: -o-linear-gradient(top, gold, #151515);
+    background: -moz-linear-gradient(top, gold, #151515);
+    background: linear-gradient(top, gold, #151515); */
+    border-radius: 0;
+
+}
 .container_evenement{
     /* background-color: rgb(0, 196, 118); */
-    background-image: url('img/foot2.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url('img/foot2.jpeg'); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
     color: #fff;
     padding: 100px 0;
+    border-radius: 0;
 
 } 
 
-.wrap-evenement {
-    width: auto;
-    border-radius: 10px;
-    padding: 55px;
-    /* margin: 0 30px; */
-    /* background: #9152f8; */
-    background: -webkit-linear-gradient(top, gold, #151515);
-    background: -o-linear-gradient(top, gold, #151515);
-    background: -moz-linear-gradient(top, gold, #151515);
-    background: linear-gradient(top, gold, #151515);
-    opacity: .98;
 
-}
 
-.container_evenement p{
+.wrap-evenement p{
     padding: 10px 0;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
-.container_evenement h2{
+.wrap-evenement h2{
     padding: 10px 0;
     font-size: 2rem;
 }
 
-.container_evenement .club_link a{
-    color: gold;
+
+.wrap-evenement table a:hover{
+    color: #ac0968;
 }
 
-.container_evenement li .club_link {
+/* .wrap-evenement li .club_link {
     color: gold;
     padding: 10px 0;
 
+} */
+
+/* Table
+************************* */
+
+.wrap-evenement th{
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    
 }
+
+
+.wrap-evenement table a{
+    color: rgb(66, 66, 65);
+}
+
+.wrap-evenement table {
+    margin: 40px 0;
+    line-height: 30px;
+
+}
+
+.wrap-evenement thead{
+    /* background-color: #FFC107 ; */
+    background-color: #333333;
+    color: #FFC107;
+    
+}
+
+.wrap-evenement .name_evenement{
+    font-weight: 900;
+    font-size: 1.4rem;
+
+}
+
+.wrap-evenement .city_evenement{
+    /* font-weight: 900; */
+    font-size: .8rem;
+    
+}
+
+.wrap-evenement .date_evenement{
+    font-weight: 900; 
+    font-size: 1.4rem;
+    
+
+}
+
+
+
 
 
 /* Register
