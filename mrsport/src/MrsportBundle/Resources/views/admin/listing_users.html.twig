@@ -3,55 +3,56 @@
 
 {% block body %}
 
-    {% block user %}
+{% block user %}
 
-    <div class="container containerdash">
+<div class="container containerdash">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Liste des utilisateurs inscrits sur le site:</h1>
+            <br>      
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Pseudo</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Actions</th>
 
-        <h1>Liste des utilisateurs inscrits sur le site</h1>
-        <br>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Pseudo</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                 {# formule pr afficher la liste des users#}
+                    {% for user in users %}
+                        <tr>
+                            <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }} </a></td>
+                        
+                            <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.username }}</a></td>
 
-                </tr>
-            </thead>
-            <tbody>
-            {% for user in users %}
-                <tr>
-                    <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }} </a></td>
-                   
-                    <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.username }}</a></td>
+                            <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.email }}</a></td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+                    <ul>
+                        <li>
+                            <a href="{{ path('user_new') }}">Create a new user</a>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+</div>
 
-                    <td scope="row"><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.email }}</a></td>
-{# 
-                    <td scope="row"><a href="{{ path('user_edit', { 'id': user.id }) }}">{{ user.last_login }}</a></td> #}
-                     <td>
-                        <ul>
-                            <li>
-                                <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
-                            </li>
-                            
-
-                        </ul>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-        <ul>
-            <li>
-                <a href="{{ path('user_new') }}">Create a new user</a>
-            </li>
-        </ul>
-    {% endblock %}
+{% endblock %}
 {% endblock %}
 
 

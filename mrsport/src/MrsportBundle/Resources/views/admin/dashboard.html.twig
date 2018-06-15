@@ -6,7 +6,9 @@
 <div class="wrap-dash">
   <div class="container containerdash">
     <div class="row">
+    
       <main role="main" class="col-lg-12">
+      {# debut statistiques #}
         <div class="card-deck">
           <div class="card border-success">
             <img class="card-img-top mx-auto" src="{{ asset('public/img/icon_user.svg') }}" alt="Card image cap">
@@ -52,12 +54,10 @@
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
-        </div>
-    {# endstats #}
+        </main>
+    {# end statistiques #}
     </div>
-    </div>
-    </main>
+  </div>
+</div>
   
- 
-
-    {% endblock body %}
+{% endblock body %}

@@ -1,75 +1,73 @@
 {% extends 'layout.html.twig' %}
 
 
-
-       
 {% block body %}
     
-    <div class="container container2">
-        <h2 class="text-center"> Liste des Evenements Sportifs ajoutés par les utilisateurs</h2>
-    <br>  
-
-
 {% block evenement %}
- <table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time</th>
-            <th scope="col">Adresse</th>
-            <th scope="col">Ville</th>
-            <th scope="col">Description</th>
-            <th scope="col">Status</th>
-            <th scope="col">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for evenement in evenements %}
-        <tr>
-            <td scope="row"><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td>
-            <td scope="row">{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
-            <td scope="row">{% if evenement.time %}{{ evenement.time|date('H:i:s') }}{% endif %}</td>
-            <td scope="row">{{ evenement.adresse }}</td>
-            <td scope="row">{{ evenement.ville }}</td>
-            <td scope="row">{{ evenement.description }}</td>
-            <td scope="row">{{ evenement.status }}
-            {% if evenement.status == "new" %}
-            <ul>
-            <li>
-                <a href="{{ path('evenements_valide', { 'id': evenement.id }) }}" class="btn btn-outline-info">Valider</a>
-            </li>
-            <li>
-                <a href="{{ path('evenements_invalide', { 'id': evenement.id }) }}" class="btn btn-outline-info">Invalider</a>
-            </li>
-            <ul>
-            {% endif %}
-            </td>
-                <td>
+
+<div class="container containerdash">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center"> Liste des Evenements Sportifs ajoutés par les utilisateurs:</h1>
+            <br>  
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Ville</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {# formule pr afficher les 2 boutons pr valider ou invalider l'évenement ajouté #}
+                    {% for evenement in evenements %}
+                        <tr>
+                            <td scope="row"><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td>
+                            <td scope="row">{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
+                            <td scope="row">{% if evenement.time %}{{ evenement.time|date('H:i:s') }}{% endif %}</td>
+                            <td scope="row">{{ evenement.adresse }}</td>
+                            <td scope="row">{{ evenement.ville }}</td>
+                            <td scope="row">{{ evenement.description }}</td>
+                            <td scope="row">{{ evenement.status }}
+                    {% if evenement.status == "new" %}
+                            <ul>
+                            <li>
+                                <a href="{{ path('evenements_valide', { 'id': evenement.id }) }}" class="btn btn-outline-info">Valider</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('evenements_invalide', { 'id': evenement.id }) }}" class="btn btn-outline-info">Invalider</a>
+                            </li>
+                            <ul>
+                    {% endif %}
+                            </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ path('evenements_show', { 'id': evenement.id }) }}">show</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}">edit</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
                 <ul>
                     <li>
-                        <a href="{{ path('evenements_show', { 'id': evenement.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}">edit</a>
+                        <a href="{{ path('evenements_new') }}">Create a new evenement</a>
                     </li>
                 </ul>
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-
-<ul>
-    <li>
-        <a href="{{ path('evenements_new') }}">Create a new evenement</a>
-    </li>
-</ul>
   
     
 {% endblock %}
-
-
 
 {% endblock body %}
 
