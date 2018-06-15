@@ -5,7 +5,7 @@
 
 
 {% block body %}
-<div class="wrap-football">
+<div class="wrap-club2">
     <div class="container container_profil">
         <div class="row" >
             <div class="col-md-4 d-none d-md-block" id="sticky-sidebar">
@@ -56,18 +56,54 @@
                     </div> 
                 </div>
                 <!-- End News-->               
-           
+            </div>
+            <div class="col-md-8">
+                <table class="table table-bordered table-hover " id="table_club">
+                    <thead class="">
+                        <tr>
+                            {# <th scope="col" >Id</th> #}
+                            <th class="" scope="col" >Nom du club</th>
 
-    <h1>Liste des clubs</h1>
+                            <!--Update events-->
+                            {% if is_granted("ROLE_SUPER_ADMIN") %}
+                            <th scope="col" >Modifier</th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for club in clubs %}
+                        <tr >
+                            {# <td><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td> #}
+                            <td>
+                                <a href="" class="nav-link">
+                                    <span class="name_evenement">{{ club.name }}</span> <br>
+                                </a>
+                            </td>
 
-            <ul>
-                <li>
-                    <a href="{{ path('club_new') }}">Créer un nouveau club</a>
-                </li>
-            </ul>
-</div>
-</div>
-    </div>
+                            {% if is_granted("ROLE_SUPER_ADMIN") %}
+                            <td>
+                                <ul>
+                                    <li>
+                                        {# <a class="date_evenement" href="{{ path('evenements_edit', { 'id': evenement.id }) }}">Modifier</a> #}
+                                    </li>
+                                </ul>
+                            </td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            
+                <h1>Liste des clubs</h1>
+
+
+                <ul>
+                    <li>
+                        <a href="{{ path('club_new') }}">Créer un nouveau club</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
  </div>

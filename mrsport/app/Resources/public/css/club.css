@@ -1,5 +1,22 @@
 /* Club
 ================= */
+.wrap-club2{
+    /* background-image: url('img/22.jpeg'); */
+    background-color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 30px 0;
+    /* opacity: 0.7; */
+
+}
+
+#table_club a{
+    color: #151515;
+}
+
 .container_club{
     /* background-color: rgb(0, 196, 118); */
     background-image: url('img/foot2.jpeg');
