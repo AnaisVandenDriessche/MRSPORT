@@ -45,7 +45,7 @@ mrsport_resultatfootball:
 
 mrsport_listeclub:
     path:     /listeclub
-    defaults: { _controller: MrsportBundle:Default:liste_club }
+    defaults: { _controller: MrsportBundle:Default:listeclub }
 
 mrsport_singleclub:
     path:     /singleclub
@@ -99,6 +99,22 @@ mrsport_listing_users:
     path:     /admin/listing_users
     defaults: { _controller: MrsportBundle:User:adminUser }
 
+
+mrsport_listeclubfootball:
+    path:     /listeclubfootball
+    defaults: { _controller: MrsportBundle:Default:liste_club_football }
+
+mrsport_listeclubbasket:
+    path:     /listeclubbasket
+    defaults: { _controller: MrsportBundle:Default:liste_club_basket }
+
+mrsport_listeclubrugby:
+    path:     /listeclubrugby
+    defaults: { _controller: MrsportBundle:Default:liste_club_rugby }
+
+mrsport_listeclubhockey:
+    path:     /listeclubhockey
+    defaults: { _controller: MrsportBundle:Default:liste_club_hockey }
 
 
 

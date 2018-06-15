@@ -2,6 +2,7 @@
 
 namespace MrsportBundle\Controller;
 
+use MrsportBundle\Entity\Club;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use MrsportBundle\Entity\User;
 
@@ -50,6 +51,62 @@ class DefaultController extends Controller
     public function liste_clubAction()
     {
         return $this->render('@Mrsport/Club/liste_club.html.twig');
+    }
+
+    public function liste_club_footballAction()
+    {
+        // requete 
+        $em = $this->getDoctrine()->getManager();
+
+        $clubsfootball = $em->getRepository(Club::class)->findBy(
+            array( 'sports' => 1)
+        );
+        return $this->render('@Mrsport/Club/liste_club_football.html.twig', 
+        array(
+            'clubs' => $clubsfootball
+        ));
+    }
+
+    public function liste_club_basketAction()
+    {
+        // requete 
+        $em = $this->getDoctrine()->getManager();
+
+        $clubsbasket = $em->getRepository(Club::class)->findBy(
+            array( 'sports' => 4)
+        );
+        return $this->render('@Mrsport/Club/liste_club_basket.html.twig', 
+        array(
+            'clubs' => $clubsbasket
+        ));
+    }
+
+    public function liste_club_rugbyAction()
+    {
+        // requete 
+        $em = $this->getDoctrine()->getManager();
+
+        $clubsrugby = $em->getRepository(Club::class)->findBy(
+            array( 'sports' => 2)
+        );
+        return $this->render('@Mrsport/Club/liste_club_rugby.html.twig', 
+        array(
+            'clubs' => $clubsrugby
+        ));
+    }
+
+    public function liste_club_hockeyAction()
+    {
+        // requete 
+        $em = $this->getDoctrine()->getManager();
+
+        $clubshockey = $em->getRepository(Club::class)->findBy(
+            array( 'sports' => 3)
+        );
+        return $this->render('@Mrsport/Club/liste_club_hockey.html.twig', 
+        array(
+            'clubs' => $clubshockey
+        ));
     }
 
     public function single_clubAction()

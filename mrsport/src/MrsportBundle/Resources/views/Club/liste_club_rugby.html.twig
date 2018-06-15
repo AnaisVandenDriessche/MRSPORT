@@ -1,10 +1,9 @@
 {% extends 'base.html.twig' %}
-{% block title %}Les clubs{% endblock %}
+{% block title %}Clubs{% endblock %}
 {% block slider %}{% include 'slider_football.html.twig' %}{% endblock %}
 
-
-
 {% block body %}
+
 <div class="wrap-football">
     <div class="container container_profil">
         <div class="row" >
@@ -58,14 +57,46 @@
                 <!-- End News-->               
            
 
-    <h1>Liste des clubs</h1>
+    <h1>Liste des clubs de rugby</h1>
 
-            <ul>
-                <li>
-                    <a href="{{ path('club_new') }}">Créer un nouveau club</a>
-                </li>
-            </ul>
-</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>President</th>
+                <th>Entraineur</th>
+                <th>Fondation</th>
+                <th>Couleur</th>
+                <th>Stade</th>
+                <th>Siteweb</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for club in clubs %}
+            <tr>
+                {# <td><a href="{{ path('club_show', { 'sports_id': club.sports_id == "1" }) }}">{{ club.sports_id }}</a></td> #}
+                <td>{{ club.name }}</td>
+                <td>{{ club.president }}</td>
+                <td>{{ club.entraineur }}</td>
+                <td>{% if club.fondation %}{{ club.fondation|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ club.couleur }}</td>
+                <td>{{ club.stade }}</td>
+                <td>{{ club.siteweb }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('club_new') }}">Créer un nouveau club</a>
+        </li>
+        <li>
+            <a href="{{ path('club_index') }}">Retour à la liste des clubs</a>
+        </li>
+    </ul>
 </div>
     </div>
     </div>
