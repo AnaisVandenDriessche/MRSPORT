@@ -3,10 +3,9 @@
 {% block slider %}{% include 'slider_evenement.html.twig' %}{% endblock %}
 
 {% block body %}
-        {% block evenement %}
+{% block evenement %}
 <div class="wrap-evenement">
     <div class="container ">
-        
             {# <h2 class="text-center">Liste des évènements</h2> #}
             <table class="table table-bordered table-hover ">
                 <thead class="">
@@ -34,9 +33,9 @@
                             </a>
                         </td>
             
-                        <td class="city_evenement  text-uppercase" >Le  {% if evenement.date %}
+                        <td ><span class="date_evenement  text-uppercase" >{% if evenement.date %}
                                     {{ evenement.date|date('d.m.Y') }}
-                                {% endif %} <br>
+                                {% endif %}</span> <br>
 
                             <span class="time_evenement">{% if evenement.time %}
                                     {{ evenement.time|date('H:i') }}
@@ -47,7 +46,7 @@
                         <td>
                             <ul>
                                 <li>
-                                    <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}">edit</a>
+                                    <a class="date_evenement" href="{{ path('evenements_edit', { 'id': evenement.id }) }}">Modifier</a>
                                 </li>
                             </ul>
                         </td>
@@ -56,8 +55,8 @@
                 {% endfor %}
                 </tbody>
             </table>
-        <div>
-            <p>Vous participez à un évènement ou avez connaissance d'un évènement sportif, n'hésitez pas à le partager avec nous.</p>
+        <div class="text-center p_events" >
+            <p class="text-center name_evenement">Vous participez à un évènement ou avez connaissance d'un évènement sportif, n'hésitez pas à le partager avec nous.</p>
             <a class="btn btn-primary" href="{{ path('evenements_new') }}">Je propose un évenement</a>
         </div>    
     </div> 

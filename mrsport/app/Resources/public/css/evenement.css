@@ -1,5 +1,75 @@
-/* Club
+/* Events
 ================= */
+/* Edit
+========================*/
+
+
+/* Show
+========================*/
+
+.wrap-evenement .card{
+    margin: 50px 0;
+}
+.wrap-evenement .card-header{
+
+    background-color: rgb(1, 149, 63);
+}
+
+.wrap-evenement .card-title{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+}
+
+/* new
+========================*/
+
+.container_evenement{
+    /* background-color: rgb(0, 196, 118); */
+    background-image: url('img/foot2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 100px 0;
+
+}
+
+.wrap-evenement2 {
+    width: auto;
+    border-radius: 10px;
+    padding: 55px;
+    /* margin: 0 30px; */
+    /* background: #9152f8; */
+    background: -webkit-linear-gradient(top, gold, #151515);
+    background: -o-linear-gradient(top, gold, #151515);
+    background: -moz-linear-gradient(top, gold, #151515);
+    background: linear-gradient(top, gold, #151515);
+    opacity: .98;
+
+}
+
+
+.wrap-evenement2 h2{
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+
+.wrap-evenement table a:hover{
+    color: #ac0968;
+}
+
+/* .wrap-evenement li .club_link {
+    color: gold;
+    padding: 10px 0;
+
+} */
+
+
+
+
+/* index
+========================*/
 .wrap-evenement {
     /* background-image: url('img/foot2.jpeg'); */
 
@@ -90,12 +160,19 @@
 
 .wrap-evenement .date_evenement{
     font-weight: 900; 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     
 
 }
 
+.p_events {
+    margin-bottom: 40px;
+}
 
+.p_events p{
+    margin: 0 40px 0px 40px;
+    
+}
 
 
 

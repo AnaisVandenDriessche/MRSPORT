@@ -1,52 +1,31 @@
 {% extends 'base.html.twig' %}
-{% block title %}Evènement{% endblock %}
+{% block title %}Voir Evénement{% endblock %}
 {% block slider %}{% include 'slider_evenement.html.twig' %}{% endblock %}
 
 {% block body %}
-{# <div class="wrap-profil">
-    <div class="container container_profil"> #}
-        <div class="container">
-            <h1>Evenement</h1>
+<div class="wrap-evenement">
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+            <h2 class="card-title">{{ evenement.name }} à <span class="text-warning">{{ evenement.ville }}</span></h2>
+            </div>
+            <div class="card-body ">
+                {# <h2 class="card-title">{{ evenement.name }}</h2> #}
+                <p class="card-text">{{ evenement.description }}</p>
+                <h2 class="">Adresse</h2>
+                <p class="card-text">{{ evenement.adresse }}<br>{{ evenement.ville }} </p>
+                
+                
+                <a href="{{ path('evenements_index') }}" class="nav-link">Retour à la liste des événements</a>
+                <a class="nav-link" href="{{ path('evenements_new') }}">Je propose un évenement</a>
+            </div>
+            <div class="card-footer">
+            <p>Date </p>
+                {% if evenement.date %}{{ evenement.date|date('d.m.Y') }}{% endif %}
+                {% if evenement.time %}{{ evenement.time|date('H:i') }}{% endif %}
 
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Id</th>
-                        <td>{{ evenement.id }}</td>
-                    </tr>
-                    <tr>
-                        <th>Date</th>
-                        <td>{% if evenement.date %}{{ evenement.date|date('Y-m-d') }}{% endif %}</td>
-                    </tr>
-                    <tr>
-                        <th>Time</th>
-                        <td>{% if evenement.time %}{{ evenement.time|date('H:i:s') }}{% endif %}</td>
-                    </tr>
-                    <tr>
-                        <th>Adresse</th>
-                        <td>{{ evenement.adresse }}</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th>
-                        <td>{{ evenement.description }}</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <ul>
-                <li>
-                    <a href="{{ path('evenements_index') }}">Back to the list</a>
-                </li>
-                <li>
-                    <a href="{{ path('evenements_edit', { 'id': evenement.id }) }}">Edit</a>
-                </li>
-                <li>
-                    {{ form_start(delete_form) }}
-                        <input type="submit" value="Delete">
-                    {{ form_end(delete_form) }}
-                </li>
-            </ul>
+            </div>
         </div>
-    {# </div>
-</div> #}
+    </div>
+</div>
 {% endblock %}
