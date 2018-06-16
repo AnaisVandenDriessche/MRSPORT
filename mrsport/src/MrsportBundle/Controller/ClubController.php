@@ -99,7 +99,7 @@ class ClubController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('club_edit', array('id' => $club->getId()));
+            return $this->redirectToRoute('club_index', array('id' => $club->getId()));
         }
 
         return $this->render('club/edit.html.twig', array(

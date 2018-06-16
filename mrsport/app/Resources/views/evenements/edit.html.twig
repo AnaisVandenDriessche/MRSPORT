@@ -1,12 +1,12 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Modifier Evénement{% endblock %}
 
-
+ 
 {% block body %}
 <div class="container-fluid">
-    <div class="row container_evenement">   
+    <div class="row container_dash_edit">   
         <div class="container">
-            <div class="col-md-7 mr-auto ml-auto wrap-evenement2">
+            <div class="col-md-7 mr-auto ml-auto wrap-club-edit2">
 
                     {{ form_start(edit_form) }}
                     {{ form_widget(edit_form) }}
@@ -18,7 +18,7 @@
                         <input class="btn btn-block btn-danger" type="submit" value="Supprimer"><br>
                     {{ form_end(delete_form) }}
                 
-                    <a class="nav-item" href="{{ path('evenements_index') }}">Back to the list</a>
+                    <a class="nav-item" href="{{ path('evenements_index') }}">Retour à la liste des événements</a>
             </div>
         </div>
     </div>

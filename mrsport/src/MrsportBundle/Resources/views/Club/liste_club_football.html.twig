@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block title %}Clubs{% endblock %}
-{% block slider %}{% include 'slider_football.html.twig' %}{% endblock %}
+{% block slider %}{% include 'slider_club_football.html.twig' %}{% endblock %}
 
 {% block body %}
 
-<div class="wrap-football">
-    <div class="container container_profil">
+<div class="wrap-club">
+    <div class="container">
         <div class="row" >
             <div class="col-md-4 d-none d-md-block" id="sticky-sidebar">
                 <!-- Side Navigation --> 
@@ -54,53 +54,57 @@
                     
                     </div> 
                 </div>
-                <!-- End News-->               
+                <!-- End News--> 
+            </div>              
            
+                {# Table #}
+                <div class="col-md-8">
+                    <table class="table table-bordered table-hover " >
+                        <thead class="">
+                            <tr>
+                                {# <th scope="col" >Id</th> #}
+                                <th class="" scope="col" >Nom du club</th>
 
-    <h1>Liste des clubs de football</h1>
+                                <!--Update events-->
+                                {% if is_granted("ROLE_SUPER_ADMIN") %}
+                                <th scope="col" >Modifier</th>
+                                {% endif %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for club in clubs %}
+                            <tr >
+                                {# <td><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td> #}
+                                <td>
+                                    <a href="{{ path('club_show', { 'id': club.id }) }}" class="nav-link">
+                                        <span class="name_evenement">{{ club.name }}</span> <br>
+                                    </a>
+                                </td>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>President</th>
-                <th>Entraineur</th>
-                <th>Fondation</th>
-                <th>Couleur</th>
-                <th>Stade</th>
-                <th>Siteweb</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for club in clubs %}
-            <tr>
-                {# <td><a href="{{ path('club_show', { 'sports_id': club.sports_id == "1" }) }}">{{ club.sports_id }}</a></td> #}
-                <td>{{ club.name }}</td>
-                <td>{{ club.president }}</td>
-                <td>{{ club.entraineur }}</td>
-                <td>{% if club.fondation %}{{ club.fondation|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ club.couleur }}</td>
-                <td>{{ club.stade }}</td>
-                <td>{{ club.siteweb }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                                {% if is_granted("ROLE_SUPER_ADMIN") %}
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <a class="nav-link date_evenement" href="{{ path('club_edit', { 'id': club.id }) }}">Modifier</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <div class="text-center p_events" >
+                        <a class="nav-link" href="{{ path('club_index') }}">Retour à la liste des clubs</a>
 
-    <ul>
-        <li>
-            <a href="{{ path('club_new') }}">Créer un nouveau club</a>
-        </li>
-        <li>
-            <a href="{{ path('club_index') }}">Retour à la liste des clubs</a>
-        </li>
-    </ul>
-</div>
-    </div>
-    </div>
-</div>
+                        <p class="text-center ">Vous participez à un évènement, avez connaissance d'un évènement sportif ou vous voulez enregistrer un club n'hésitez pas à le partager avec nous.</p>
+                        <a class="btn btn-success" href="{{ path('evenements_new') }}">Je propose un évenement</a>
+                        <a class="btn btn-warning" href="{{ path('club_new') }}">Je propose un club</a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>      
  </div>
 {% endblock %}
 

@@ -1,25 +1,27 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Modifier club{% endblock %}
-
+ 
 {% block body %}
-<div class="container">
+<div class="container-fluid">
+    <div class="row container_dash_edit">   
+        <div class="container">
+            <div class="col-md-7 mr-auto ml-auto wrap-club-edit2">
 
-    <h1>Club edit</h1>
+                <h2 class="text-center">Modification Club</h2>
+                {{ form_start(edit_form) }}
+                    {{ form_widget(edit_form) }}
+                    <input class="btn btn-block btn-success" type="submit" value="Enregistrer" /><br>
+                {{ form_end(edit_form) }}
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('club_index') }}">Retour à la liste des clubs</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input class="btn btn-primary" type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+               
+                {{ form_start(delete_form) }}
+                    <input class="btn btn-block btn-primary" type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            
+                <a class="nav-item" href="{{ path('club_index') }}">Retour à la liste des clubs</a>
+                  
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

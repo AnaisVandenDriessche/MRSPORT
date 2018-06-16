@@ -19,7 +19,7 @@
                         <th scope="col" >Modifier</th>
                         {% endif %}
 
-                    </tr>
+                    </tr> 
                 </thead>
                 <tbody>
                 {% for evenement in evenements %}
@@ -41,7 +41,7 @@
                                     {{ evenement.time|date('H:i') }}
                                 {% endif %} </span>
                         </td> 
-
+ 
                         {% if is_granted("ROLE_SUPER_ADMIN") %}
                         <td>
                             <ul>

@@ -1,18 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block title %}Les clubs{% endblock %}
-{% block slider %}{% include 'slider_football.html.twig' %}{% endblock %}
+{% block slider %}{% include 'slider_club.html.twig' %}{% endblock %}
 
 
 
 {% block body %}
-<div class="wrap-club2">
-    <div class="container container_profil">
+<div class="wrap-club">
+ <div class="container">
+        {# <h1 class="text-center ">Hockey</h1> #}
         <div class="row" >
-            <div class="col-md-4 d-none d-md-block" id="sticky-sidebar">
+            <div class="col-4 d-none d-md-block" id="sticky-sidebar">
                 <!-- Side Navigation --> 
                 <div class="card backgd">
                     <div class="card-body">
-                        <h2 class="card-title yellow text-uppercase">Tous les sports</h2>
+                        <h2 class="card-title yellow text-uppercase">Choisir par sport</h2>
                         <ul>
                             <li class="nav">
                                 <a class="nav-link" href="{{ path('mrsport_listeclubfootball') }}">Football</a>
@@ -35,10 +36,10 @@
                 <div class="card backgd_newsletter ">
                     <div class="card-body">
                         <h2 class="card-title yellow text-uppercase">NewsLetter</h2>
-                        <p>Nec minus feminae quoque calamitatum participes fuere similium. </p> 
+                        <p>Nec minus feminae quoque calamitatum participes fuere similium. </p> <br>
                     
                     <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
+                            {# <label for="exampleInputEmail1">Email address</label> #}
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
@@ -57,8 +58,10 @@
                 </div>
                 <!-- End News-->               
             </div>
+
+            {# Table #}
             <div class="col-md-8">
-                <table class="table table-bordered table-hover " id="table_club">
+                <table class="table table-bordered table-hover " >
                     <thead class="">
                         <tr>
                             {# <th scope="col" >Id</th> #}
@@ -75,7 +78,7 @@
                         <tr >
                             {# <td><a href="{{ path('evenements_show', { 'id': evenement.id }) }}">{{ evenement.id }}</a></td> #}
                             <td>
-                                <a href="" class="nav-link">
+                                <a href="{{ path('club_show', { 'id': club.id }) }}" class="nav-link">
                                     <span class="name_evenement">{{ club.name }}</span> <br>
                                 </a>
                             </td>
@@ -84,7 +87,7 @@
                             <td>
                                 <ul>
                                     <li>
-                                        {# <a class="date_evenement" href="{{ path('evenements_edit', { 'id': evenement.id }) }}">Modifier</a> #}
+                                        <a class="nav-link date_evenement" href="{{ path('club_edit', { 'id': club.id }) }}">Modifier</a>
                                     </li>
                                 </ul>
                             </td>
@@ -94,17 +97,16 @@
                     </tbody>
                 </table>
             
-                <h1>Liste des clubs</h1>
+                <div class="text-center p_events" >
+                    <p class="text-center ">Vous participez à un évènement, avez connaissance d'un évènement sportif ou vous voulez enregistrer un club n'hésitez pas à le partager avec nous.</p>
+                    <a class="btn btn-success" href="{{ path('evenements_new') }}">Je propose un évenement</a>
+                    <a class="btn btn-warning" href="{{ path('club_new') }}">Je propose un club</a>
 
-
-                <ul>
-                    <li>
-                        <a href="{{ path('club_new') }}">Créer un nouveau club</a>
-                    </li>
-                </ul>
+                </div>   
             </div>
         </div>
     </div>
-</div>
+    </div>      
  </div>
+
 {% endblock %}

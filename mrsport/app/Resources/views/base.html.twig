@@ -13,9 +13,6 @@
 	{# <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"> #}
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
 
-{#     
-    <link href="/Applications/MAMP/htdocs/projet/MRSPORT/mrsport/app/Resources/public/css/footer.css" rel="stylesheet" type="text/css"> #}
-
     <title>{% block title %}{% endblock %}</title>
 
     <!-- Custom CSS 
@@ -28,7 +25,7 @@
             {% endstylesheets %}  
 
 
-            <link rel="stylesheet" href="{{ asset('public/flexslider/flexslider.css') }}" type="text/css" /> 
+            {# <link rel="stylesheet" href="{{ asset('public/flexslider/flexslider.css') }}" type="text/css" />  #}
 
             <!-- My CSS -->
             {% stylesheets '@Style_Main' filter='cssrewrite' %}
@@ -71,6 +68,8 @@
             {% javascripts '@Script_Perso' %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script>
+
         {% endblock %}
       
 </body>
