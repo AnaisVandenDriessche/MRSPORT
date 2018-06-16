@@ -29,6 +29,8 @@
     background-image: url('img/foot2.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     color: #fff;
     padding: 100px 0;
 

@@ -3,6 +3,7 @@
 {% block slider %}{% include 'slider_club_football.html.twig' %}{% endblock %}
 
 {% block body %}
+        {% set current_path = app.request.get('_route') %}
 
 <div class="wrap-club">
     <div class="container">
@@ -13,16 +14,16 @@
                     <div class="card-body">
                         <h2 class="card-title yellow text-uppercase">Tous les sports</h2>
                         <ul>
-                            <li class="nav">
+                            <li class="nav {% if current_path == 'mrsport_listeclubfootball' %}active{% endif %}">
                                 <a class="nav-link" href="{{ path('mrsport_listeclubfootball') }}">Football</a>
                             </li>
-                            <li class="nav">
+                            <li class="nav {% if current_path == 'mrsport_listeclubfootball' %}active{% endif %}">
                                 <a class="nav-link" href="{{ path('mrsport_listeclubbasket') }}">Basket</a>
                             </li>
-                            <li class="nav">
+                            <li class="nav {% if current_path == 'mrsport_listeclubfootball' %}active{% endif %}">
                                 <a class="nav-link" href="{{ path('mrsport_listeclubrugby') }}">Rugby</a>
                             </li>
-                            <li class="nav">
+                            <li class="nav {% if current_path == 'mrsport_listeclubfootball' %}active{% endif %}">
                                 <a class="nav-link" href="{{ path('mrsport_listeclubhockey') }}">Hockey</a>
                             </li> 
                         </ul>

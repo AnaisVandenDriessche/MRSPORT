@@ -44,7 +44,7 @@ class ClubController extends Controller
     
 
     /**
-     * @Security("has_role('ROLE_ADMIN')")
+     * @Security("has_role('ROLE_USER')")
      *
      */
     public function newAction(Request $request)

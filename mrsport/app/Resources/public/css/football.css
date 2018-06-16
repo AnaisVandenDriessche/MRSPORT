@@ -3,8 +3,9 @@ Show Profil
 ==============================================*/
 
 .jumbotron-profil{
-    background-color: #333333;
-    height: 250px; 
+    background-color: #000000;
+    /* background-image: url('img/22.jpeg'); */
+    height: auto; 
     /* parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;

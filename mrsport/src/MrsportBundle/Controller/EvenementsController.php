@@ -38,9 +38,9 @@ class EvenementsController extends Controller
             'evenements' => $evenements,
         ));
     }
-
+ 
     /**
-     * @Security("has_role('ROLE_ADMIN')")
+     * @Security("has_role('ROLE_USER')")
      *
      */
     public function newAction(Request $request)
