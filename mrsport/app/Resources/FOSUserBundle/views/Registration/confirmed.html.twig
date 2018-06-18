@@ -1,13 +1,26 @@
 {% extends 'base.html.twig' %}
+{% block slider %}{% endblock %}
+
 {% block title %}Page confirmed{% endblock %}
 
 {% block body %}
     {% trans_default_domain 'FOSUserBundle' %}
+    <div class="container-fluid">
+    <div class="row container_login"> 
+        <div class="container">
+            <div class="col-sm-5 mr-auto ml-auto wrap-login">
     {% block fos_user_content %}
-        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        {# <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p> #}
+        <p><span class="text-danger font-weight-bold text-uppercase">{{ app.user.username }}</span>, votre inscription a bien été pris en compte.</p>
+        <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Voir mon profil</a>
+
         {% if targetUrl %}
         <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
+    </div>
+    </div>
+    </div>
+    </div>
 {% endblock fos_user_content %}
 {% endblock body %}
  
