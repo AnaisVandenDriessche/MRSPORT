@@ -13,21 +13,16 @@
             </div>
             <div class="card-body ">
                 {# <h2 class="card-title">{{ evenement.name }}</h2> #}
-                <p class="card-text">{{ club.name }}</p>
-                <p class="card-text">{{ club.president }}</p>
-                <p class="card-text">{{ club.entraineur }}</p>
-                <p>{% if club.fondation %}{{ club.fondation|date('d.m.Y') }}{% endif %}</p>
-                <p class="card-text">{{ club.couleur}}</p>
-                <p class="card-text">{{ club.siteweb}}</p>
-
-                <h2 class="">Adresse</h2>
-                {# <p class="card-text">{{ club.ad }}<br>{{ evenement.ville }} </p> #}
-                
-                
-                <a href="{{ path('club_index') }}" class="nav-link">Retour à la liste des clubs</a>
-                <a class="nav-link" href="{{ path('club_new') }}">Je propose un club</a>
+                <p class="card-text"><span class="font-weight-bold"> Président :</span> {{ club.president }}</p>
+                <p class="card-text"><span class="font-weight-bold">Coach : </span>{{ club.entraineur }}</p>
+                <p class="card-text"><span class="font-weight-bold">Date de création :</span> {% if club.fondation %}{{ club.fondation|date('d.m.Y') }}{% endif %}</p>
+                <p class="card-text"><span class="font-weight-bold">Couleur du club :</span> {{ club.couleur}}</p>
+                <p class="card-text"><span class="font-weight-bold">Site internet :</span> {{ club.siteweb}}</p>
+           
             </div>
             <div class="card-footer">
+                <a href="{{ path('club_index') }}" class="nav-link">Retour à la liste des clubs</a>
+                <a class="nav-link" href="{{ path('club_new') }}">Je propose un club</a>
     
 
             </div>

@@ -3,10 +3,11 @@
 {% block slider %}{% include 'slider_basket.html.twig' %}{% endblock %}
 
 {% block body %}
+<div class="wrap-football">
     <div class="container">
                 <h1 class="text-center ">Basket</h1>
         <div class="row" >
-            <div class="col-4 d-none d-md-block" id="sticky-sidebar">
+            <div class="col-md-4 d-none d-md-block" id="sticky-sidebar">
                 <!-- Side Navigation --> 
                 <div class="card backgd">
                     <div class="card-body">
@@ -34,10 +35,9 @@
                 <div class="card backgd_newsletter">
                     <div class="card-body">
                         <h2 class="card-title yellow text-uppercase">NewsLetter</h2>
-                        <p>Nec minus feminae quoque calamitatum participes fuere similium. </p> 
+                        <p>Nec minus feminae quoque calamitatum participes fuere similium.<br><br> </p> 
                        
                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
@@ -62,12 +62,14 @@
             </div>
             <!-- End col-4--> 
 
-            <div class="col-8" id="main">
+            <div class="col-md-8" id="main">
                 <div class="">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b1bba528b760f1963d56328" src="https://scorenco.com/widget/5b1bba528b760f1963d56328/?auto_height=true" style="display: block; width: 100%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe><a style="font-size:11px" href="https://scorenco.com/basket/clubs/rouen/"></a>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.5/iframeResizer.min.js"></script><script>if(!window._rsz){window._rsz=function(){var i=iFrameResize({checkOrigin:false,interval:100});};if(document.readyState!="loading"){_rsz()}else{document.addEventListener("DOMContentLoaded",_rsz)}}</script><iframe id="5b272a0572171e7dc47d44c1" src="https://scorenco.com/widget/5b272a0572171e7dc47d44c1/?auto_height=true" style="display: block; width: 80%; overflow: auto; margin: auto; border-width: 0px;" scrolling="no"></iframe><br><br>
+
+
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 {% endblock %}
