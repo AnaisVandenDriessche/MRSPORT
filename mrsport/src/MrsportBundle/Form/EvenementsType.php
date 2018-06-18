@@ -33,6 +33,12 @@ class EvenementsType extends AbstractType
             ->add('description',TextareaType::class, [
                 "required" => true
             ])
+            ->add('telephone', TextType::class, [
+                "required" => true
+            ])
+            ->add('email', TextType::class, [
+                "required" => true
+            ])
             ->add('sports',EntityType::class, array(
                 'class' => Sports::class,
                 // 'choice_label' => 'name',
