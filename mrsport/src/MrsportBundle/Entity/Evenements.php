@@ -73,14 +73,14 @@ class Evenements
     /**
      * @var string
      *
-     * @ORM\Column(name="telephone", type="string", length= 10)
+     * @ORM\Column(name="telephone", type="string", length=50,nullable=true)
      */
     private $telephone;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length= 100)
+     * @ORM\Column(name="email", type="string", length= 100,nullable=true)
      */
     private $email;
 
@@ -305,7 +305,7 @@ class Evenements
     /**
      * Set telephone.
      *
-     * @param string $telephone
+     * @param integer $telephone
      *
      * @return Evenements
      */
@@ -319,7 +319,7 @@ class Evenements
     /**
      * Get telephone.
      *
-     * @return string
+     * @return integer
      */
     public function getTelephone()
     {
