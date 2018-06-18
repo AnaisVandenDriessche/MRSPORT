@@ -91,29 +91,29 @@ class AppFixtures extends Fixture
         $manager->persist($sport4);
 
         // Club
-        $date = new \DateTime('2014-06-12');
+        $date = new \DateTime('1899-07-11');
         $club = new Club();
         $club->setName('FC Rouen');
-        $club->setPresident('Mit Kabasele');
-        $club->setEntraineur('Annaïs Guardiola');
+        $club->setPresident('Fabrice Tardy');
+        $club->setEntraineur('David Giguel');
         $club->setFondation($date);
-        $club->setCouleur('Blue');
-        $club->setStade('Velodrome');
-        $club->setSiteweb('rouen.fr');
-        $club->setSports($sport4);
+        $club->setCouleur('rouge et blanc');
+        $club->setStade('Stade Robert-Diochon');
+        $club->setSiteweb('fcrouen.fr');
+        $club->setSports($sport1);
         $club->setStatus('invalide');
         $manager->persist($club);
 
         $date2 = new \DateTime('2017-06-12');
         $club2 = new Club();
-        $club2->setName('FC Barentin');
-        $club2->setPresident('Elmoufid Hadji');
-        $club2->setEntraineur('Garcia');
+        $club2->setName('Rouen hockey élite 76');
+        $club2->setPresident('Thierry Chaix');
+        $club2->setEntraineur('Fabrice Lhenry et Ari Salo');
         $club2->setFondation($date2);
-        $club2->setCouleur('Yellow');
-        $club2->setStade('Stade Vert');
-        $club2->setSiteweb('barentin.fr');
-        $club2->setSports($sport2);
+        $club2->setCouleur('noir et jaune');
+        $club2->setStade('L\'Île Lacroix');
+        $club2->setSiteweb('rouenhockeyelite76.com');
+        $club2->setSports($sport3);
         $club2->setStatus('new');
         $manager->persist($club2);
 
@@ -139,7 +139,7 @@ class AppFixtures extends Fixture
         $club2->setCouleur('Bleu, blanc et orange');
         $club2->setStade('Kindarena');
         $club2->setSiteweb('rouenmetrobasket.com');
-        $club2->setSports($sport2);
+        $club2->setSports($sport4);
         $club2->setStatus('valide');
         $manager->persist($club2);
 
@@ -152,9 +152,38 @@ class AppFixtures extends Fixture
         $club2->setCouleur('Rose et noir');
         $club2->setStade('Stade Stanislas Bilyk');
         $club2->setSiteweb('https://www.fff.fr/la-vie-des-clubs/183800/infos-cles');
+        $club2->setSports($sport1);
+        $club2->setStatus('valide');
+        $manager->persist($club2);
+
+
+        $date2 = new \DateTime('1942-09-01');
+        $club2 = new Club();
+        $club2->setName('SSCC BASKET');
+        $club2->setPresident('PESQUET Pascal');
+        $club2->setEntraineur('DUBOSC David');
+        $club2->setFondation($date2);
+        $club2->setCouleur('Rose et noir');
+        $club2->setStade('Stade Sotteville-lès-Rouen');
+        $club2->setSiteweb('http://www.sotteville-basket.fr');
+        $club2->setSports($sport4);
+        $club2->setStatus('valide');
+        $manager->persist($club2);
+
+
+        $date2 = new \DateTime('1942-09-01');
+        $club2 = new Club();
+        $club2->setName('Association Sportive Rouen Université Club Section Rugby');
+        $club2->setPresident('John Doe');
+        $club2->setEntraineur('VALOGNES Guillaume');
+        $club2->setFondation($date2);
+        $club2->setCouleur('Vert et noir');
+        $club2->setStade('Stade Mont Saint Aignan');
+        $club2->setSiteweb('http://rugby.asrouenuc.com');
         $club2->setSports($sport2);
         $club2->setStatus('valide');
         $manager->persist($club2);
+
 
         // Evenement
         $date3 = '2018-06-12';

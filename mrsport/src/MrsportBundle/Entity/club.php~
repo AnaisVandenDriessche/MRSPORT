@@ -82,6 +82,21 @@ class Club
 
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length= 10)
+     */
+    private $telephone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length= 100)
+     */
+    private $email;
+
+
+    /**
      * @var status
      *
      * @ORM\Column(name="status", columnDefinition="ENUM('valide','invalide','new')")
@@ -306,4 +321,28 @@ class Club
     }
 
     
+
+    /**
+     * Set status.
+     *
+     * @param string $status
+     *
+     * @return Club
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status.
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
 }

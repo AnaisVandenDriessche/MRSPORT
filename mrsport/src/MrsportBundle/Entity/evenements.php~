@@ -69,6 +69,21 @@ class Evenements
      */
     private $description;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length= 10)
+     */
+    private $telephone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length= 100)
+     */
+    private $email;
+
     /**
      * @var status
      *
@@ -261,5 +276,29 @@ class Evenements
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set status.
+     *
+     * @param string $status
+     *
+     * @return Evenements
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status.
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }
