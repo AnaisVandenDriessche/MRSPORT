@@ -24,6 +24,25 @@
 
 }
 
+.wrap-login22 {
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    padding: 55px;
+    /* margin: 0 30px; */
+    background: #ffffff;
+    line-height: 20px;
+    color: #151515;
+    
+
+}
+
+.wrap-login22 a{
+    color: green;
+}
+
+
+
 .container_login p{
     padding: 10px 0;
 }

@@ -8,15 +8,21 @@
     <div class="container-fluid">
     <div class="row container_login"> 
         <div class="container">
-            <div class="col-sm-5 mr-auto ml-auto wrap-login">
+            <div class="col-sm-9 mr-auto ml-auto wrap-login22">
     {% block fos_user_content %}
         {# <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p> #}
-        <p><span class="text-danger font-weight-bold text-uppercase">{{ app.user.username }}</span>, votre inscription a bien été pris en compte.</p>
-        <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Voir mon profil</a>
+        <h2 class="font-weight-bold text-center text-success ">Confirmation d’inscription</h2>
+        <p>
+        <span class="text-danger font-weight-bold text-uppercase">{{ app.user.username }}</span>, votre inscription a bien été pris en compte, maintenant vous avez la possibilité de proposer un évévenment ou un club. Une fois que votre proposition est vérifiée, elle sera mis en ligne sous 48h maximum.</p>
+        
 
         {% if targetUrl %}
-        <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
+        <a class="nav-link text-center text-primary" href="{{ targetUrl }}">{{ 'Retour sur le formulaire'|trans }}</a>
+        {% endif %}
+
+        <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Voir mon profil</a>
+        <a class="nav-link" href="{{ path('evenements_new') }}" >Proposer un événement</a>
+        <a class="nav-link" href="{{ path('club_new') }}" >Proposer un club</a>
     </div>
     </div>
     </div>
