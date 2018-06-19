@@ -1,10 +1,15 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
+{% block title %}User Edit{% endblock %}
+{% block slider %}{% endblock %}
 
 {% block body %}
 
     {% block user %}
+    <div class="container-fluid">
+    <div class="row container_dash_edit">   
+        <div class="container">
+            <div class="col-md-7 mr-auto ml-auto wrap-club-edit2">
         <h1>Users list</h1>
-
         <table>
             <thead>
                 <tr>
@@ -36,5 +41,8 @@
                 <a href="{{ path('user_new') }}">Create a new user</a>
             </li>
         </ul>
+    </div>
+    </div>
+    </div>
     {% endblock %}
 {% endblock %}

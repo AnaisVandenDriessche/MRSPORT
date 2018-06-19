@@ -29,7 +29,8 @@
                     </label>
                     <br>      
                     <button type="submit" id="_submit" name="_submit" class="btn btn-block btn-success">Valider</button>
-                    <p class="container"><a href="#" class="">Mot de passe oublié ?</a></p>
+                    <a href="{{ path('fos_user_resetting_request') }}" class="nav-link">Mot de passe oublié ?</a>
+                    
                         
                     <div class="col-md-12 ">
                         <div class="login-or">
@@ -41,7 +42,7 @@
                     <div class="text-center ">
                     <a class="nav-link btn btn-block btn-danger send-button tx-tfm" href="{{ path('fos_user_registration_register') }}">Inscription</a>
                     </div>
-                    <br>        
+                    <br>          
                 </form>
             </div>
         </div>

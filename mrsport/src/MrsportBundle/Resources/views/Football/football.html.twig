@@ -3,6 +3,8 @@
 {% block slider %}{% include 'slider_football.html.twig' %}{% endblock %}
  
 {% block body %}
+{% set current_path = app.request.get('_route') %}
+
 <div class="wrap-football">
     <div class="container ">
         <div class="row" >
@@ -10,9 +12,9 @@
                 <!-- Side Navigation --> 
                 <div class="card backgd">
                     <div class="card-body">
-                        <h2 class="card-title yellow text-uppercase">Tous les sports</h2>
+                        <h2 class="card-title yellow text-uppercase ">Tous les sports</h2>
                         <ul>
-                            <li class="nav">
+                            <li class="nav{% if current_path == 'mrsport_homepage' %}active{% endif %}">
                                 <a class="nav-link" href="{{ path('mrsport_football') }}">Football</a>
                             </li>
                             <li class="nav">
